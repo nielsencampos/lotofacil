@@ -1097,7 +1097,7 @@ notebook = [
 requires-dist = [
     { name = "dbt-core", specifier = ">=1.12.5" },
     { name = "dbt-postgres", specifier = ">=1.11.0" },
-    { name = "httpx", specifier = ">=0.27" },
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "psycopg", extras = ["binary"], specifier = ">=3.3.5" },
     { name = "pydantic", specifier = ">=2.13.5" },
     { name = "pydantic-settings", specifier = ">=2.15.0" },

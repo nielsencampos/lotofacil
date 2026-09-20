@@ -5,7 +5,7 @@ description = "Data pipeline for Lotofacil (a Brazilian lottery) with insights."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "httpx>=0.27",
+    "httpx>=0.28.1",
     "psycopg[binary]>=3.3.5",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
