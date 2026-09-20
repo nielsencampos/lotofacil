@@ -30,6 +30,10 @@ seeds:
       relation: true
       columns: true
     ball_names:
-      +post-hook: "alter table {{ this }} add primary key (number)"
+      +post-hook:
+        - "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey"
+        - "alter table {{ this }} add primary key (number)"
     ball_orders:
-      +post-hook: "alter table {{ this }} add primary key (draw_order)"
+      +post-hook:
+        - "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey"
+        - "alter table {{ this }} add primary key (draw_order)"

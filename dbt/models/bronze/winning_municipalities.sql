@@ -5,7 +5,10 @@
 -- dropped since they are always an empty string (verified across all rows).
 -- `winner_index` is the entry's position in the source array: the source
 -- `posicao` field is always 1, so it can't be part of a unique key.
-{{ config(post_hook="alter table {{ this }} add primary key (contest_number, winner_index)") }}
+{{ config(post_hook=[
+    "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey",
+    "alter table {{ this }} add primary key (contest_number, winner_index)"
+]) }}
 select
     contest_number,
     winner.ordinality::integer as winner_index,

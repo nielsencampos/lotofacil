@@ -3,7 +3,10 @@
 -- business logic, joins, or derived columns. `numero` is dropped since it
 -- is always identical to `contest_number`; `id` and `premiacaoContingencia`
 -- are dropped since they are always null (verified across all 3784 rows).
-{{ config(post_hook="alter table {{ this }} add primary key (contest_number)") }}
+{{ config(post_hook=[
+    "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey",
+    "alter table {{ this }} add primary key (contest_number)"
+]) }}
 select
     contest_number,
     (payload ->> 'acumulado')::boolean as is_accumulated,
