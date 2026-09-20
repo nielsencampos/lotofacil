@@ -1095,17 +1095,17 @@ notebook = [
 
 [package.metadata]
 requires-dist = [
-    { name = "dbt-core", specifier = ">=1.8" },
-    { name = "dbt-postgres", specifier = ">=1.8" },
+    { name = "dbt-core", specifier = ">=1.12.5" },
+    { name = "dbt-postgres", specifier = ">=1.11.0" },
     { name = "httpx", specifier = ">=0.27" },
-    { name = "psycopg", extras = ["binary"], specifier = ">=3.2" },
+    { name = "psycopg", extras = ["binary"], specifier = ">=3.3.5" },
     { name = "pydantic", specifier = ">=2.9" },
-    { name = "pydantic-settings", specifier = ">=2.5" },
+    { name = "pydantic-settings", specifier = ">=2.15.0" },
     { name = "typer", specifier = ">=0.12" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "ruff", specifier = ">=0.6" }]
+dev = [{ name = "ruff", specifier = ">=0.16.8" }]
 notebook = [{ name = "jupyterlab", specifier = ">=4" }]
 
 [[package]]
