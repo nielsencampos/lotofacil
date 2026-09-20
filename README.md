@@ -200,3 +200,24 @@ JS — that's expected, not a sign something's misconfigured.
 The `dbt` job's Postgres service binds host port 5432, same as our own `db`
 container — stop it first (`docker compose stop db`) or `act` will fail with
 "port is already allocated". Bring it back with `docker compose up -d db`.
+
+## Dependabot
+
+`.github/dependabot.yml` keeps three ecosystems up to date on a weekly
+schedule: `pip` (`pyproject.toml`/`uv.lock`), `github-actions`
+(`.github/workflows/`), and `docker-compose` (the Postgres image). It runs
+on GitHub's own infrastructure, not in CI.
+
+It can also be dry-run locally with the
+[Dependabot CLI](https://github.com/dependabot/cli) (also Docker-based, like
+`act`), which is how the `actions/checkout`/`astral-sh/setup-uv` versions in
+`ci.yml` were found to be outdated:
+
+```bash
+export LOCAL_GITHUB_ACCESS_TOKEN=$(gh auth token)
+dependabot update github_actions <owner>/<repo> --local .
+```
+
+`--local .` points it at the working directory instead of cloning the repo,
+so it reflects uncommitted changes. It prints what PR it *would* open
+without actually opening one.
