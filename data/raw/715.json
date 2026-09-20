@@ -1,0 +1,146 @@
+{
+  "acumulado": false,
+  "dataApuracao": "15/02/2012",
+  "dataProximoConcurso": "17/02/2012",
+  "dezenasSorteadasOrdemSorteio": [
+    "08",
+    "15",
+    "24",
+    "05",
+    "20",
+    "18",
+    "03",
+    "25",
+    "13",
+    "11",
+    "22",
+    "01",
+    "23",
+    "10",
+    "14"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "05",
+    "08",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "18",
+    "20",
+    "22",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "BRASÍLIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "MIRACEMA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "NITERÓI",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "RIO DE JANEIRO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BLUMENAU",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "PEREIRA BARRETO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 6,
+      "valorPremio": 145645.87
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 961,
+      "valorPremio": 399.7
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 28109,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 296555,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1151742,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "GUARANÉSIA, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 715,
+  "numeroConcursoAnterior": 714,
+  "numeroConcursoFinal_0_5": 720,
+  "numeroConcursoProximo": 716,
+  "numeroJogo": 8,
+  "observacao": "VALOR LÍQUIDO ACUMULADO PARA O CONCURSO ESPECIAL DA INDEPENDÊNCIA - R$ 1.143.491,58.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 15070938.75,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

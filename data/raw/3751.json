@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "02/08/2026",
+  "dataProximoConcurso": "03/08/2026",
+  "dezenasSorteadasOrdemSorteio": [
+    "07",
+    "17",
+    "16",
+    "04",
+    "21",
+    "08",
+    "12",
+    "18",
+    "23",
+    "24",
+    "09",
+    "19",
+    "01",
+    "11",
+    "02"
+  ],
+  "exibirDetalhamentoPorCidade": false,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "07",
+    "08",
+    "09",
+    "11",
+    "12",
+    "16",
+    "17",
+    "18",
+    "19",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "CANAL ELETRONICO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "--"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1799546.99
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 282,
+      "valorPremio": 1911.47
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8748,
+      "valorPremio": 35.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 97223,
+      "valorPremio": 14.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 494881,
+      "valorPremio": 7.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3751,
+  "numeroConcursoAnterior": 3750,
+  "numeroConcursoFinal_0_5": 3760,
+  "numeroConcursoProximo": 3752,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21187236.0,
+  "valorAcumuladoConcurso_0_5": 290249.52,
+  "valorAcumuladoConcursoEspecial": 141161580.87,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 2000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

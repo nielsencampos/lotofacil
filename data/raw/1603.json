@@ -1,0 +1,138 @@
+{
+  "acumulado": false,
+  "dataApuracao": "26/12/2017",
+  "dataProximoConcurso": "27/12/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "13",
+    "24",
+    "16",
+    "03",
+    "21",
+    "23",
+    "09",
+    "04",
+    "19",
+    "07",
+    "20",
+    "01",
+    "02",
+    "10",
+    "14"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "07",
+    "09",
+    "10",
+    "13",
+    "14",
+    "16",
+    "19",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "BETIM",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SERTANIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CHAPECÓ",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "Ribeirão Preto",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SÃO PAULO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 5,
+      "valorPremio": 285580.11
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 401,
+      "valorPremio": 1565.2
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 13002,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 154599,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 810489,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "MEDIANEIRA, PR",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1603,
+  "numeroConcursoAnterior": 1602,
+  "numeroConcursoFinal_0_5": 1610,
+  "numeroConcursoProximo": 1604,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 18171076.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 20803935.74,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1200000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

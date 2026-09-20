@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "23/12/2010",
+  "dataProximoConcurso": "27/12/2010",
+  "dezenasSorteadasOrdemSorteio": [
+    "11",
+    "02",
+    "23",
+    "18",
+    "25",
+    "20",
+    "07",
+    "14",
+    "13",
+    "16",
+    "09",
+    "06",
+    "15",
+    "03",
+    "10"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "20",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "BARREIRAS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "BA"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "ITABIRITO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BALNEÁRIO CAMBORIÚ",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SANTA CRUZ DO RIO PARDO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 368981.88
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 627,
+      "valorPremio": 1441.19
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 24729,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 241352,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1268817,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "VOLTA REDONDA, RJ",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 594,
+  "numeroConcursoAnterior": 593,
+  "numeroConcursoFinal_0_5": 600,
+  "numeroConcursoProximo": 595,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 17492418.75,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

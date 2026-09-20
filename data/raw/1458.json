@@ -1,0 +1,138 @@
+{
+  "acumulado": false,
+  "dataApuracao": "06/01/2017",
+  "dataProximoConcurso": "09/01/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "20",
+    "11",
+    "17",
+    "18",
+    "07",
+    "03",
+    "01",
+    "22",
+    "24",
+    "19",
+    "09",
+    "05",
+    "02",
+    "23",
+    "14"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "07",
+    "09",
+    "11",
+    "14",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "BRASÍLIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "LUZIÂNIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "GO"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "IPATINGA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SANTARÉM",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PA"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SÃO JOSÉ DE UBÁ",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 5,
+      "valorPremio": 356213.76
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 465,
+      "valorPremio": 1683.62
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 17307,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 204837,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1070579,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Espaço Caixa Loterias",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1458,
+  "numeroConcursoAnterior": 1457,
+  "numeroConcursoFinal_0_5": 1460,
+  "numeroConcursoProximo": 1459,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 23487330.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 21445441.39,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

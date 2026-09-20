@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "17/01/2005",
+  "dataProximoConcurso": "24/01/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "23",
+    "07",
+    "11",
+    "15",
+    "04",
+    "17",
+    "20",
+    "08",
+    "09",
+    "24",
+    "01",
+    "18",
+    "21",
+    "10",
+    "19"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 296233.16
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 619,
+      "valorPremio": 820.4
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 34720,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 283047,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1543014,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "BRASÍLIA, DF",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 69,
+  "numeroConcursoAnterior": 68,
+  "numeroConcursoFinal_0_5": 70,
+  "numeroConcursoProximo": 70,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 ACERTOS) próximo concurso: R$1.500.000,00 (HUM MILHÃO E QUINHENTOS  MIL REAIS).",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

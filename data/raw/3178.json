@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "10/08/2024",
+  "dataProximoConcurso": "12/08/2024",
+  "dezenasSorteadasOrdemSorteio": [
+    "10",
+    "16",
+    "19",
+    "06",
+    "09",
+    "05",
+    "20",
+    "03",
+    "04",
+    "14",
+    "25",
+    "24",
+    "07",
+    "01",
+    "23"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "14",
+    "16",
+    "19",
+    "20",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "CANAL ELETRONICO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "--"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1554603.27
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 235,
+      "valorPremio": 1981.55
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 9278,
+      "valorPremio": 30.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 100570,
+      "valorPremio": 12.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 558698,
+      "valorPremio": 6.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO,  SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3178,
+  "numeroConcursoAnterior": 3177,
+  "numeroConcursoFinal_0_5": 3180,
+  "numeroConcursoProximo": 3179,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 19421922.0,
+  "valorAcumuladoConcurso_0_5": 2190940.64,
+  "valorAcumuladoConcursoEspecial": 118474985.54,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

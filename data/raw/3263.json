@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "07/12/2024",
+  "dataProximoConcurso": "09/12/2024",
+  "dezenasSorteadasOrdemSorteio": [
+    "17",
+    "22",
+    "13",
+    "16",
+    "24",
+    "15",
+    "06",
+    "19",
+    "14",
+    "21",
+    "08",
+    "04",
+    "20",
+    "02",
+    "11"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "04",
+    "06",
+    "08",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "19",
+    "20",
+    "21",
+    "22",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "MARINGA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "PORTO ALEGRE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SAO PAULO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 1495288.86
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 521,
+      "valorPremio": 1599.52
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 15182,
+      "valorPremio": 30.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 161935,
+      "valorPremio": 12.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 847194,
+      "valorPremio": 6.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO,  SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3263,
+  "numeroConcursoAnterior": 3262,
+  "numeroConcursoFinal_0_5": 3270,
+  "numeroConcursoProximo": 3264,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 31724739.0,
+  "valorAcumuladoConcurso_0_5": 990128.68,
+  "valorAcumuladoConcursoEspecial": 32253907.17,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

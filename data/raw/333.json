@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "19/06/2008",
+  "dataProximoConcurso": "23/06/2008",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "02",
+    "13",
+    "25",
+    "09",
+    "14",
+    "01",
+    "06",
+    "21",
+    "15",
+    "05",
+    "23",
+    "18",
+    "12",
+    "11"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "05",
+    "06",
+    "09",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "21",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 9,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 13,
+      "valorPremio": 69149.3
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 847,
+      "valorPremio": 454.85
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 29908,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 259841,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1376784,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "JACUPIRANGA, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 333,
+  "numeroConcursoAnterior": 332,
+  "numeroConcursoFinal_0_5": 340,
+  "numeroConcursoProximo": 334,
+  "numeroJogo": 8,
+  "observacao": "GANHADORES DE 15 ACERTOS: São Paulo/SP (05), Brasília/DF, Mutum/MG, Três Pontas/MG, Cordeiro/RJ, São José do Rio Preto/SP, São Caetano do Sul/SP, Guapiara/SP, Ibitinga/SP.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1200000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

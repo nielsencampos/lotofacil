@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "01/11/2010",
+  "dataProximoConcurso": "04/11/2010",
+  "dezenasSorteadasOrdemSorteio": [
+    "06",
+    "07",
+    "14",
+    "24",
+    "17",
+    "20",
+    "19",
+    "13",
+    "10",
+    "01",
+    "08",
+    "21",
+    "03",
+    "05",
+    "12"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "10",
+    "12",
+    "13",
+    "14",
+    "17",
+    "19",
+    "20",
+    "21",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "CAMAÇARI",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "BA"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BELO HORIZONTE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "RIO DE JANEIRO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "MOGI DAS CRUZES",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 359931.8
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 872,
+      "valorPremio": 1010.85
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 22931,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 240902,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1207526,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Tauá, CE",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 579,
+  "numeroConcursoAnterior": 578,
+  "numeroConcursoFinal_0_5": 580,
+  "numeroConcursoProximo": 580,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16920325.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

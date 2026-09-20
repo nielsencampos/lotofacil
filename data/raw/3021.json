@@ -1,0 +1,114 @@
+{
+  "acumulado": false,
+  "dataApuracao": "03/02/2024",
+  "dataProximoConcurso": "05/02/2024",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "25",
+    "23",
+    "19",
+    "24",
+    "20",
+    "14",
+    "05",
+    "07",
+    "10",
+    "12",
+    "08",
+    "11",
+    "13",
+    "02"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "04",
+    "05",
+    "07",
+    "08",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "19",
+    "20",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "CANAL ELETRONICO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "--"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "JARDINOPOLIS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 2,
+      "valorPremio": 569167.52
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 584,
+      "valorPremio": 583.86
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 13324,
+      "valorPremio": 30.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 147975,
+      "valorPremio": 12.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 718435,
+      "valorPremio": 6.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3021,
+  "numeroConcursoAnterior": 3020,
+  "numeroConcursoFinal_0_5": 3030,
+  "numeroConcursoProximo": 3022,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21012507.0,
+  "valorAcumuladoConcurso_0_5": 183602.42,
+  "valorAcumuladoConcursoEspecial": 52506873.11,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

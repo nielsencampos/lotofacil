@@ -1,0 +1,146 @@
+{
+  "acumulado": false,
+  "dataApuracao": "14/05/2012",
+  "dataProximoConcurso": "16/05/2012",
+  "dezenasSorteadasOrdemSorteio": [
+    "13",
+    "06",
+    "24",
+    "21",
+    "19",
+    "14",
+    "16",
+    "08",
+    "12",
+    "01",
+    "25",
+    "04",
+    "18",
+    "07",
+    "05"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "12",
+    "13",
+    "14",
+    "16",
+    "18",
+    "19",
+    "21",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 2,
+      "municipio": "BRASÍLIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CONFINS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "UBERABA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CURITIBA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "LONDRINA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "JANDIRA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 7,
+      "valorPremio": 239939.68
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 627,
+      "valorPremio": 1177.47
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 17679,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 212417,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1164773,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 752,
+  "numeroConcursoAnterior": 751,
+  "numeroConcursoFinal_0_5": 760,
+  "numeroConcursoProximo": 753,
+  "numeroJogo": 8,
+  "observacao": "SORTEIO REALIZADO EM ESTÚDIO DE TV. VALOR LÍQUIDO ACUMULADO PARA O CONCURSO ESPECIAL DA INDEPENDÊNCIA - R$ 13.120.357,46.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 17915808.75,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

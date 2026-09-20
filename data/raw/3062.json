@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "25/03/2024",
+  "dataProximoConcurso": "26/03/2024",
+  "dezenasSorteadasOrdemSorteio": [
+    "02",
+    "13",
+    "17",
+    "07",
+    "04",
+    "08",
+    "11",
+    "24",
+    "09",
+    "25",
+    "10",
+    "20",
+    "19",
+    "12",
+    "06"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "04",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "17",
+    "19",
+    "20",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "GOIANIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "GO"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1319080.35
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 228,
+      "valorPremio": 1732.96
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8085,
+      "valorPremio": 30.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 106297,
+      "valorPremio": 12.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 575010,
+      "valorPremio": 6.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3062,
+  "numeroConcursoAnterior": 3061,
+  "numeroConcursoFinal_0_5": 3070,
+  "numeroConcursoProximo": 3063,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 18471810.0,
+  "valorAcumuladoConcurso_0_5": 447220.13,
+  "valorAcumuladoConcursoEspecial": 70396127.29,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

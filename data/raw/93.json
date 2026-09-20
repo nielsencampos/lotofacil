@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "04/07/2005",
+  "dataProximoConcurso": "11/07/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "24",
+    "07",
+    "17",
+    "09",
+    "13",
+    "18",
+    "20",
+    "05",
+    "06",
+    "10",
+    "21",
+    "02",
+    "19",
+    "23"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "13",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 4,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "TO"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 6,
+      "valorPremio": 271483.43
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 480,
+      "valorPremio": 1454.37
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 18433,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 230658,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1352474,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "ITAÚNA, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 93,
+  "numeroConcursoAnterior": 92,
+  "numeroConcursoFinal_0_5": 100,
+  "numeroConcursoProximo": 94,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 ACERTOS) próximo concurso, a ser realizado em 11/07/2005: R$1.300.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

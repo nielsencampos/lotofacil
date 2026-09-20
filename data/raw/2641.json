@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "18/10/2022",
+  "dataProximoConcurso": "19/10/2022",
+  "dezenasSorteadasOrdemSorteio": [
+    "09",
+    "04",
+    "01",
+    "19",
+    "24",
+    "20",
+    "13",
+    "17",
+    "08",
+    "12",
+    "07",
+    "05",
+    "03",
+    "23",
+    "14"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "07",
+    "08",
+    "09",
+    "12",
+    "13",
+    "14",
+    "17",
+    "19",
+    "20",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "MANHUACU",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "RECIFE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BOA VISTA DAS MISSOES",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "ROSANA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 232814.8
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 560,
+      "valorPremio": 498.12
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 14904,
+      "valorPremio": 25.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 150610,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 666256,
+      "valorPremio": 5.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 2641,
+  "numeroConcursoAnterior": 2640,
+  "numeroConcursoFinal_0_5": 2650,
+  "numeroConcursoProximo": 2642,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16968255.0,
+  "valorAcumuladoConcurso_0_5": 150203.1,
+  "valorAcumuladoConcursoEspecial": 11775681.1,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

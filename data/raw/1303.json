@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "28/12/2015",
+  "dataProximoConcurso": "30/12/2015",
+  "dezenasSorteadasOrdemSorteio": [
+    "08",
+    "01",
+    "19",
+    "18",
+    "11",
+    "15",
+    "22",
+    "05",
+    "20",
+    "09",
+    "23",
+    "13",
+    "14",
+    "16",
+    "10"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "05",
+    "08",
+    "09",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19",
+    "20",
+    "22",
+    "23"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "LÁBREA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "AM"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "LAVRAS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BELÉM",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PA"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 426530.54
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 334,
+      "valorPremio": 1684.0
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 11666,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 150905,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 831540,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "MANHUMIRIM, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1303,
+  "numeroConcursoAnterior": 1302,
+  "numeroConcursoFinal_0_5": 1310,
+  "numeroConcursoProximo": 1304,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 17217532.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 19603268.74,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

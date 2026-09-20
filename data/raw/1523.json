@@ -1,0 +1,154 @@
+{
+  "acumulado": false,
+  "dataApuracao": "12/06/2017",
+  "dataProximoConcurso": "14/06/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "19",
+    "09",
+    "03",
+    "05",
+    "06",
+    "21",
+    "13",
+    "07",
+    "23",
+    "16",
+    "25",
+    "14",
+    "10",
+    "12",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "12",
+    "13",
+    "14",
+    "16",
+    "18",
+    "19",
+    "21",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 2,
+      "municipio": "RECIFE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CAMPO MOURÃO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "JANDAIA DO SUL",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BARRA MANSA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "RIO DE JANEIRO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "OSASCO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "PALMAS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "TO"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 8,
+      "valorPremio": 182920.06
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 903,
+      "valorPremio": 712.33
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 21770,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 202653,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 959572,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Espaço Caixa Loterias",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1523,
+  "numeroConcursoAnterior": 1522,
+  "numeroConcursoFinal_0_5": 1530,
+  "numeroConcursoProximo": 1524,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21017854.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 46510627.5,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

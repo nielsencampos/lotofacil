@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "28/06/2010",
+  "dataProximoConcurso": "01/07/2010",
+  "dezenasSorteadasOrdemSorteio": [
+    "07",
+    "20",
+    "15",
+    "01",
+    "13",
+    "17",
+    "25",
+    "24",
+    "14",
+    "16",
+    "22",
+    "11",
+    "08",
+    "10",
+    "05"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "05",
+    "07",
+    "08",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "20",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "NATAL",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RN"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1258973.12
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 566,
+      "valorPremio": 1361.83
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 16716,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 186405,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 907421,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "RIBEIRÃO PRETO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 543,
+  "numeroConcursoAnterior": 542,
+  "numeroConcursoFinal_0_5": 550,
+  "numeroConcursoProximo": 544,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 13582411.25,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

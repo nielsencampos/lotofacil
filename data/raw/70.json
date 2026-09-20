@@ -1,0 +1,138 @@
+{
+  "acumulado": false,
+  "dataApuracao": "24/01/2005",
+  "dataProximoConcurso": "31/01/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "14",
+    "05",
+    "09",
+    "24",
+    "06",
+    "15",
+    "12",
+    "19",
+    "20",
+    "01",
+    "02",
+    "25",
+    "16",
+    "10",
+    "03"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "09",
+    "10",
+    "12",
+    "14",
+    "15",
+    "16",
+    "19",
+    "20",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 6,
+      "valorPremio": 264323.93
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 611,
+      "valorPremio": 1112.42
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 19413,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 230116,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1265554,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "RIO DE JANEIRO, RJ",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 70,
+  "numeroConcursoAnterior": 69,
+  "numeroConcursoFinal_0_5": 80,
+  "numeroConcursoProximo": 71,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 acertos) para o próximo concurso: R$1.500.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

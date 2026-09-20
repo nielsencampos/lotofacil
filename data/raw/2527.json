@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "21/05/2022",
+  "dataProximoConcurso": "23/05/2022",
+  "dezenasSorteadasOrdemSorteio": [
+    "18",
+    "06",
+    "13",
+    "19",
+    "02",
+    "21",
+    "23",
+    "11",
+    "14",
+    "20",
+    "01",
+    "17",
+    "12",
+    "09",
+    "05"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "05",
+    "06",
+    "09",
+    "11",
+    "12",
+    "13",
+    "14",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "23"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "CANAL ELETRONICO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "--"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "FOZ DO IGUACU",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CHAPECO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SAO PAULO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 5,
+      "valorPremio": 270269.79
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 168,
+      "valorPremio": 1686.59
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 7604,
+      "valorPremio": 25.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 100739,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 570498,
+      "valorPremio": 5.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 2527,
+  "numeroConcursoAnterior": 2526,
+  "numeroConcursoFinal_0_5": 2530,
+  "numeroConcursoProximo": 2528,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16525230.0,
+  "valorAcumuladoConcurso_0_5": 1629075.63,
+  "valorAcumuladoConcursoEspecial": 79391666.82,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

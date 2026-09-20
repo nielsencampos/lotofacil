@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "14/10/2013",
+  "dataProximoConcurso": "16/10/2013",
+  "dezenasSorteadasOrdemSorteio": [
+    "11",
+    "07",
+    "09",
+    "20",
+    "19",
+    "05",
+    "03",
+    "04",
+    "02",
+    "18",
+    "14",
+    "16",
+    "21",
+    "13",
+    "25"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "07",
+    "09",
+    "11",
+    "13",
+    "14",
+    "16",
+    "18",
+    "19",
+    "20",
+    "21",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "GOIÂNIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "GO"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "IBIÁ",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CURRAIS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PI"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 444090.24
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 563,
+      "valorPremio": 1040.16
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 19553,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 237192,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1209535,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "OSASCO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 968,
+  "numeroConcursoAnterior": 967,
+  "numeroConcursoFinal_0_5": 970,
+  "numeroConcursoProximo": 969,
+  "numeroJogo": 8,
+  "observacao": "Sorteio realizado em Estúdio de TV.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16770608.75,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 6293755.63,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

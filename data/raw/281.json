@@ -1,0 +1,138 @@
+{
+  "acumulado": false,
+  "dataApuracao": "17/12/2007",
+  "dataProximoConcurso": "20/12/2007",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "01",
+    "10",
+    "23",
+    "12",
+    "02",
+    "25",
+    "17",
+    "19",
+    "08",
+    "11",
+    "09",
+    "14",
+    "03",
+    "15"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "17",
+    "19",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RO"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RS"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 6,
+      "valorPremio": 166444.42
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 683,
+      "valorPremio": 624.27
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 24788,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 310715,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1611578,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Floriano, PI",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 281,
+  "numeroConcursoAnterior": 280,
+  "numeroConcursoFinal_0_5": 290,
+  "numeroConcursoProximo": 282,
+  "numeroJogo": 8,
+  "observacao": "Ganhadores da faixa de 15 Acertos:São Paulo/SP(02), Valença/RJ, Ariquemes/RO, Maringá/PR, Porto Alegre/RS.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

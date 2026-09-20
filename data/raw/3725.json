@@ -1,0 +1,114 @@
+{
+  "acumulado": false,
+  "dataApuracao": "02/07/2026",
+  "dataProximoConcurso": "03/07/2026",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "14",
+    "24",
+    "17",
+    "11",
+    "05",
+    "06",
+    "02",
+    "25",
+    "16",
+    "21",
+    "08",
+    "19",
+    "01",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": false,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "06",
+    "08",
+    "11",
+    "13",
+    "14",
+    "16",
+    "17",
+    "19",
+    "21",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "SANTA BARBARA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BELEM",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PA"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 2,
+      "valorPremio": 903320.97
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 295,
+      "valorPremio": 1834.44
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8139,
+      "valorPremio": 35.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 90249,
+      "valorPremio": 14.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 468852,
+      "valorPremio": 7.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3725,
+  "numeroConcursoAnterior": 3724,
+  "numeroConcursoFinal_0_5": 3730,
+  "numeroConcursoProximo": 3726,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 20536845.0,
+  "valorAcumuladoConcurso_0_5": 1380936.07,
+  "valorAcumuladoConcursoEspecial": 126252432.97,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 2000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

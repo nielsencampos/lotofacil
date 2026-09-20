@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "17/01/2023",
+  "dataProximoConcurso": "18/01/2023",
+  "dezenasSorteadasOrdemSorteio": [
+    "06",
+    "24",
+    "14",
+    "20",
+    "17",
+    "09",
+    "15",
+    "18",
+    "04",
+    "19",
+    "08",
+    "21",
+    "01",
+    "10",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "06",
+    "08",
+    "09",
+    "10",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "SAO JOAO DEL REI",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1638091.22
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 238,
+      "valorPremio": 1443.15
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8014,
+      "valorPremio": 25.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 103188,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 601885,
+      "valorPremio": 5.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 2716,
+  "numeroConcursoAnterior": 2715,
+  "numeroConcursoFinal_0_5": 2720,
+  "numeroConcursoProximo": 2717,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 18491485.0,
+  "valorAcumuladoConcurso_0_5": 1575139.07,
+  "valorAcumuladoConcursoEspecial": 40310451.95,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "20/02/2015",
+  "dataProximoConcurso": "23/02/2015",
+  "dezenasSorteadasOrdemSorteio": [
+    "21",
+    "16",
+    "11",
+    "09",
+    "04",
+    "08",
+    "22",
+    "20",
+    "01",
+    "02",
+    "18",
+    "05",
+    "19",
+    "14",
+    "07"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "07",
+    "08",
+    "09",
+    "11",
+    "14",
+    "16",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "PALMEIRA DOESTE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 2163456.64
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 413,
+      "valorPremio": 1611.82
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 17120,
+      "valorPremio": 15.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 221866,
+      "valorPremio": 6.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1181935,
+      "valorPremio": 3.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESTÚDIO DE TV",
+  "nomeMunicipioUFSorteio": "OSASCO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1173,
+  "numeroConcursoAnterior": 1172,
+  "numeroConcursoFinal_0_5": 1180,
+  "numeroConcursoProximo": 1174,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 22464435.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 29277124.64,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

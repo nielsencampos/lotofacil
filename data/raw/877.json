@@ -1,0 +1,146 @@
+{
+  "acumulado": false,
+  "dataApuracao": "08/03/2013",
+  "dataProximoConcurso": "11/03/2013",
+  "dezenasSorteadasOrdemSorteio": [
+    "23",
+    "10",
+    "16",
+    "11",
+    "19",
+    "03",
+    "15",
+    "14",
+    "25",
+    "18",
+    "21",
+    "07",
+    "08",
+    "09",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19",
+    "21",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "PORTO SEGURO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "BA"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CAPIM BRANCO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "CAMPO GRANDE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "DOURADOS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BARRA DO GARÇAS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MT"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "RIO DE JANEIRO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 6,
+      "valorPremio": 215761.17
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 663,
+      "valorPremio": 858.28
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 25186,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 310648,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1565268,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 877,
+  "numeroConcursoAnterior": 876,
+  "numeroConcursoFinal_0_5": 880,
+  "numeroConcursoProximo": 878,
+  "numeroJogo": 8,
+  "observacao": "VALOR LÍQUIDO ACUMULADO PARA O CONCURSO ESPECIAL DA INDEPENDÊNCIA: R$ 26.794.147,17. SORTEIO REALIZADO EM ESTÚDIO DE TV.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 19597015.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

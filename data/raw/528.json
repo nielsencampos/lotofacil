@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "06/05/2010",
+  "dataProximoConcurso": "10/05/2010",
+  "dezenasSorteadasOrdemSorteio": [
+    "06",
+    "23",
+    "10",
+    "04",
+    "12",
+    "15",
+    "07",
+    "24",
+    "11",
+    "25",
+    "02",
+    "19",
+    "03",
+    "21",
+    "08"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "06",
+    "07",
+    "08",
+    "10",
+    "11",
+    "12",
+    "15",
+    "19",
+    "21",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "Aracaju",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SE"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1526533.47
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 437,
+      "valorPremio": 1497.09
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 15652,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 222396,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1238471,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "SÃO GABRIEL DO OESTE, MS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 528,
+  "numeroConcursoAnterior": 527,
+  "numeroConcursoFinal_0_5": 530,
+  "numeroConcursoProximo": 529,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 17081620.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1400000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

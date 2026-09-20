@@ -1,0 +1,114 @@
+{
+  "acumulado": false,
+  "dataApuracao": "01/02/2017",
+  "dataProximoConcurso": "03/02/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "05",
+    "16",
+    "06",
+    "03",
+    "08",
+    "11",
+    "07",
+    "09",
+    "02",
+    "13",
+    "20",
+    "19",
+    "18",
+    "01",
+    "17"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "11",
+    "13",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "SALVADOR",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "BA"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SÃO BERNARDO DO CAMPO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 2,
+      "valorPremio": 1014704.42
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 861,
+      "valorPremio": 1036.06
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 15983,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 147795,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 887046,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "MACEIÓ, AL",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1469,
+  "numeroConcursoAnterior": 1468,
+  "numeroConcursoFinal_0_5": 1470,
+  "numeroConcursoProximo": 1470,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21939102.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 26002842.33,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

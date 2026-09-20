@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "15/03/2007",
+  "dataProximoConcurso": "19/03/2007",
+  "dezenasSorteadasOrdemSorteio": [
+    "05",
+    "14",
+    "23",
+    "19",
+    "24",
+    "10",
+    "17",
+    "11",
+    "01",
+    "21",
+    "22",
+    "13",
+    "16",
+    "03",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "05",
+    "10",
+    "11",
+    "13",
+    "14",
+    "16",
+    "17",
+    "18",
+    "19",
+    "21",
+    "22",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 269,
+      "valorPremio": 1703.36
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 12150,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 175505,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1105371,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "ARACAJU, SE",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 202,
+  "numeroConcursoAnterior": 201,
+  "numeroConcursoFinal_0_5": 210,
+  "numeroConcursoProximo": 203,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!!! Estimativa de prêmio (15 acertos) para o próximo concurso, a ser realizado em 19/03/2007: R$1.900.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1069138.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

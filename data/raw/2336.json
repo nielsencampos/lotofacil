@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "30/09/2021",
+  "dataProximoConcurso": "01/10/2021",
+  "dezenasSorteadasOrdemSorteio": [
+    "13",
+    "11",
+    "22",
+    "04",
+    "12",
+    "20",
+    "17",
+    "10",
+    "25",
+    "14",
+    "18",
+    "03",
+    "06",
+    "16",
+    "01"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "06",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "16",
+    "17",
+    "18",
+    "20",
+    "22",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "TUCURUI",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PA"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 3158457.35
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 385,
+      "valorPremio": 1413.2
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 14583,
+      "valorPremio": 25.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 178880,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 894420,
+      "valorPremio": 5.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO LOTERIAS CAIXA",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 2336,
+  "numeroConcursoAnterior": 2335,
+  "numeroConcursoFinal_0_5": 2340,
+  "numeroConcursoProximo": 2337,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 24938265.0,
+  "valorAcumuladoConcurso_0_5": 1480731.12,
+  "valorAcumuladoConcursoEspecial": 6725613.21,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1600000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "11/06/2014",
+  "dataProximoConcurso": "13/06/2014",
+  "dezenasSorteadasOrdemSorteio": [
+    "21",
+    "15",
+    "01",
+    "03",
+    "05",
+    "14",
+    "02",
+    "11",
+    "17",
+    "04",
+    "10",
+    "25",
+    "07",
+    "13",
+    "22"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "07",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "17",
+    "21",
+    "22",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "GOIÂNIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "GO"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BOA ESPERANÇA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "Curitiba",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 545041.79
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 398,
+      "valorPremio": 1264.11
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 15792,
+      "valorPremio": 15.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 226013,
+      "valorPremio": 6.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1238826,
+      "valorPremio": 3.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "FOZ DO IGUAÇU, PR",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1067,
+  "numeroConcursoAnterior": 1066,
+  "numeroConcursoFinal_0_5": 1070,
+  "numeroConcursoProximo": 1068,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 20225562.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 43735322.92,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

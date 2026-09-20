@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "16/11/2006",
+  "dataProximoConcurso": "20/11/2006",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "16",
+    "24",
+    "06",
+    "08",
+    "11",
+    "15",
+    "10",
+    "01",
+    "21",
+    "05",
+    "12",
+    "09",
+    "07",
+    "20"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "15",
+    "16",
+    "20",
+    "21",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 239,
+      "valorPremio": 1973.03
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8661,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 119123,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 733474,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "LAJEADO, RS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 169,
+  "numeroConcursoAnterior": 168,
+  "numeroConcursoFinal_0_5": 170,
+  "numeroConcursoProximo": 170,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!! Estimativa de prêmio (15 acertos) para o próximo concurso, a ser realizado em 21/11/2006: R$2.200.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1100295.03,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

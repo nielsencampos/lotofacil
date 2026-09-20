@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "23/03/2009",
+  "dataProximoConcurso": "26/03/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "18",
+    "17",
+    "01",
+    "05",
+    "14",
+    "25",
+    "07",
+    "16",
+    "12",
+    "24",
+    "20",
+    "11",
+    "22",
+    "21",
+    "09"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "05",
+    "07",
+    "09",
+    "11",
+    "12",
+    "14",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PB"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "TO"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 381115.94
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 766,
+      "valorPremio": 852.93
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 25330,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 253883,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1353830,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "BRASÍLIA, DF",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 411,
+  "numeroConcursoAnterior": 410,
+  "numeroConcursoFinal_0_5": 420,
+  "numeroConcursoProximo": 412,
+  "numeroJogo": 8,
+  "observacao": "Ganhadores de 15 acertos: ARAGUAÍNA/TO, JOÃO PESSOA/PB, MORUNGABA/SP e PIRACICABA/SP.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

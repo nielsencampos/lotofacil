@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "09/03/2021",
+  "dataProximoConcurso": "10/03/2021",
+  "dezenasSorteadasOrdemSorteio": [
+    "09",
+    "22",
+    "12",
+    "08",
+    "04",
+    "21",
+    "20",
+    "11",
+    "05",
+    "13",
+    "16",
+    "18",
+    "02",
+    "07",
+    "01"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "07",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "16",
+    "18",
+    "20",
+    "21",
+    "22"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "VARZEA GRANDE",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MT"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1288876.05
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 270,
+      "valorPremio": 1429.88
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8417,
+      "valorPremio": 25.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 102705,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 542488,
+      "valorPremio": 5.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO LOTERIAS CAIXA",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 2176,
+  "numeroConcursoAnterior": 2175,
+  "numeroConcursoFinal_0_5": 2180,
+  "numeroConcursoProximo": 2177,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 15962342.5,
+  "valorAcumuladoConcurso_0_5": 1544602.64,
+  "valorAcumuladoConcursoEspecial": 52265105.23,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

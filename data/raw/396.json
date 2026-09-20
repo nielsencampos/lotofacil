@@ -1,0 +1,154 @@
+{
+  "acumulado": false,
+  "dataApuracao": "26/01/2009",
+  "dataProximoConcurso": "29/01/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "03",
+    "02",
+    "09",
+    "01",
+    "05",
+    "10",
+    "15",
+    "13",
+    "22",
+    "07",
+    "06",
+    "24",
+    "20",
+    "18",
+    "11"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "13",
+    "15",
+    "18",
+    "20",
+    "22",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "CE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "GO"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MA"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 3,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 3,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 12,
+      "valorPremio": 98868.7
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 1403,
+      "valorPremio": 362.42
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 34981,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 316500,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1468013,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "ARAPIRACA, AL",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 396,
+  "numeroConcursoAnterior": 395,
+  "numeroConcursoFinal_0_5": 400,
+  "numeroConcursoProximo": 397,
+  "numeroJogo": 8,
+  "observacao": "GANHADORES DE 15 ACERTOS: BELO HORIZONTE/MG; SAO PAULO/SP(2); SETE LAGOAS/MG; NOVA IGUACU/RJ; GOIANIA/GO; SAO LUIS/MA; RIO DE JANEIRO/RJ; LORENA/SP; MATELANDIA/PR; NOVA IGUACU/RJ E BARRO/CE.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

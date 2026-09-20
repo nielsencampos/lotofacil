@@ -1,0 +1,138 @@
+{
+  "acumulado": false,
+  "dataApuracao": "08/01/2009",
+  "dataProximoConcurso": "12/01/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "21",
+    "18",
+    "25",
+    "16",
+    "06",
+    "15",
+    "04",
+    "23",
+    "13",
+    "12",
+    "03",
+    "01",
+    "09",
+    "22",
+    "08"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "06",
+    "08",
+    "09",
+    "12",
+    "13",
+    "15",
+    "16",
+    "18",
+    "21",
+    "22",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "ES"
+    },
+    {
+      "ganhadores": 4,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 9,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 16,
+      "valorPremio": 55856.68
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 2683,
+      "valorPremio": 142.76
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 46805,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 355727,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1524094,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Auditório",
+  "nomeMunicipioUFSorteio": "BRASÍLIA, DF",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 391,
+  "numeroConcursoAnterior": 390,
+  "numeroConcursoFinal_0_5": 400,
+  "numeroConcursoProximo": 392,
+  "numeroJogo": 8,
+  "observacao": "GANHADORES DE 15 ACERTOS: TABOÃO DA SERRA/SP; SÃO GONÇALO/RJ; SERRA/ES; JAÚ/SP; AMERICANA/SP; OSASCO/SP; MARINGÁ/PR; SERRA NEGRA/SP; CAMBUÍ/MG (2); CONSELHEIRO PENA/MG (2); SÃO PAULO/SP (04).",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1400000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

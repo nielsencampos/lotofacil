@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "29/11/2017",
+  "dataProximoConcurso": "01/12/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "22",
+    "02",
+    "03",
+    "15",
+    "14",
+    "06",
+    "25",
+    "16",
+    "20",
+    "19",
+    "01",
+    "05",
+    "09",
+    "12"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "09",
+    "12",
+    "14",
+    "15",
+    "16",
+    "19",
+    "20",
+    "22",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 337,
+      "valorPremio": 1831.57
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 12177,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 168761,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 899895,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "CARDOSO MOREIRA, RJ",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1592,
+  "numeroConcursoAnterior": 1591,
+  "numeroConcursoFinal_0_5": 1600,
+  "numeroConcursoProximo": 1593,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 22150422.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 15978142.65,
+  "valorAcumuladoProximoConcurso": 2006022.61,
+  "valorEstimadoProximoConcurso": 5000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

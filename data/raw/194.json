@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "12/02/2007",
+  "dataProximoConcurso": "15/02/2007",
+  "dezenasSorteadasOrdemSorteio": [
+    "23",
+    "14",
+    "22",
+    "25",
+    "12",
+    "18",
+    "08",
+    "09",
+    "13",
+    "15",
+    "02",
+    "21",
+    "17",
+    "07",
+    "10"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "07",
+    "08",
+    "09",
+    "10",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "21",
+    "22",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1197208.94
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 354,
+      "valorPremio": 1449.4
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 14957,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 233715,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1231332,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Porto Seguro, BA",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 194,
+  "numeroConcursoAnterior": 193,
+  "numeroConcursoFinal_0_5": 200,
+  "numeroConcursoProximo": 195,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 acertos) para o próximo concurso, a ser realizado em 15/02/2007: R$800.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

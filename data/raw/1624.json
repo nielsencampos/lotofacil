@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "14/02/2018",
+  "dataProximoConcurso": "16/02/2018",
+  "dezenasSorteadasOrdemSorteio": [
+    "20",
+    "01",
+    "18",
+    "17",
+    "14",
+    "15",
+    "16",
+    "09",
+    "11",
+    "24",
+    "06",
+    "23",
+    "02",
+    "08",
+    "07"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "06",
+    "07",
+    "08",
+    "09",
+    "11",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 247,
+      "valorPremio": 2978.34
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 9742,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 140074,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 866367,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "VINHEDO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1624,
+  "numeroConcursoAnterior": 1623,
+  "numeroConcursoFinal_0_5": 1630,
+  "numeroConcursoProximo": 1625,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 23150418.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 30812348.24,
+  "valorAcumuladoProximoConcurso": 2390861.19,
+  "valorEstimadoProximoConcurso": 5500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

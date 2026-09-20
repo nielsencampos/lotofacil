@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "09/09/2015",
+  "dataProximoConcurso": "11/09/2015",
+  "dezenasSorteadasOrdemSorteio": [
+    "13",
+    "11",
+    "06",
+    "18",
+    "19",
+    "23",
+    "01",
+    "15",
+    "12",
+    "22",
+    "08",
+    "10",
+    "02",
+    "14",
+    "16"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "06",
+    "08",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19",
+    "22",
+    "23"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 223,
+      "valorPremio": 1890.78
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 8037,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 105232,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 618173,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "JUIZ DE FORA, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1256,
+  "numeroConcursoAnterior": 1255,
+  "numeroConcursoFinal_0_5": 1260,
+  "numeroConcursoProximo": 1257,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 14736838.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 316232.83,
+  "valorAcumuladoProximoConcurso": 1370342.19,
+  "valorEstimadoProximoConcurso": 4000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

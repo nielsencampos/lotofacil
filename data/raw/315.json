@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "17/04/2008",
+  "dataProximoConcurso": "22/04/2008",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "13",
+    "11",
+    "23",
+    "05",
+    "06",
+    "21",
+    "17",
+    "08",
+    "02",
+    "24",
+    "03",
+    "20",
+    "14",
+    "19"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "05",
+    "06",
+    "08",
+    "11",
+    "13",
+    "14",
+    "16",
+    "17",
+    "19",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MS"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "RJ"
+    },
+    {
+      "ganhadores": 6,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 10,
+      "valorPremio": 125445.39
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 1080,
+      "valorPremio": 497.8
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 21712,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 211835,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1071147,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "SÃO FRANCISCO DO SUL, SC",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 315,
+  "numeroConcursoAnterior": 314,
+  "numeroConcursoFinal_0_5": 320,
+  "numeroConcursoProximo": 316,
+  "numeroJogo": 8,
+  "observacao": "GANHADORES DE 15 ACERTOS: CAMPINAS/SP, OLINDA/PE, CAMPO GRANDE/MS, PALMARES PAULISTA/SP, SOROCABA/SP, RIO DE JANEIRO/RJ (2) e SÃO PAULO/SP (3).",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1200000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

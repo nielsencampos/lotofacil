@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "21/02/2018",
+  "dataProximoConcurso": "23/02/2018",
+  "dezenasSorteadasOrdemSorteio": [
+    "20",
+    "17",
+    "13",
+    "04",
+    "03",
+    "24",
+    "11",
+    "06",
+    "21",
+    "02",
+    "14",
+    "09",
+    "08",
+    "15",
+    "12"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "06",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "20",
+    "21",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "MARÍLIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 2000192.65
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 439,
+      "valorPremio": 1401.92
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 16412,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 206558,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1150717,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "CAMINHÃO DA SORTE",
+  "nomeMunicipioUFSorteio": "CAMPO BELO, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1627,
+  "numeroConcursoAnterior": 1626,
+  "numeroConcursoFinal_0_5": 1630,
+  "numeroConcursoProximo": 1628,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 25328216.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 32367490.22,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

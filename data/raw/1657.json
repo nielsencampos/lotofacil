@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "02/05/2018",
+  "dataProximoConcurso": "04/05/2018",
+  "dezenasSorteadasOrdemSorteio": [
+    "06",
+    "18",
+    "03",
+    "24",
+    "17",
+    "23",
+    "12",
+    "04",
+    "15",
+    "21",
+    "10",
+    "19",
+    "08",
+    "20",
+    "09"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "04",
+    "06",
+    "08",
+    "09",
+    "10",
+    "12",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 451,
+      "valorPremio": 1789.94
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 13210,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 158253,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 865738,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "XANXERÊ, SC",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1657,
+  "numeroConcursoAnterior": 1656,
+  "numeroConcursoFinal_0_5": 1660,
+  "numeroConcursoProximo": 1658,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 20829654.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 47144356.81,
+  "valorAcumuladoProximoConcurso": 1836529.9,
+  "valorEstimadoProximoConcurso": 4500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

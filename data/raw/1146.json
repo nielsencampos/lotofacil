@@ -1,0 +1,130 @@
+{
+  "acumulado": false,
+  "dataApuracao": "17/12/2014",
+  "dataProximoConcurso": "19/12/2014",
+  "dezenasSorteadasOrdemSorteio": [
+    "24",
+    "17",
+    "02",
+    "07",
+    "13",
+    "21",
+    "04",
+    "03",
+    "11",
+    "22",
+    "25",
+    "15",
+    "19",
+    "05",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "07",
+    "11",
+    "13",
+    "15",
+    "17",
+    "18",
+    "19",
+    "21",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "VARJÃO DE MINAS",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "GOIANA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "IPOJUCA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PE"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SÃO PAULO",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 4,
+      "valorPremio": 360410.22
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 651,
+      "valorPremio": 973.4
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 23815,
+      "valorPremio": 15.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 279365,
+      "valorPremio": 6.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1411948,
+      "valorPremio": 3.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "CAMINHÃO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO JOÃO DO PIAUÍ, PI",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1146,
+  "numeroConcursoAnterior": 1145,
+  "numeroConcursoFinal_0_5": 1150,
+  "numeroConcursoProximo": 1147,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21439993.5,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 18174741.28,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

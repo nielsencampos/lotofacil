@@ -1,0 +1,206 @@
+version: 2
+
+models:
+  - name: draws
+    description: >
+      One row per contest with every scalar attribute from the raw API
+      payload, typed and renamed to English, but with no business logic,
+      joins, or derived columns. Primary key: contest_number (enforced in
+      PostgreSQL via a post-hook).
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: is_accumulated
+        description: >
+          Whether the main prize tier (15 hits) rolled over with no winner
+          (source: acumulado).
+        tests:
+          - not_null
+      - name: draw_date
+        description: >
+          Date this contest was drawn (source: dataApuracao).
+        tests:
+          - not_null
+      - name: next_draw_date
+        description: >
+          Scheduled date of the next contest (source: dataProximoConcurso).
+      - name: show_city_detail
+        description: >
+          Whether the API exposes a per-city winner breakdown for this
+          contest (source: exibirDetalhamentoPorCidade).
+      - name: special_contest_indicator
+        description: >
+          Caixa's special-contest indicator code (source:
+          indicadorConcursoEspecial).
+      - name: draw_location
+        description: >
+          Venue where the draw took place (source: localSorteio).
+      - name: draw_city_state
+        description: >
+          City/state where the draw took place (source:
+          nomeMunicipioUFSorteio).
+      - name: heart_team_name
+        description: >
+          Timemania-style "heart team" name; unused by Lotofacil and always
+          blank (source: nomeTimeCoracaoMesSorte).
+      - name: previous_contest_number
+        description: >
+          Contest number immediately before this one (source:
+          numeroConcursoAnterior).
+      - name: final_contest_number_0_5
+        description: >
+          Last contest number in the current progressive "0-5" accumulation
+          cycle (source: numeroConcursoFinal_0_5).
+      - name: next_contest_number
+        description: >
+          Contest number immediately after this one (source:
+          numeroConcursoProximo).
+      - name: game_number
+        description: >
+          Caixa's internal game code; 8 identifies Lotofacil (source:
+          numeroJogo).
+      - name: remarks
+        description: >
+          Free-text remarks about the contest, usually blank (source:
+          observacao).
+      - name: game_type
+        description: >
+          Game name as returned by the API, always "LOTOFACIL" (source:
+          tipoJogo).
+      - name: publication_type
+        description: >
+          Caixa's internal publication-type code (source: tipoPublicacao).
+      - name: is_last_contest
+        description: >
+          Whether this was the most recent contest at the time it was
+          fetched (source: ultimoConcurso).
+      - name: collected_amount
+        description: >
+          Total amount collected from ticket sales for this contest, in BRL
+          (source: valorArrecadado).
+      - name: accumulated_amount_0_5
+        description: >
+          Amount accumulated for the current progressive "0-5" cycle, in BRL
+          (source: valorAcumuladoConcurso_0_5).
+      - name: special_accumulated_amount
+        description: >
+          Amount accumulated for the next special (year-end) contest, in BRL
+          (source: valorAcumuladoConcursoEspecial).
+      - name: next_accumulated_amount
+        description: >
+          Amount rolled over into the next contest's main prize, in BRL
+          (source: valorAcumuladoProximoConcurso).
+      - name: next_estimated_prize
+        description: >
+          Estimated main prize for the next contest, in BRL (source:
+          valorEstimadoProximoConcurso).
+      - name: guarantee_fund_balance
+        description: >
+          Balance of Caixa's prize guarantee fund, in BRL (source:
+          valorSaldoReservaGarantidora).
+      - name: total_prize_tier_one_amount
+        description: >
+          Total amount paid out at the top prize tier (15 hits) for this
+          contest, in BRL (source: valorTotalPremioFaixaUm).
+
+  - name: ball_draws
+    description: >
+      One row per (contest, draw position) from dezenasSorteadasOrdemSorteio,
+      typed so it joins to the ball_names and ball_orders dictionaries.
+      Primary key: (contest_number, draw_order), enforced in PostgreSQL via
+      a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, draw_order]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number.
+        tests:
+          - not_null
+      - name: draw_order
+        description: >
+          Position in which this ball was drawn, 1-15 (source: index in the
+          dezenasSorteadasOrdemSorteio array). Joins to
+          ball_orders.draw_order.
+        tests:
+          - not_null
+      - name: ball_number
+        description: >
+          Number printed on the drawn ball, 1-25. Joins to ball_names.number.
+        tests:
+          - not_null
+
+  - name: prize_tiers
+    description: >
+      One row per (contest, prize tier) from listaRateioPremio, typed and
+      renamed to English. Primary key: (contest_number, prize_tier),
+      enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, prize_tier]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number.
+        tests:
+          - not_null
+      - name: prize_tier
+        description: >
+          Prize tier rank, 1 (15 hits) through 5 (11 hits) (source: faixa).
+        tests:
+          - not_null
+      - name: prize_tier_description
+        description: >
+          Human-readable description of the tier, e.g. "15 acertos" (source:
+          descricaoFaixa).
+      - name: winner_count
+        description: >
+          Number of winning tickets at this tier for this contest (source:
+          numeroDeGanhadores).
+      - name: prize_amount
+        description: >
+          Prize amount per winning ticket at this tier, in BRL (source:
+          valorPremio).
+
+  - name: winning_municipalities
+    description: >
+      One row per (contest, winning municipality) from
+      listaMunicipioUFGanhadores, typed and renamed to English. Most
+      contests have no winners at the top prize tier. Primary key:
+      (contest_number, winner_index), enforced in PostgreSQL via a
+      post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, winner_index]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number.
+        tests:
+          - not_null
+      - name: winner_index
+        description: >
+          Position of this entry in the source array. Combined with
+          contest_number for uniqueness since the source posicao field is
+          always 1.
+        tests:
+          - not_null
+      - name: state
+        description: >
+          Brazilian state (UF) of the winning ticket (source: uf).
+      - name: city
+        description: >
+          City of the winning ticket; sometimes blank in the source data
+          (source: municipio).
+      - name: winner_position
+        description: >
+          Source ranking field for this winner; always 1 in the data seen so
+          far (source: posicao).
+      - name: winner_count
+        description: >
+          Number of winning tickets from this municipality (source:
+          ganhadores).

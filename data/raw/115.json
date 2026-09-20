@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "05/12/2005",
+  "dataProximoConcurso": "12/12/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "17",
+    "05",
+    "16",
+    "06",
+    "11",
+    "20",
+    "09",
+    "12",
+    "21",
+    "25",
+    "07",
+    "13",
+    "01",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "11",
+    "12",
+    "13",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 4081776.78
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 674,
+      "valorPremio": 1388.24
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 22580,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 326888,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1754217,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Votorantim, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 115,
+  "numeroConcursoAnterior": 114,
+  "numeroConcursoFinal_0_5": 120,
+  "numeroConcursoProximo": 116,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 ACERTOS) para o próximo concurso, a ser realizado em 12/12/2005: R$1.300.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

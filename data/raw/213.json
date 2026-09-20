@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "23/04/2007",
+  "dataProximoConcurso": "26/04/2007",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "01",
+    "10",
+    "21",
+    "05",
+    "04",
+    "09",
+    "23",
+    "08",
+    "03",
+    "24",
+    "25",
+    "11",
+    "18",
+    "19"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "08",
+    "09",
+    "10",
+    "11",
+    "16",
+    "18",
+    "19",
+    "21",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 331,
+      "valorPremio": 1367.72
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 13114,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 188730,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1138481,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "ITAPETININGA, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 213,
+  "numeroConcursoAnterior": 212,
+  "numeroConcursoFinal_0_5": 220,
+  "numeroConcursoProximo": 214,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!! Estimativa de prêmio (15 acertos) para o próximo concurso a ser realizado em 26/04/2007: R$2.000.000,00",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1056335.44,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

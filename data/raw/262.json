@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "11/10/2007",
+  "dataProximoConcurso": "15/10/2007",
+  "dezenasSorteadasOrdemSorteio": [
+    "08",
+    "21",
+    "12",
+    "20",
+    "03",
+    "14",
+    "13",
+    "07",
+    "09",
+    "24",
+    "15",
+    "23",
+    "04",
+    "17",
+    "06"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "04",
+    "06",
+    "07",
+    "08",
+    "09",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "20",
+    "21",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "PR"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1189723.12
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 461,
+      "valorPremio": 1106.03
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 23646,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 215284,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1197030,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "CHAPECÓ, SC",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 262,
+  "numeroConcursoAnterior": 261,
+  "numeroConcursoFinal_0_5": 270,
+  "numeroConcursoProximo": 263,
+  "numeroJogo": 8,
+  "observacao": "Ganhador de 15 acertos: Ibaiti/PR.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1100000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

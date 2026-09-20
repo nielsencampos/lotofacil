@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "03/01/2018",
+  "dataProximoConcurso": "05/01/2018",
+  "dezenasSorteadasOrdemSorteio": [
+    "14",
+    "18",
+    "09",
+    "15",
+    "24",
+    "06",
+    "03",
+    "07",
+    "11",
+    "01",
+    "12",
+    "17",
+    "08",
+    "02",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "06",
+    "07",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 285,
+      "valorPremio": 1408.43
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 12289,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 153609,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 745762,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "CAMINHÃO DA SORTE",
+  "nomeMunicipioUFSorteio": "CAMBORIÚ, SC",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1607,
+  "numeroConcursoAnterior": 1606,
+  "numeroConcursoFinal_0_5": 1610,
+  "numeroConcursoProximo": 1608,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16897284.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 22157605.53,
+  "valorAcumuladoProximoConcurso": 1304553.84,
+  "valorEstimadoProximoConcurso": 3000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

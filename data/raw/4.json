@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "20/10/2003",
+  "dataProximoConcurso": "27/10/2003",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "05",
+    "25",
+    "24",
+    "23",
+    "08",
+    "12",
+    "02",
+    "17",
+    "18",
+    "01",
+    "10",
+    "04",
+    "19",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "08",
+    "10",
+    "12",
+    "13",
+    "16",
+    "17",
+    "18",
+    "19",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MT"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 902226.02
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 258,
+      "valorPremio": 1498.72
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 9569,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 123912,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 706657,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Caxias do Sul, RS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 4,
+  "numeroConcursoAnterior": 3,
+  "numeroConcursoFinal_0_5": 10,
+  "numeroConcursoProximo": 5,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio (15 ACERTOS) próximo concurso: R$800.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

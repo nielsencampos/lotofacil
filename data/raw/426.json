@@ -1,0 +1,114 @@
+{
+  "acumulado": false,
+  "dataApuracao": "14/05/2009",
+  "dataProximoConcurso": "18/05/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "06",
+    "15",
+    "16",
+    "24",
+    "19",
+    "11",
+    "25",
+    "03",
+    "05",
+    "10",
+    "04",
+    "18",
+    "02",
+    "22",
+    "08"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "08",
+    "10",
+    "11",
+    "15",
+    "16",
+    "18",
+    "19",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MG"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 2,
+      "valorPremio": 726104.9
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 951,
+      "valorPremio": 934.91
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 25317,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 292035,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1325120,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "SÃO PEDRO DA ALDEIA, RJ",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 426,
+  "numeroConcursoAnterior": 425,
+  "numeroConcursoFinal_0_5": 430,
+  "numeroConcursoProximo": 427,
+  "numeroJogo": 8,
+  "observacao": "AS APOSTAS GANHADORAS DE 15 ACERTOS FORAM REALIZADAS EM CAMPINAS/SP E ITANHANDU/MG.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

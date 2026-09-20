@@ -1,0 +1,34 @@
+version: 2
+
+seeds:
+  - name: ball_names
+    description: >
+      Static dictionary mapping each Lotofacil ball number (1-25) to its
+      name. Primary key: number, enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: number
+        description: Ball number, 1-25 (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: Portuguese name of the ball, e.g. "Bola Um".
+        tests:
+          - unique
+          - not_null
+
+  - name: ball_orders
+    description: >
+      Static dictionary mapping each draw position (1-15) to its name.
+      Primary key: draw_order, enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: draw_order
+        description: Position in the draw order, 1-15 (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: Portuguese name of the position, e.g. "Primeira Bola".
+        tests:
+          - unique
+          - not_null

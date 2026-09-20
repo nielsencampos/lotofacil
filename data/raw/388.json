@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "29/12/2008",
+  "dataProximoConcurso": "02/01/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "01",
+    "07",
+    "21",
+    "15",
+    "16",
+    "09",
+    "11",
+    "06",
+    "10",
+    "20",
+    "05",
+    "17",
+    "03",
+    "18",
+    "02"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "21"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 362,
+      "valorPremio": 1812.45
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 12984,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 198569,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1161589,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "NOVA ANDRADINA, MS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 388,
+  "numeroConcursoAnterior": 387,
+  "numeroConcursoFinal_0_5": 390,
+  "numeroConcursoProximo": 389,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1530915.08,
+  "valorEstimadoProximoConcurso": 2800000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

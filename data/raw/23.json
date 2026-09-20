@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "01/03/2004",
+  "dataProximoConcurso": "08/03/2004",
+  "dezenasSorteadasOrdemSorteio": [
+    "10",
+    "11",
+    "05",
+    "19",
+    "18",
+    "14",
+    "06",
+    "04",
+    "20",
+    "01",
+    "08",
+    "03",
+    "12",
+    "16",
+    "17"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "06",
+    "08",
+    "10",
+    "11",
+    "12",
+    "14",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SE"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1178452.05
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 541,
+      "valorPremio": 933.55
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 16248,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 215670,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1187602,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Umuarama, PR",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 23,
+  "numeroConcursoAnterior": 22,
+  "numeroConcursoFinal_0_5": 30,
+  "numeroConcursoProximo": 24,
+  "numeroJogo": 8,
+  "observacao": "Estimativa de prêmio para o próximo concurso (15 acertos): R$ 1.300.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

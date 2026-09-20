@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "19/12/2005",
+  "dataProximoConcurso": "27/12/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "14",
+    "20",
+    "05",
+    "11",
+    "09",
+    "23",
+    "18",
+    "17",
+    "06",
+    "13",
+    "25",
+    "15",
+    "07",
+    "12",
+    "10"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "05",
+    "06",
+    "07",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "17",
+    "18",
+    "20",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 3,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 569686.18
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 498,
+      "valorPremio": 1470.79
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 18606,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 280170,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1592727,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "Campinas, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 117,
+  "numeroConcursoAnterior": 116,
+  "numeroConcursoFinal_0_5": 120,
+  "numeroConcursoProximo": 118,
+  "numeroJogo": 8,
+  "observacao": "CONCURSO 118 ADIADO PARA 27/12 POR PROBLEMAS DE TRANSMISSÃO DE DADOS. Estimativa de prêmio (15 acertos) para o próximo concurso, a ser realizado em 26/12/2005: R$1.400.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "28/05/2009",
+  "dataProximoConcurso": "01/06/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "05",
+    "14",
+    "02",
+    "20",
+    "15",
+    "07",
+    "25",
+    "13",
+    "22",
+    "06",
+    "04",
+    "23",
+    "09",
+    "11",
+    "03"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "11",
+    "13",
+    "14",
+    "15",
+    "20",
+    "22",
+    "23",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "BRASÍLIA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "DF"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1275129.3
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 407,
+      "valorPremio": 1342.72
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 18378,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 236449,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1404782,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PRADÓPOLIS, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 430,
+  "numeroConcursoAnterior": 429,
+  "numeroConcursoFinal_0_5": 440,
+  "numeroConcursoProximo": 431,
+  "numeroJogo": 8,
+  "observacao": "A APOSTA GANHADORA DE 15 ACERTOS FOI REALIZADA EM BRASÍLIA/DF.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 14860456.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "19/10/2016",
+  "dataProximoConcurso": "21/10/2016",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "09",
+    "03",
+    "11",
+    "04",
+    "13",
+    "05",
+    "14",
+    "12",
+    "21",
+    "01",
+    "19",
+    "20",
+    "08",
+    "25"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "14",
+    "16",
+    "19",
+    "20",
+    "21",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 328,
+      "valorPremio": 1810.27
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 11280,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 154433,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 891211,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "SANTOS DUMONT, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1425,
+  "numeroConcursoAnterior": 1424,
+  "numeroConcursoFinal_0_5": 1430,
+  "numeroConcursoProximo": 1426,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21377800.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 7166746.1,
+  "valorAcumuladoProximoConcurso": 1929752.74,
+  "valorEstimadoProximoConcurso": 4500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

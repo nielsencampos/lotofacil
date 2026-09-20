@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "24/09/2014",
+  "dataProximoConcurso": "26/09/2014",
+  "dezenasSorteadasOrdemSorteio": [
+    "25",
+    "01",
+    "15",
+    "10",
+    "09",
+    "02",
+    "03",
+    "04",
+    "06",
+    "20",
+    "24",
+    "22",
+    "19",
+    "17",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "06",
+    "09",
+    "10",
+    "15",
+    "17",
+    "18",
+    "19",
+    "20",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 315,
+      "valorPremio": 2079.24
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 13016,
+      "valorPremio": 15.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 193906,
+      "valorPremio": 6.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1136223,
+      "valorPremio": 3.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PINHEIROS, ES",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1110,
+  "numeroConcursoAnterior": 1109,
+  "numeroConcursoFinal_0_5": 1120,
+  "numeroConcursoProximo": 1111,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21457987.5,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 3439830.89,
+  "valorAcumuladoProximoConcurso": 2128615.68,
+  "valorEstimadoProximoConcurso": 5000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

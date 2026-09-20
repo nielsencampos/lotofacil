@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "20/11/2008",
+  "dataProximoConcurso": "24/11/2008",
+  "dezenasSorteadasOrdemSorteio": [
+    "22",
+    "11",
+    "12",
+    "15",
+    "04",
+    "03",
+    "01",
+    "08",
+    "02",
+    "07",
+    "17",
+    "09",
+    "13",
+    "19",
+    "20"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "07",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "15",
+    "17",
+    "19",
+    "20",
+    "22"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 2,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 2,
+      "valorPremio": 320234.6
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 692,
+      "valorPremio": 396.66
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 25917,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 320438,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1420841,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PALMEIRA DAS MISSÕES, RS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 377,
+  "numeroConcursoAnterior": 376,
+  "numeroConcursoFinal_0_5": 380,
+  "numeroConcursoProximo": 378,
+  "numeroJogo": 8,
+  "observacao": "Ganhadores de 15 acertos: São Caetano do Sul/SP e Campos Novos Paulista/SP.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

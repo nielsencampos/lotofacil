@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "26/07/2004",
+  "dataProximoConcurso": "02/08/2004",
+  "dezenasSorteadasOrdemSorteio": [
+    "23",
+    "21",
+    "12",
+    "19",
+    "05",
+    "04",
+    "06",
+    "13",
+    "14",
+    "10",
+    "03",
+    "18",
+    "24",
+    "11",
+    "25"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "04",
+    "05",
+    "06",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "18",
+    "19",
+    "21",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 334,
+      "valorPremio": 2056.93
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 12675,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 172526,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1140441,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "FORMOSA, GO",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 44,
+  "numeroConcursoAnterior": 43,
+  "numeroConcursoFinal_0_5": 50,
+  "numeroConcursoProximo": 45,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!! Estimativa de prêmio (15 ACERTOS) próximo concurso: R$3.200.000,00 (TRÊS MILHÕES E DUZENTOS MIL REAIS).",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1603036.94,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

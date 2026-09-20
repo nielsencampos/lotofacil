@@ -1,0 +1,122 @@
+{
+  "acumulado": false,
+  "dataApuracao": "06/08/2009",
+  "dataProximoConcurso": "10/08/2009",
+  "dezenasSorteadasOrdemSorteio": [
+    "24",
+    "22",
+    "11",
+    "14",
+    "05",
+    "09",
+    "16",
+    "07",
+    "04",
+    "21",
+    "23",
+    "18",
+    "17",
+    "25",
+    "06"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "11",
+    "14",
+    "16",
+    "17",
+    "18",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "JARAGUÁ DO SUL",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SC"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "BAURU",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    },
+    {
+      "ganhadores": 1,
+      "municipio": "SANTA MARIA DA SERRA",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "SP"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 3,
+      "valorPremio": 1403449.06
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 460,
+      "valorPremio": 2296.05
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 19788,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 268293,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1642129,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "JI-PARANÁ, RO",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 450,
+  "numeroConcursoAnterior": 449,
+  "numeroConcursoFinal_0_5": 460,
+  "numeroConcursoProximo": 451,
+  "numeroJogo": 8,
+  "observacao": "INFORMAMOS QUE, EXCEPCIONALMENTE, O SORTEIO DO CONCURSO 451 DA LOTOFÁCIL SERÁ REALIZADO NO AUDITÓRIO DA CAIXA EM BRASÍLIA, EM 10/08/2009, A PARTIR DAS 20 HORAS.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21774037.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1600000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

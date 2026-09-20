@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "20/10/2025",
+  "dataProximoConcurso": "21/10/2025",
+  "dezenasSorteadasOrdemSorteio": [
+    "17",
+    "19",
+    "07",
+    "03",
+    "12",
+    "08",
+    "21",
+    "01",
+    "22",
+    "02",
+    "24",
+    "14",
+    "20",
+    "11",
+    "18"
+  ],
+  "exibirDetalhamentoPorCidade": false,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "07",
+    "08",
+    "11",
+    "12",
+    "14",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 232,
+      "valorPremio": 2112.02
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 7347,
+      "valorPremio": 35.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 84244,
+      "valorPremio": 14.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 463652,
+      "valorPremio": 7.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO DA SORTE",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+  "numero": 3517,
+  "numeroConcursoAnterior": 3516,
+  "numeroConcursoFinal_0_5": 3520,
+  "numeroConcursoProximo": 3518,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 19299577.5,
+  "valorAcumuladoConcurso_0_5": 2074819.8,
+  "valorAcumuladoConcursoEspecial": 17451673.31,
+  "valorAcumuladoProximoConcurso": 1635815.43,
+  "valorEstimadoProximoConcurso": 5000000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,35 @@
+name: "lotofacil"
+version: "1.0.0"
+config-version: 2
+
+profile: "lotofacil"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  lotofacil:
+    +persist_docs:
+      relation: true
+      columns: true
+    bronze:
+      +materialized: table
+      +schema: bronze
+
+seeds:
+  lotofacil:
+    +schema: bronze
+    +persist_docs:
+      relation: true
+      columns: true
+    ball_names:
+      +post-hook: "alter table {{ this }} add primary key (number)"
+    ball_orders:
+      +post-hook: "alter table {{ this }} add primary key (draw_order)"

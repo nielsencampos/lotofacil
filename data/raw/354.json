@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "01/09/2008",
+  "dataProximoConcurso": "04/09/2008",
+  "dezenasSorteadasOrdemSorteio": [
+    "23",
+    "22",
+    "09",
+    "10",
+    "08",
+    "19",
+    "17",
+    "12",
+    "01",
+    "02",
+    "18",
+    "21",
+    "04",
+    "16",
+    "07"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "07",
+    "08",
+    "09",
+    "10",
+    "12",
+    "16",
+    "17",
+    "18",
+    "19",
+    "21",
+    "22",
+    "23"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "AM"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1466707.15
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 436,
+      "valorPremio": 1441.72
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 16846,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 236753,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1379307,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "TABOÃO DA SERRA, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 354,
+  "numeroConcursoAnterior": 353,
+  "numeroConcursoFinal_0_5": 360,
+  "numeroConcursoProximo": 355,
+  "numeroJogo": 8,
+  "observacao": "Ganhador de 15 acertos: Manaus/AM.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

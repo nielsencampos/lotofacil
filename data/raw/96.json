@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "25/07/2005",
+  "dataProximoConcurso": "02/08/2005",
+  "dezenasSorteadasOrdemSorteio": [
+    "09",
+    "17",
+    "24",
+    "06",
+    "16",
+    "10",
+    "23",
+    "18",
+    "14",
+    "19",
+    "04",
+    "03",
+    "12",
+    "21",
+    "22"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "03",
+    "04",
+    "06",
+    "09",
+    "10",
+    "12",
+    "14",
+    "16",
+    "17",
+    "18",
+    "19",
+    "21",
+    "22",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "MT"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1793190.45
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 454,
+      "valorPremio": 1692.75
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 16790,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 220370,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1209732,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PASSA QUATRO, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 96,
+  "numeroConcursoAnterior": 95,
+  "numeroConcursoFinal_0_5": 100,
+  "numeroConcursoProximo": 97,
+  "numeroJogo": 8,
+  "observacao": "Estimativa prêmio (15 ACERTOS) próx conc: R$1.300.000,00. Em razão de problemas técnicos, a CAIXA informa o adiamento  do sorteio do conc 97 para 02/08/2005, terça-feira, às 20:00hs.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

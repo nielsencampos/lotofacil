@@ -1,0 +1,106 @@
+{
+  "acumulado": false,
+  "dataApuracao": "24/01/2008",
+  "dataProximoConcurso": "28/01/2008",
+  "dezenasSorteadasOrdemSorteio": [
+    "21",
+    "03",
+    "24",
+    "07",
+    "17",
+    "05",
+    "02",
+    "11",
+    "13",
+    "09",
+    "22",
+    "12",
+    "25",
+    "16",
+    "08"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "05",
+    "07",
+    "08",
+    "09",
+    "11",
+    "12",
+    "13",
+    "16",
+    "17",
+    "21",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [
+    {
+      "ganhadores": 1,
+      "municipio": "",
+      "nomeFatansiaUL": "",
+      "posicao": 1,
+      "serie": "",
+      "uf": "AL"
+    }
+  ],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 1,
+      "valorPremio": 1210021.45
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 513,
+      "valorPremio": 1010.88
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 17502,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 203845,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1145496,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "São João da Barra, RJ",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 292,
+  "numeroConcursoAnterior": 291,
+  "numeroConcursoFinal_0_5": 300,
+  "numeroConcursoProximo": 293,
+  "numeroJogo": 8,
+  "observacao": "Ganhador de 15 acertos: Porto Real do Colégio/AL.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 0.0,
+  "valorEstimadoProximoConcurso": 1200000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

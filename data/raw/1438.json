@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "21/11/2016",
+  "dataProximoConcurso": "23/11/2016",
+  "dezenasSorteadasOrdemSorteio": [
+    "01",
+    "10",
+    "08",
+    "21",
+    "04",
+    "24",
+    "11",
+    "17",
+    "15",
+    "14",
+    "07",
+    "09",
+    "20",
+    "12",
+    "22"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "04",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "14",
+    "15",
+    "17",
+    "20",
+    "21",
+    "22",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 337,
+      "valorPremio": 1762.37
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 14018,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 166183,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 879250,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "ESPAÇO CAIXA LOTERIAS",
+  "nomeMunicipioUFSorteio": "SÃO PAULO, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1438,
+  "numeroConcursoAnterior": 1437,
+  "numeroConcursoFinal_0_5": 1440,
+  "numeroConcursoProximo": 1439,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 21613060.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 12952788.88,
+  "valorAcumuladoProximoConcurso": 1930238.45,
+  "valorEstimadoProximoConcurso": 4700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

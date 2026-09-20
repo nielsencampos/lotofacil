@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "23/06/2017",
+  "dataProximoConcurso": "26/06/2017",
+  "dezenasSorteadasOrdemSorteio": [
+    "21",
+    "18",
+    "23",
+    "08",
+    "09",
+    "01",
+    "05",
+    "20",
+    "02",
+    "06",
+    "10",
+    "24",
+    "17",
+    "25",
+    "04"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "04",
+    "05",
+    "06",
+    "08",
+    "09",
+    "10",
+    "17",
+    "18",
+    "20",
+    "21",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 246,
+      "valorPremio": 2356.61
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 10465,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 147891,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 856773,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "CAMPINA GRANDE , PB",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1528,
+  "numeroConcursoAnterior": 1527,
+  "numeroConcursoFinal_0_5": 1530,
+  "numeroConcursoProximo": 1529,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 20670296.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 48418148.05,
+  "valorAcumuladoProximoConcurso": 1884111.74,
+  "valorEstimadoProximoConcurso": 4800000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

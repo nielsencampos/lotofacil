@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: transient
+    schema: transient
+    tables:
+      - name: raw
+        description: >
+          One row per Lotofacil contest, holding the untouched JSON payload
+          fetched from the Caixa public API.
+        columns:
+          - name: contest_number
+            description: Lotofacil contest number (primary key).
+            tests:
+              - unique
+              - not_null
+          - name: payload
+            description: Raw JSON response from the API.
+          - name: fetched_at
+            description: Timestamp when the row was loaded into PostgreSQL.

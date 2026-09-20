@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "15/01/2014",
+  "dataProximoConcurso": "17/01/2014",
+  "dezenasSorteadasOrdemSorteio": [
+    "04",
+    "07",
+    "06",
+    "05",
+    "15",
+    "22",
+    "13",
+    "03",
+    "16",
+    "23",
+    "01",
+    "24",
+    "20",
+    "14",
+    "09"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "13",
+    "14",
+    "15",
+    "16",
+    "20",
+    "22",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 1040,
+      "valorPremio": 737.87
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 20930,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 249120,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1313774,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PORTEIRINHA, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1006,
+  "numeroConcursoAnterior": 1005,
+  "numeroConcursoFinal_0_5": 1010,
+  "numeroConcursoProximo": 1007,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 19601950.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 20065978.02,
+  "valorAcumuladoProximoConcurso": 1745812.02,
+  "valorEstimadoProximoConcurso": 4300000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

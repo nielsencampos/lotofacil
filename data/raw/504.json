@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "11/02/2010",
+  "dataProximoConcurso": "15/02/2010",
+  "dezenasSorteadasOrdemSorteio": [
+    "16",
+    "15",
+    "20",
+    "10",
+    "17",
+    "13",
+    "18",
+    "14",
+    "09",
+    "21",
+    "12",
+    "19",
+    "01",
+    "23",
+    "06"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "06",
+    "09",
+    "10",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "23"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 274,
+      "valorPremio": 3099.58
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 10689,
+      "valorPremio": 12.5
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 162296,
+      "valorPremio": 5.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 982144,
+      "valorPremio": 2.5
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "SANTOS, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 504,
+  "numeroConcursoAnterior": 503,
+  "numeroConcursoFinal_0_5": 510,
+  "numeroConcursoProximo": 505,
+  "numeroJogo": 8,
+  "observacao": "O SORTEIO DO CONCURSO 505 FOI ANTECIPADO PARA O DIA 13/02/2010 - SÁBADO.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 16912318.75,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1981660.21,
+  "valorEstimadoProximoConcurso": 2700000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

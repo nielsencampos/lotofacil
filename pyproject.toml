@@ -1,0 +1,45 @@
+[project]
+name = "lotofacil"
+version = "0.1.0"
+description = "Data pipeline for Lotofacil (a Brazilian lottery) with insights."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27",
+    "psycopg[binary]>=3.2",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.5",
+    "typer>=0.12",
+    "dbt-core>=1.8",
+    "dbt-postgres>=1.8",
+]
+
+[project.scripts]
+lotofacil = "lotofacil.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lotofacil"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.6",
+]
+notebook = [
+    "jupyterlab>=4",
+]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["data", "workspace"]
+
+[tool.ruff.lint]
+# B008: typer's Option()/Argument() as a default value is the documented,
+# idiomatic pattern, not the mutable-default-argument bug this rule targets.
+ignore = ["B008"]
+# E501 (line too long) isn't in ruff's default rule set; opt into it so the
+# 100-character line-length limit above is actually enforced.
+extend-select = ["E501"]

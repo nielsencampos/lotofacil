@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "08/12/2003",
+  "dataProximoConcurso": "15/12/2003",
+  "dezenasSorteadasOrdemSorteio": [
+    "24",
+    "09",
+    "08",
+    "19",
+    "20",
+    "22",
+    "06",
+    "10",
+    "11",
+    "16",
+    "07",
+    "25",
+    "23",
+    "02",
+    "12"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "16",
+    "19",
+    "20",
+    "22",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 306,
+      "valorPremio": 1855.82
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 14249,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 216679,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1343171,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "VOTORANTIM, SP",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 11,
+  "numeroConcursoAnterior": 10,
+  "numeroConcursoFinal_0_5": 20,
+  "numeroConcursoProximo": 12,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!! Estimativa de prêmio (15 ACERTOS) próximo concurso: R$4.000.000,00 (QUATRO MILHÕES DE REAIS).",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 2351000.93,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "26/09/2018",
+  "dataProximoConcurso": "28/09/2018",
+  "dezenasSorteadasOrdemSorteio": [
+    "25",
+    "11",
+    "12",
+    "24",
+    "23",
+    "04",
+    "17",
+    "16",
+    "05",
+    "10",
+    "07",
+    "01",
+    "22",
+    "03",
+    "13"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "03",
+    "04",
+    "05",
+    "07",
+    "10",
+    "11",
+    "12",
+    "13",
+    "16",
+    "17",
+    "22",
+    "23",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 371,
+      "valorPremio": 1533.2
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 15517,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 201660,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1112582,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "PALMAS, PR",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1716,
+  "numeroConcursoAnterior": 1715,
+  "numeroConcursoFinal_0_5": 1720,
+  "numeroConcursoProximo": 1717,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 24076348.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 3744689.21,
+  "valorAcumuladoProximoConcurso": 1848654.08,
+  "valorEstimadoProximoConcurso": 4500000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

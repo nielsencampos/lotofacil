@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - run: uv sync
+      - run: uv run ruff check src/
+
+  dbt:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: lotofacil
+          POSTGRES_USER: lotofacil
+          POSTGRES_PASSWORD: lotofacil
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U lotofacil -d lotofacil"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      POSTGRES_HOST: localhost
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: lotofacil
+      POSTGRES_USER: lotofacil
+      POSTGRES_PASSWORD: lotofacil
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+          python-version: "3.12"
+
+      - run: uv sync
+
+      # data/raw/ is committed to the repo, so this loads real history with
+      # no calls to the Caixa API.
+      - run: uv run lotofacil init-db
+      - run: uv run lotofacil load
+
+      - run: uv run dbt seed --project-dir dbt --profiles-dir dbt
+      - run: uv run dbt run --project-dir dbt --profiles-dir dbt
+      - run: uv run dbt test --project-dir dbt --profiles-dir dbt

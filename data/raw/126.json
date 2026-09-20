@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "20/02/2006",
+  "dataProximoConcurso": "01/03/2006",
+  "dezenasSorteadasOrdemSorteio": [
+    "07",
+    "22",
+    "18",
+    "08",
+    "13",
+    "25",
+    "16",
+    "01",
+    "21",
+    "04",
+    "24",
+    "14",
+    "03",
+    "02",
+    "06"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "06",
+    "07",
+    "08",
+    "13",
+    "14",
+    "16",
+    "18",
+    "21",
+    "22",
+    "24",
+    "25"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 493,
+      "valorPremio": 1516.7
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 18073,
+      "valorPremio": 10.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 245449,
+      "valorPremio": 4.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 1428758,
+      "valorPremio": 2.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "CORUMBÁ, MS",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 126,
+  "numeroConcursoAnterior": 125,
+  "numeroConcursoFinal_0_5": 130,
+  "numeroConcursoProximo": 127,
+  "numeroJogo": 8,
+  "observacao": "ACUMULOU!!! Estimativa de prêmio (15 acertos) para o próximo concurso, a ser realizado em 01/03/2006: R$4.000.000,00.",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 0.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 0.0,
+  "valorAcumuladoProximoConcurso": 1744710.64,
+  "valorEstimadoProximoConcurso": 0.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}

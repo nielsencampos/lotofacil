@@ -1,0 +1,97 @@
+{
+  "acumulado": true,
+  "dataApuracao": "27/05/2016",
+  "dataProximoConcurso": "30/05/2016",
+  "dezenasSorteadasOrdemSorteio": [
+    "14",
+    "07",
+    "23",
+    "04",
+    "02",
+    "05",
+    "03",
+    "06",
+    "20",
+    "15",
+    "17",
+    "18",
+    "16",
+    "09",
+    "24"
+  ],
+  "exibirDetalhamentoPorCidade": true,
+  "id": null,
+  "indicadorConcursoEspecial": 1,
+  "listaDezenas": [
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "09",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "20",
+    "23",
+    "24"
+  ],
+  "listaDezenasSegundoSorteio": null,
+  "listaMunicipioUFGanhadores": [],
+  "listaRateioPremio": [
+    {
+      "descricaoFaixa": "15 acertos",
+      "faixa": 1,
+      "numeroDeGanhadores": 0,
+      "valorPremio": 0.0
+    },
+    {
+      "descricaoFaixa": "14 acertos",
+      "faixa": 2,
+      "numeroDeGanhadores": 245,
+      "valorPremio": 1938.42
+    },
+    {
+      "descricaoFaixa": "13 acertos",
+      "faixa": 3,
+      "numeroDeGanhadores": 9616,
+      "valorPremio": 20.0
+    },
+    {
+      "descricaoFaixa": "12 acertos",
+      "faixa": 4,
+      "numeroDeGanhadores": 130964,
+      "valorPremio": 8.0
+    },
+    {
+      "descricaoFaixa": "11 acertos",
+      "faixa": 5,
+      "numeroDeGanhadores": 704946,
+      "valorPremio": 4.0
+    }
+  ],
+  "listaResultadoEquipeEsportiva": null,
+  "localSorteio": "Caminhão da Sorte",
+  "nomeMunicipioUFSorteio": "ALTO JEQUITIBÁ, MG",
+  "nomeTimeCoracaoMesSorte": "",
+  "numero": 1367,
+  "numeroConcursoAnterior": 1366,
+  "numeroConcursoFinal_0_5": 1370,
+  "numeroConcursoProximo": 1368,
+  "numeroJogo": 8,
+  "observacao": "",
+  "premiacaoContingencia": null,
+  "tipoJogo": "LOTOFACIL",
+  "tipoPublicacao": 3,
+  "ultimoConcurso": true,
+  "valorArrecadado": 17190732.0,
+  "valorAcumuladoConcurso_0_5": 0.0,
+  "valorAcumuladoConcursoEspecial": 44831239.92,
+  "valorAcumuladoProximoConcurso": 1543470.51,
+  "valorEstimadoProximoConcurso": 4200000.0,
+  "valorSaldoReservaGarantidora": 0.0,
+  "valorTotalPremioFaixaUm": 0.0
+}
