@@ -1,8 +1,11 @@
 -- Bronze layer: every scalar (non-list, non-nested) attribute from the raw
 -- API payload, with its proper type and an English column name — but no
--- business logic, joins, or derived columns. `numero` is dropped since it
--- is always identical to `contest_number`; `id` and `premiacaoContingencia`
--- are dropped since they are always null (verified across all 3784 rows).
+-- business logic, joins, or derived columns. Dropped because they carry no
+-- information (verified across all 3784 contests): `numero` (always equal to
+-- `contest_number`); `id` and `premiacaoContingencia` (always null);
+-- `nomeTimeCoracaoMesSorte` (always blank), `numeroJogo` (always 8),
+-- `tipoJogo` (always LOTOFACIL), `tipoPublicacao` (one value) and
+-- `ultimoConcurso` (true on every row).
 {{ config(post_hook=[
     "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey",
     "alter table {{ this }} add primary key (contest_number)"
@@ -16,15 +19,10 @@ select
     (payload ->> 'indicadorConcursoEspecial')::integer as special_contest_indicator,
     payload ->> 'localSorteio' as draw_location,
     payload ->> 'nomeMunicipioUFSorteio' as draw_city_state,
-    payload ->> 'nomeTimeCoracaoMesSorte' as heart_team_name,
     (payload ->> 'numeroConcursoAnterior')::integer as previous_contest_number,
     (payload ->> 'numeroConcursoFinal_0_5')::integer as final_contest_number_0_5,
     (payload ->> 'numeroConcursoProximo')::integer as next_contest_number,
-    (payload ->> 'numeroJogo')::integer as game_number,
     payload ->> 'observacao' as remarks,
-    payload ->> 'tipoJogo' as game_type,
-    (payload ->> 'tipoPublicacao')::integer as publication_type,
-    (payload ->> 'ultimoConcurso')::boolean as is_last_contest,
     (payload ->> 'valorArrecadado')::numeric as collected_amount,
     (payload ->> 'valorAcumuladoConcurso_0_5')::numeric as accumulated_amount_0_5,
     (payload ->> 'valorAcumuladoConcursoEspecial')::numeric as special_accumulated_amount,
