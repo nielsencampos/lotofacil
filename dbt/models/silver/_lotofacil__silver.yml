@@ -129,9 +129,10 @@ models:
     columns:
       - name: state
         description: >
-          Brazilian state (UF), normalized to upper/trim. Includes a
-          handful of placeholder codes ("--", "XX", "C", "G") from winning
-          tickets with no physical municipality on record.
+          Brazilian state (UF), normalized to upper/trim. Online/app ticket
+          sales are canonicalized to "XX", and the truncated codes "C"/"G"
+          are fixed to "CE"/"GO" (see
+          dbt/macros/normalize_municipality.sql).
         tests:
           - not_null
       - name: city

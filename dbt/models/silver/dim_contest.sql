@@ -3,9 +3,9 @@
 -- same grain (collected_amount, accumulated amounts, etc.) live in
 -- fact_contest_summary instead — Kimball convention: dimensions describe,
 -- facts measure.
--- draw_city_state is split into draw_state/draw_city (normalized to
--- upper/trim) and FK'd to dim_municipality, unifying draw locations with
--- winning-ticket municipalities in one shared geography dimension.
+-- draw_city_state is split into draw_state/draw_city and run through the
+-- same normalize_municipality_* macros as dim_municipality (upper/trim/
+-- unaccent + the "--"/"C"/"G" fixes) so the FK below actually matches.
 -- draw_location (the venue, e.g. "ESPACO DA SORTE") is a different concept
 -- — kept as free text, normalized to upper/trim, though that only
 -- collapses pure-case duplicates; genuine typos (e.g. "ESPCAO" vs
@@ -27,8 +27,8 @@ select
     d.show_city_detail,
     d.special_contest_indicator,
     upper(trim(d.draw_location)) as draw_location,
-    upper(trim(split_part(d.draw_city_state, ',', 2))) as draw_state,
-    upper(trim(split_part(d.draw_city_state, ',', 1))) as draw_city,
+    {{ normalize_municipality_state("split_part(d.draw_city_state, ',', 2)", "split_part(d.draw_city_state, ',', 1)") }} as draw_state,
+    {{ normalize_municipality_city("split_part(d.draw_city_state, ',', 1)") }} as draw_city,
     trim(d.heart_team_name) as heart_team_name,
     d.previous_contest_number,
     d.final_contest_number_0_5,
@@ -40,5 +40,5 @@ select
     d.is_last_contest
 from {{ ref('draws') }} d
 inner join {{ ref('dim_municipality') }} m
-    on m.state = upper(trim(split_part(d.draw_city_state, ',', 2)))
-   and m.city = upper(trim(split_part(d.draw_city_state, ',', 1)))
+    on m.state = {{ normalize_municipality_state("split_part(d.draw_city_state, ',', 2)", "split_part(d.draw_city_state, ',', 1)") }}
+   and m.city = {{ normalize_municipality_city("split_part(d.draw_city_state, ',', 1)") }}

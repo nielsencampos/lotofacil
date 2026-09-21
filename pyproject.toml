@@ -30,6 +30,8 @@ dev = [
 ]
 notebook = [
     "jupyterlab>=4.6.3",
+    "pandas>=2.2",
+    "itables>=2.2",
 ]
 
 [tool.ruff]

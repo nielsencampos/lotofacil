@@ -1,9 +1,10 @@
 -- Silver fact: one row per (contest, winning municipality). Column order
 -- mirrors bronze.winning_municipalities. winner_position stays here as a
 -- degenerate attribute (it's always 1 in the data seen so far, not worth
--- its own dimension). state/city are normalized (upper/trim) to match
--- dim_municipality — the raw bronze values sometimes differ only by case
--- (e.g. "Irece" vs "IRECE"), which would otherwise fail to join here.
+-- its own dimension). state/city go through the same normalization as
+-- dim_municipality (upper/trim/unaccent + canal eletrônico/C/G
+-- canonicalization) — see dbt/macros/normalize_municipality.sql —
+-- otherwise this wouldn't join.
 {{ config(
     tags=["fact"],
     post_hook=[
@@ -17,12 +18,12 @@
 select
     wm.contest_number,
     wm.winner_index,
-    upper(trim(wm.state)) as state,
-    upper(trim(wm.city)) as city,
+    {{ normalize_municipality_state('wm.state', 'wm.city') }} as state,
+    {{ normalize_municipality_city('wm.city') }} as city,
     wm.winner_position,
     wm.winner_count
 from {{ ref('winning_municipalities') }} wm
 inner join {{ ref('dim_contest') }} c on c.contest_number = wm.contest_number
 inner join {{ ref('dim_municipality') }} m
-    on m.state = upper(trim(wm.state))
-   and m.city = upper(trim(wm.city))
+    on m.state = {{ normalize_municipality_state('wm.state', 'wm.city') }}
+   and m.city = {{ normalize_municipality_city('wm.city') }}
