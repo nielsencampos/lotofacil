@@ -10,8 +10,11 @@
 --   as the unique natural key.
 -- - Names are Portuguese, upper case and unaccented, like the other text in
 --   silver (MARCO, TERCA-FEIRA, SABADO). Weeks are ISO weeks (Monday first).
--- - No holidays on purpose: which ones count (national? Carnaval? Nov 20,
---   national only since 2024?) is a business decision, not a calendar fact.
+-- - Holidays come from the holidays seed (Brazilian national holidays as listed by
+--   BrasilAPI, so Carnaval, Sexta-feira Santa, Pascoa and Corpus Christi count).
+--   holiday_flg says whether the day is one; holiday_nm names it, or is
+--   ---NAO SE APLICA--- on any other day. Only the years present in the seed are
+--   covered, which the dim_date_years_have_holidays test enforces.
 -- Constraints are left unnamed where they create an index — see the note in
 -- dim_location.sql on why.
 {{ config(
@@ -106,5 +109,8 @@ select
     day_of_week_nbr,
     (array['{{ weekday_names | join("', '") }}'])[day_of_week_nbr] as day_of_week_nm,
     (array['{{ weekday_abbrs | join("', '") }}'])[day_of_week_nbr] as day_of_week_abbr_nm,
-    (day_of_week_nbr in (6, 7)) as weekend_flg
+    (day_of_week_nbr in (6, 7)) as weekend_flg,
+    (h.holiday_date is not null) as holiday_flg,
+    coalesce(h.holiday_name, {{ not_applicable() }}) as holiday_nm
 from enriched
+left join {{ ref('holidays') }} h on h.holiday_date = enriched.date_dt

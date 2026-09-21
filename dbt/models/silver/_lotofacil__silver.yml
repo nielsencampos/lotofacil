@@ -25,17 +25,6 @@ models:
         tests:
           - unique
           - not_null
-      - name: dim_location_id
-        description: >
-          Where the draw took place (venue, city and state, replacing
-          bronze's draw_location + draw_city_state). Foreign key to
-          dim_location.
-        tests:
-          - not_null
-          - relationships:
-              arguments:
-                to: ref('dim_location')
-                field: dim_location_id
       - name: draw_dim_date_id
         description: Day this contest was drawn. Foreign key to dim_date.
         tests:
@@ -53,6 +42,17 @@ models:
               arguments:
                 to: ref('dim_date')
                 field: dim_date_id
+      - name: dim_location_id
+        description: >
+          Where the draw took place (venue, city and state, replacing
+          bronze's draw_location + draw_city_state). Foreign key to
+          dim_location.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_location')
+                field: dim_location_id
       - name: is_accumulated_flg
         description: Whether the main prize tier (15 hits) rolled over with no winner.
         tests:
@@ -98,7 +98,7 @@ models:
           - unique
           - not_null
       - name: ball_nm
-        description: Portuguese name of the ball, e.g. "Bola Um".
+        description: Portuguese name of the ball, e.g. "BOLA UM".
         tests:
           - not_null
 
@@ -121,7 +121,7 @@ models:
           - unique
           - not_null
       - name: draw_position_nm
-        description: Portuguese name of the position, e.g. "Primeira Bola".
+        description: Portuguese name of the position, e.g. "PRIMEIRA BOLA".
         tests:
           - not_null
 
@@ -140,13 +140,16 @@ models:
           - not_null
       - name: prize_tier_nbr
         description: >
-          Prize tier rank, 1 (15 hits) through 5 (11 hits) (unique natural
-          key).
+          Number of hits that wins this tier, 15 (the top prize) through 11
+          (unique natural key).
         tests:
           - unique
           - not_null
+          - accepted_values:
+              arguments:
+                values: [11, 12, 13, 14, 15]
       - name: prize_tier_desc
-        description: Human-readable description of the tier, e.g. "15 acertos".
+        description: Human-readable description of the tier, e.g. "15 ACERTOS".
         tests:
           - not_null
 
@@ -214,9 +217,9 @@ models:
       latest next_draw_date (the next scheduled draw).
       Other tables carry dim_date_id instead of a raw date. Names are
       Portuguese, upper case and unaccented; weeks are ISO weeks (Monday
-      first). No holidays. Primary key: dim_date_id (the smart key
-      yyyymmdd); date_dt stays as the unique natural key. Enforced in
-      PostgreSQL via a post-hook.
+      first). Holidays come from the holidays seed (national holidays only).
+      Primary key: dim_date_id (the smart key yyyymmdd); date_dt stays as the
+      unique natural key. Enforced in PostgreSQL via a post-hook.
     columns:
       - name: dim_date_id
         description: Date dimension identifier, the number yyyymmdd (e.g. 20260921). Primary key.
@@ -328,6 +331,19 @@ models:
         description: Three-letter day-of-week abbreviation, e.g. "SEG".
       - name: weekend_flg
         description: Whether this is a Saturday or Sunday.
+      - name: holiday_flg
+        description: >
+          Whether this is a Brazilian national holiday, per the holidays seed
+          (which also counts Carnaval, Sexta-feira Santa, Pascoa and Corpus
+          Christi).
+        tests:
+          - not_null
+      - name: holiday_nm
+        description: >
+          Holiday name, e.g. "DIA DO TRABALHO", or ---NAO SE APLICA--- when the
+          day is not a holiday.
+        tests:
+          - not_null
 
   # --- Facts ----------------------------------------------------------------
   - name: fact_contest_summary
@@ -446,7 +462,9 @@ models:
                 to: ref('dim_contest')
                 field: dim_contest_id
       - name: dim_prize_tier_id
-        description: Prize tier dimension key, 1 through 5 (FK to dim_prize_tier).
+        description: >
+          Prize tier dimension key, the number of hits (15 down to 11) (FK to
+          dim_prize_tier).
         tests:
           - not_null
           - relationships:

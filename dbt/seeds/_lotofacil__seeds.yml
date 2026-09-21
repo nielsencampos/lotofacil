@@ -12,7 +12,7 @@ seeds:
           - unique
           - not_null
       - name: name
-        description: Portuguese name of the ball, e.g. "Bola Um".
+        description: Portuguese name of the ball, e.g. "BOLA UM".
         tests:
           - unique
           - not_null
@@ -28,7 +28,27 @@ seeds:
           - unique
           - not_null
       - name: name
-        description: Portuguese name of the position, e.g. "Primeira Bola".
+        description: Portuguese name of the position, e.g. "PRIMEIRA BOLA".
         tests:
           - unique
+          - not_null
+
+  - name: holidays
+    description: >
+      Brazilian national holidays, one row per date, from 2003 (the first
+      contest) through next year. Generated from BrasilAPI by
+      `uv run lotofacil holidays` and committed, so the build needs no network.
+      BrasilAPI lists every date as national, including Carnaval, Sexta-feira
+      Santa, Pascoa and Corpus Christi, which are not legal holidays. When two
+      holidays fall on the same date their names are joined with " / ".
+      Primary key: holiday_date, enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: holiday_date
+        description: Date of the holiday (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: holiday_name
+        description: Portuguese name of the holiday, e.g. "DIA DO TRABALHO".
+        tests:
           - not_null

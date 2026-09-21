@@ -4,13 +4,14 @@ Data pipeline for Lotofacil (a Brazilian lottery) with insights.
 
 It fetches draw results from the public Caixa API, stores the raw responses
 as JSON, loads them into PostgreSQL, and models them with dbt: a typed
-`bronze` layer and a `silver` star schema (dimensions and facts).
+`bronze` layer, a `silver` star schema (dimensions and facts) and a `gold`
+cube with one row per contest. See [ROADMAP.md](ROADMAP.md) for what comes next.
 
 ## Architecture
 
 ```
-Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->  silver
-   (update.sh)                          (load.sh)                       (dbt)      (dbt)
+Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->  silver  -->  gold
+   (update.sh)                          (load.sh)                       (dbt)      (dbt)     (dbt)
 ```
 
 - **Source**: `https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/{contest_number}`
@@ -38,6 +39,10 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
   - `ball_names`, `ball_orders` (dbt seeds): static dictionaries unrelated
     to any specific contest — ball number (1-25) -> name, and draw position
     (1-15) -> name. `ball_draws` joins to both.
+  - `holidays` (dbt seed): Brazilian national holidays from 2003 through next
+    year, feeding `dim_date`. It is generated from BrasilAPI
+    (`uv run lotofacil holidays`) and committed, so builds need no network;
+    re-run it about once a year to extend the calendar.
 
   Every bronze table/seed has a primary key enforced in PostgreSQL (a
   post-hook `alter table` after each build — see `dbt/dbt_project.yml` and
@@ -84,7 +89,8 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     tickets (city + state only, venue `---NAO SE APLICA---`).
     **`dim_date`** has one row per calendar day, from the first contest to
     the latest `next_draw_date`, with year/semester/quarter/bimester/month/ISO
-    week, Portuguese day and month names, and flags; no holidays.
+    week, Portuguese day and month names, and flags, including national
+    holidays (from the `holidays` seed).
     `dim_contest` references it twice (`draw_dim_date_id`,
     `next_draw_dim_date_id`), a role-playing dimension.
   - **Text normalization** (`dbt/macros/normalize_texts.sql`): upper + trim +
@@ -101,13 +107,17 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     `_cd` code, `_dt` date, `_flg` boolean flag, `_desc` description, `_amt`
     decimal amount, `_qtty` integer quantity.
   - **Tags** let you select groups of models regardless of folder: `bronze`,
-    `silver`, `dim`, `fact`, `dictionary` (the seeds), e.g.
+    `silver`, `gold`, `dim`, `fact`, `cube`, `dictionary` (the seeds), e.g.
     `dbt run --select tag:dim` or `dbt build --select tag:silver,tag:fact`.
   - Primary keys, unique keys and foreign keys are all enforced in
     PostgreSQL by post-hooks. Constraints that create an index are left
     unnamed on purpose: dbt rebuilds a table next to the old one and the
     hook runs before the old one is dropped, so an explicitly named index
     collides (index names are unique per schema).
+
+- **dbt (gold layer)**: tables built only from silver and shaped for a reader
+  instead of for modeling. Today it is `cube_contest`, one wide row per
+  contest (see the data model below), so it can be queried without joins.
 
 Fetching and loading are two independent services: `update.sh` only talks to
 the Caixa API and writes to `data/raw/` (no Docker/PostgreSQL needed);
@@ -128,7 +138,7 @@ safe to kill PostgreSQL whenever it's not needed
 data/raw/               Raw JSON files fetched from the API (1.json, 2.json, ...)
 src/lotofacil/          Python package: API client, fetch/load logic, CLI
 sql/schema.sql          transient.raw table DDL
-dbt/                    dbt Core project (bronze + silver models, seeds, macros)
+dbt/                    dbt Core project (bronze + silver + gold models, seeds, macros)
 docker-compose.yml      PostgreSQL service
 update.sh               Fetches new contests into data/raw/ (no Docker needed)
 load.sh                 Loads data/raw/ into PostgreSQL's transient.raw
@@ -191,6 +201,8 @@ uv run lotofacil fetch --start 3700 --end 3783  # fetch a specific range
 uv run lotofacil fetch --latest                 # fetch only the most recent contest
 
 uv run lotofacil load                           # (re)load every JSON file in data/raw/ (what load.sh runs)
+
+uv run lotofacil holidays                       # rebuild dbt/seeds/holidays.csv from BrasilAPI
 ```
 
 ## Data model
@@ -200,23 +212,38 @@ uv run lotofacil load                           # (re)load every JSON file in da
 | raw     | `transient.raw`             | one row per contest (JSONB)                  | `contest_number`                      |
 | bronze  | `draws`                     | one row per contest, scalar attributes only, typed | `contest_number`                |
 | bronze  | `ball_draws`                | one row per contest x draw position (1-15), typed  | `(contest_number, draw_order)`  |
-| bronze  | `prize_tiers`               | one row per contest x prize tier, typed      | `(contest_number, prize_tier)`        |
+| bronze  | `prize_tiers`               | one row per contest x prize tier, typed      | `(contest_number, prize_tier_number)` |
 | bronze  | `winning_municipalities`    | one row per contest x winning municipality, typed | `(contest_number, winner_index)` |
 | bronze  | `ball_names` (seed)         | static: one row per ball number (1-25)       | `number`                              |
 | bronze  | `ball_orders` (seed)        | static: one row per draw position (1-15)     | `draw_order`                          |
+| bronze  | `holidays` (seed)           | static: one row per national holiday date    | `holiday_date`                        |
 | silver  | `dim_contest`               | one row per contest                          | `dim_contest_id` (= contest number)   |
 | silver  | `dim_location`              | one row per (venue, city, state)             | `dim_location_id` (numeric md5)       |
 | silver  | `dim_date`                  | one row per calendar day                     | `dim_date_id` (`yyyymmdd`)            |
 | silver  | `dim_ball`                  | one row per ball number (1-25)               | `dim_ball_id`                         |
 | silver  | `dim_draw_position`         | one row per draw position (1-15)             | `dim_draw_position_id`                |
-| silver  | `dim_prize_tier`            | one row per prize tier (5)                   | `dim_prize_tier_id`                   |
+| silver  | `dim_prize_tier`            | one row per prize tier (5)                   | `dim_prize_tier_id` (= hits, 11-15)   |
 | silver  | `fact_contest_summary`      | one row per contest (monetary measures)      | `fact_contest_summary_id`             |
 | silver  | `fact_ball_draws`           | one row per contest x draw position          | `fact_ball_draw_id`                   |
 | silver  | `fact_prize_tiers`          | one row per contest x prize tier             | `fact_prize_tier_id`                  |
 | silver  | `fact_winning_municipalities` | one row per contest x winning municipality | `fact_winning_municipality_id`        |
 
-A gold/mart layer (pre-aggregated, BI-ready tables) doesn't exist yet — it's
-the natural next step on top of silver.
+Gold is the consumption layer: tables shaped for a reader, built only from
+silver, with no key of their own beyond the natural one.
+
+| Layer   | Model                       | Grain                                      | Primary key                          |
+|---------|-----------------------------|---------------------------------------------|---------------------------------------|
+| gold    | `cube_contest`              | one row per contest, everything in one place | `contest_nbr`                         |
+
+`cube_contest` carries the draw date and place, the drawn balls as two integer
+arrays (`balls_draw_order` in the order they came out, `balls_sorted` in numeric
+order), the winners and prize of each tier (`tier_15_*` ... `tier_11_*`), the
+winning municipalities of the 15-hit tier (`tier_15_winning_locations`, a JSON
+array; the source doesn't label the tier, but the list only exists for contests
+with a 15-hit winner, and tiers 11-14 have no location data), and the money
+measures. Because those municipalities' winners don't always add up to
+`tier_15_winner_qtty` in the source (79 contests differ), both are shown as sent
+rather than reconciled.
 
 ## Notebooks
 

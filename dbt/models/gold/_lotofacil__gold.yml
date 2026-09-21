@@ -1,0 +1,128 @@
+version: 2
+
+models:
+  - name: cube_contest
+    description: >
+      Gold cube: one row per contest with everything about it in one place
+      (draw date and place, the balls in draw order and in numeric order,
+      winners and prize per tier, winning municipalities and the money
+      measures), so it can be read without joins. Built only from silver.
+      Primary key: contest_nbr, enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: contest_nbr
+        description: Lotofacil contest number (primary key).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_nbr
+
+      - name: draw_dt
+        description: Day this contest was drawn.
+        tests:
+          - not_null
+      - name: draw_day_of_week_nm
+        description: Day of the week of the draw, e.g. "SEGUNDA-FEIRA".
+      - name: draw_year_nbr
+        description: Year of the draw.
+      - name: draw_month_nbr
+        description: Month of the draw, 1-12.
+      - name: draw_holiday_flg
+        description: Whether the draw day is a Brazilian national holiday.
+      - name: draw_holiday_nm
+        description: >
+          Holiday name when the draw day is a holiday, else ---NAO SE APLICA---.
+      - name: next_draw_dt
+        description: Day of the next scheduled contest.
+
+      - name: location_nm
+        description: Venue where the draw took place, e.g. "ESPACO DA SORTE".
+      - name: city_nm
+        description: City where the draw took place.
+      - name: state_cd
+        description: Two-letter state code of the draw city.
+
+      - name: is_accumulated_flg
+        description: Whether nobody won the top prize and it accumulated.
+      - name: show_city_detail_flg
+        description: Whether the source lists the winning municipalities.
+      - name: independence_day_flg
+        description: Whether this was a Lotofacil da Independencia draw.
+      - name: remarks_desc
+        description: Free-text remarks about the contest, upper case.
+      - name: previous_contest_nbr
+        description: Number of the previous contest.
+      - name: final_contest_nbr
+        description: Number of the contest that closes the current 0-5 cycle.
+      - name: next_contest_nbr
+        description: Number of the next contest.
+
+      - name: balls_draw_order
+        description: >
+          The 15 drawn ball numbers in the order they came out (position 1
+          first), as an integer array.
+        tests:
+          - not_null
+      - name: balls_sorted
+        description: The same 15 ball numbers in ascending order, as an integer array.
+        tests:
+          - not_null
+
+      - name: tier_15_winner_qtty
+        description: Winners with 15 hits (the top prize).
+      - name: tier_15_prize_amt
+        description: Prize paid to each winner with 15 hits, in BRL.
+      - name: tier_14_winner_qtty
+        description: Winners with 14 hits.
+      - name: tier_14_prize_amt
+        description: Prize paid to each winner with 14 hits, in BRL.
+      - name: tier_13_winner_qtty
+        description: Winners with 13 hits.
+      - name: tier_13_prize_amt
+        description: Prize paid to each winner with 13 hits, in BRL.
+      - name: tier_12_winner_qtty
+        description: Winners with 12 hits.
+      - name: tier_12_prize_amt
+        description: Prize paid to each winner with 12 hits, in BRL.
+      - name: tier_11_winner_qtty
+        description: Winners with 11 hits.
+      - name: tier_11_prize_amt
+        description: Prize paid to each winner with 11 hits, in BRL.
+      - name: winner_total_qtty
+        description: Winners across all prize tiers (11 to 15 hits).
+        tests:
+          - not_null
+
+      - name: tier_15_winning_municipality_qtty
+        description: >
+          Number of entries in the winning municipalities list (0 when the
+          source lists none). The source does not label the tier, but the list
+          only exists for contests with a 15-hit winner. Not reconciled with
+          tier_15_winner_qtty.
+        tests:
+          - not_null
+      - name: tier_15_winning_locations
+        description: >
+          JSON array with one object per winning municipality entry of the
+          15-hit tier, in source order, each with city_nm, state_cd and
+          winner_qtty. Empty array when there are none. Tiers 11 to 14 have no
+          location data in the source.
+        tests:
+          - not_null
+
+      - name: collected_amt
+        description: Total amount collected from bets, in BRL.
+      - name: accumulated_amt
+        description: Amount accumulated for the 0-5 cycle, in BRL.
+      - name: special_accumulated_amt
+        description: Amount accumulated for the special draw, in BRL.
+      - name: next_accumulated_amt
+        description: Amount that accumulates into the next contest, in BRL.
+      - name: next_estimated_prize_amt
+        description: Estimated top prize of the next contest, in BRL.
+      - name: guarantee_fund_balance_amt
+        description: Balance of the guarantee fund, in BRL.
+      - name: total_prize_tier_one_amt
+        description: Total prize amount of the top tier, in BRL.
