@@ -83,7 +83,7 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
   - **`dim_location`** is shared by draws (venue + city + state) and winning
     tickets (city + state only, venue `---NAO INFORMADO---`).
     **`dim_date`** has one row per calendar day, from the first contest to
-    today (São Paulo time), with year/semester/quarter/bimester/month/ISO
+    the latest `next_draw_date`, with year/semester/quarter/bimester/month/ISO
     week, Portuguese day and month names, and flags; no holidays.
     `dim_contest` references it twice (`draw_dim_date_id`,
     `next_draw_dim_date_id`), a role-playing dimension.

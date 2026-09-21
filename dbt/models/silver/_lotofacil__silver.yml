@@ -206,8 +206,8 @@ models:
 
   - name: dim_date
     description: >
-      One row per calendar day, from the first contest's date up to today
-      (America/Sao_Paulo), or the latest next_draw_date when that is later.
+      One row per calendar day, from the first contest's date up to the
+      latest next_draw_date (the next scheduled draw).
       Other tables carry dim_date_id instead of a raw date. Names are
       Portuguese, upper case and unaccented; weeks are ISO weeks (Monday
       first). No holidays. Primary key: dim_date_id (the smart key

@@ -1,11 +1,10 @@
 -- Silver dimension: one row per calendar day, so other tables can carry
 -- dim_date_id instead of a raw date.
 -- - Range: every single day (not only contest days), from the first contest's
---   date up to today in America/Sao_Paulo (the database runs in UTC, which
---   would already be "tomorrow" in the evening). The end is pushed out to the
---   latest next_draw_date when that is later than today (it usually is 1-2
---   days ahead), so dim_contest.next_draw_dim_date_id never comes out NULL.
---   Both bounds come from the data, so the dimension grows by itself.
+--   date up to the latest next_draw_date, i.e. the next scheduled draw. That
+--   covers every date dim_contest points at, so neither draw_dim_date_id nor
+--   next_draw_dim_date_id can come out NULL. It depends only on the data (no
+--   clock), so the model is deterministic and grows as new contests arrive.
 -- - dim_date_id is the smart key yyyymmdd (e.g. 20260921): readable, sortable,
 --   and unlike a hash it can be read straight off a fact row. date_dt stays
 --   as the unique natural key.
@@ -29,11 +28,7 @@
 with bounds as (
     select
         min(draw_date) as start_dt,
-        greatest(
-            (now() at time zone 'America/Sao_Paulo')::date,
-            max(draw_date),
-            max(next_draw_date)
-        ) as end_dt
+        greatest(max(draw_date), max(next_draw_date)) as end_dt
     from {{ ref('draws') }}
 ),
 
