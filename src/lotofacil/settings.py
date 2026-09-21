@@ -14,10 +14,11 @@ class Settings(BaseSettings):
     postgres_user: str = "lotofacil"
     postgres_password: str = "lotofacil"
 
-    lotofacil_api_base_url: str = (
-        "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil"
-    )
+    lotofacil_api_base_url: str = "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil"
     lotofacil_data_dir: Path = Path("data/raw")
+
+    holidays_api_base_url: str = "https://brasilapi.com.br/api/feriados/v1"
+    holidays_seed_path: Path = Path("dbt/seeds/holidays.csv")
 
     @property
     def database_url(self) -> str:

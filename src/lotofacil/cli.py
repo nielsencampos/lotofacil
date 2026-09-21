@@ -7,6 +7,7 @@ from pathlib import Path
 import typer
 
 from lotofacil import fetch as fetch_module
+from lotofacil import holidays as holidays_module
 from lotofacil import load as load_module
 from lotofacil.db import init_schema
 
@@ -69,6 +70,17 @@ def update(
     if not skip_load:
         loaded = load_module.load_directory(data_dir)
         typer.echo(f"Loaded {len(loaded)} contest(s) into transient.raw")
+
+
+@app.command()
+def holidays(
+    start_year: int = typer.Option(holidays_module.FIRST_YEAR, help="First year to include."),
+    end_year: int | None = typer.Option(None, help="Last year to include (default: next year)."),
+    output: Path | None = typer.Option(None, help="CSV file to write (default: the dbt seed)."),
+) -> None:
+    """Rebuild the holidays dbt seed from BrasilAPI's national holiday calendar."""
+    path, count = holidays_module.write_seed(start_year, end_year, output)
+    typer.echo(f"Wrote {count} holiday(s) to {path}")
 
 
 if __name__ == "__main__":

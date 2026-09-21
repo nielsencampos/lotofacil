@@ -38,9 +38,9 @@
 select
     d.contest_number as dim_contest_id,
     d.contest_number as contest_nbr,
-    l.dim_location_id,
     dd_draw.dim_date_id as draw_dim_date_id,
     dd_next.dim_date_id as next_draw_dim_date_id,
+    l.dim_location_id,
     d.is_accumulated as is_accumulated_flg,
     d.show_city_detail as show_city_detail_flg,
     coalesce(

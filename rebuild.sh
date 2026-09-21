@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Rebuild everything from data/raw/: brings PostgreSQL up (if needed), loads
-# every JSON file, and builds the bronze dbt models/seeds. Safe to run any
+# every JSON file, and builds every dbt layer (seeds, bronze, silver, gold). Safe to run any
 # time, including right after `docker compose down -v` — data/raw/ is the
 # source of truth and nothing in Postgres is incremental, so it's fine to
 # kill the database whenever it's not needed and rebuild it on demand.

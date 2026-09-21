@@ -118,22 +118,27 @@ models:
   - name: prize_tiers
     description: >
       One row per (contest, prize tier) from listaRateioPremio, typed and
-      renamed to English. Primary key: (contest_number, prize_tier),
+      renamed to English. Primary key: (contest_number, prize_tier_number),
       enforced in PostgreSQL via a post-hook.
     tests:
       - unique_combination_of_columns:
           arguments:
-            combination_of_columns: [contest_number, prize_tier]
+            combination_of_columns: [contest_number, prize_tier_number]
     columns:
       - name: contest_number
         description: Lotofacil contest number.
         tests:
           - not_null
-      - name: prize_tier
+      - name: prize_tier_number
         description: >
-          Prize tier rank, 1 (15 hits) through 5 (11 hits) (source: faixa).
+          Number of hits that wins this tier, 15 (the top prize) through 11,
+          read from the text of descricaoFaixa (e.g. "15 acertos" -> 15). It
+          replaces the source's ordinal faixa (1-5), which maps 1:1 to it.
         tests:
           - not_null
+          - accepted_values:
+              arguments:
+                values: [11, 12, 13, 14, 15]
       - name: prize_tier_description
         description: >
           Human-readable description of the tier, e.g. "15 acertos" (source:

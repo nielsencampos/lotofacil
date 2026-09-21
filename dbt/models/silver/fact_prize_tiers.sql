@@ -26,4 +26,4 @@ select
     pt.prize_amount as prize_amt
 from {{ ref('prize_tiers') }} pt
 inner join {{ ref('dim_contest') }} c on c.contest_nbr = pt.contest_number
-inner join {{ ref('dim_prize_tier') }} dpt on dpt.prize_tier_nbr = pt.prize_tier
+inner join {{ ref('dim_prize_tier') }} dpt on dpt.prize_tier_nbr = pt.prize_tier_number
