@@ -1,0 +1,290 @@
+version: 2
+
+models:
+  # --- Dimensions ---------------------------------------------------------
+  - name: dim_contest
+    description: >
+      One row per contest — descriptive attributes only. Primary key:
+      contest_number. Foreign key (draw_state, draw_city) to
+      dim_municipality, both enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: is_accumulated
+        description: Whether the main prize tier (15 hits) rolled over with no winner.
+      - name: draw_date
+        description: Date this contest was drawn.
+        tests:
+          - not_null
+      - name: next_draw_date
+        description: Scheduled date of the next contest.
+      - name: show_city_detail
+        description: Whether the API exposes a per-city winner breakdown for this contest.
+      - name: special_contest_indicator
+        description: Caixa's special-contest indicator code.
+      - name: draw_location
+        description: >
+          Venue where the draw took place, normalized to upper/trim. Still
+          has some genuine typo-based duplicates (e.g. "ESPACO" vs
+          "ESPCAO") that normalization alone doesn't fix.
+      - name: draw_state
+        description: >
+          State (UF) where the draw took place, parsed out of
+          draw_city_state and normalized to upper/trim (part of FK to
+          dim_municipality).
+        tests:
+          - not_null
+      - name: draw_city
+        description: >
+          City where the draw took place, parsed out of draw_city_state and
+          normalized to upper/trim (part of FK to dim_municipality).
+        tests:
+          - not_null
+      - name: heart_team_name
+        description: >
+          Timemania-style "heart team" name; unused by Lotofacil and always
+          blank.
+      - name: previous_contest_number
+        description: Contest number immediately before this one.
+      - name: final_contest_number_0_5
+        description: >
+          Last contest number in the current progressive "0-5" accumulation
+          cycle.
+      - name: next_contest_number
+        description: Contest number immediately after this one.
+      - name: game_number
+        description: Caixa's internal game code; 8 identifies Lotofacil.
+      - name: remarks
+        description: Free-text remarks about the contest, usually blank.
+      - name: game_type
+        description: Game name as returned by the API, always "LOTOFACIL".
+      - name: publication_type
+        description: Caixa's internal publication-type code.
+      - name: is_last_contest
+        description: >
+          Whether this was the most recent contest at the time it was
+          fetched.
+
+  - name: dim_ball
+    description: >
+      One row per ball number (1-25). Primary key: ball_number, enforced in
+      PostgreSQL via a post-hook.
+    columns:
+      - name: ball_number
+        description: Number printed on the ball, 1-25 (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: ball_name
+        description: Portuguese name of the ball, e.g. "Bola Um".
+        tests:
+          - not_null
+
+  - name: dim_draw_position
+    description: >
+      One row per draw position (1-15). Primary key: draw_order, enforced
+      in PostgreSQL via a post-hook.
+    columns:
+      - name: draw_order
+        description: Position in the draw order, 1-15 (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: draw_position_name
+        description: Portuguese name of the position, e.g. "Primeira Bola".
+        tests:
+          - not_null
+
+  - name: dim_prize_tier
+    description: >
+      One row per prize tier (5 total). Primary key: prize_tier, enforced
+      in PostgreSQL via a post-hook.
+    columns:
+      - name: prize_tier
+        description: >
+          Prize tier rank, 1 (15 hits) through 5 (11 hits) (primary key).
+        tests:
+          - unique
+          - not_null
+      - name: prize_tier_description
+        description: Human-readable description of the tier, e.g. "15 acertos".
+        tests:
+          - not_null
+
+  - name: dim_municipality
+    description: >
+      One row per distinct (state, city) pair, sourced from both winning
+      tickets (bronze.winning_municipalities) and draw locations
+      (bronze.draws.draw_city_state) — a single shared geography dimension
+      for both. Values are normalized to upper/trim. Not a complete list of
+      all Brazilian states/cities. Primary key: (state, city), enforced in
+      PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [state, city]
+    columns:
+      - name: state
+        description: >
+          Brazilian state (UF), normalized to upper/trim. Includes a
+          handful of placeholder codes ("--", "XX", "C", "G") from winning
+          tickets with no physical municipality on record.
+        tests:
+          - not_null
+      - name: city
+        description: >
+          City name, normalized to upper/trim; sometimes blank in the
+          source data.
+        tests:
+          - not_null
+
+  # --- Facts ----------------------------------------------------------------
+  - name: fact_contest_summary
+    description: >
+      One row per contest — the numeric measures split out of dim_contest.
+      Primary key: contest_number. Foreign key to dim_contest, both
+      enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (primary key, FK to dim_contest).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_number
+      - name: collected_amount
+        description: Total amount collected from ticket sales for this contest, in BRL.
+      - name: accumulated_amount_0_5
+        description: >
+          Amount accumulated for the current progressive "0-5" cycle, in
+          BRL.
+      - name: special_accumulated_amount
+        description: >
+          Amount accumulated for the next special (year-end) contest, in
+          BRL.
+      - name: next_accumulated_amount
+        description: >
+          Amount rolled over into the next contest's main prize, in BRL.
+      - name: next_estimated_prize
+        description: Estimated main prize for the next contest, in BRL.
+      - name: guarantee_fund_balance
+        description: Balance of Caixa's prize guarantee fund, in BRL.
+      - name: total_prize_tier_one_amount
+        description: >
+          Total amount paid out at the top prize tier (15 hits) for this
+          contest, in BRL.
+
+  - name: fact_ball_draws
+    description: >
+      One row per (contest, draw position) — factless fact, no numeric
+      measure. Primary key: (contest_number, draw_order). Foreign keys to
+      dim_contest, dim_draw_position, and dim_ball, all enforced in
+      PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, draw_order]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_number
+      - name: draw_order
+        description: Position in which this ball was drawn, 1-15 (FK to dim_draw_position).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_draw_position')
+                field: draw_order
+      - name: ball_number
+        description: Number printed on the drawn ball, 1-25 (FK to dim_ball).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ball')
+                field: ball_number
+
+  - name: fact_prize_tiers
+    description: >
+      One row per (contest, prize tier). Primary key: (contest_number,
+      prize_tier). Foreign keys to dim_contest and dim_prize_tier, both
+      enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, prize_tier]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_number
+      - name: prize_tier
+        description: Prize tier rank, 1 through 5 (FK to dim_prize_tier).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_prize_tier')
+                field: prize_tier
+      - name: winner_count
+        description: Number of winning tickets at this tier for this contest.
+      - name: prize_amount
+        description: Prize amount per winning ticket at this tier, in BRL.
+
+  - name: fact_winning_municipalities
+    description: >
+      One row per (contest, winning municipality). Primary key:
+      (contest_number, winner_index). Foreign keys to dim_contest and
+      dim_municipality, both enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [contest_number, winner_index]
+    columns:
+      - name: contest_number
+        description: Lotofacil contest number (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_number
+      - name: winner_index
+        description: >
+          Position of this entry in the source array; part of the primary
+          key since the source posicao field is always 1.
+        tests:
+          - not_null
+      - name: state
+        description: >
+          Brazilian state (UF) of the winning ticket, normalized to
+          upper/trim (part of FK to dim_municipality).
+        tests:
+          - not_null
+      - name: city
+        description: >
+          City of the winning ticket, normalized to upper/trim (part of FK
+          to dim_municipality).
+        tests:
+          - not_null
+      - name: winner_position
+        description: >
+          Source ranking field for this winner; always 1 in the data seen
+          so far.
+      - name: winner_count
+        description: Number of winning tickets from this municipality.

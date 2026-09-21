@@ -22,6 +22,11 @@ models:
     bronze:
       +materialized: table
       +schema: bronze
+      +tags: ["bronze"]
+    silver:
+      +materialized: table
+      +schema: silver
+      +tags: ["silver"]
 
 seeds:
   lotofacil:
@@ -29,6 +34,7 @@ seeds:
     +persist_docs:
       relation: true
       columns: true
+    +tags: ["bronze", "dictionary"]
     ball_names:
       +post-hook:
         - "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey"
