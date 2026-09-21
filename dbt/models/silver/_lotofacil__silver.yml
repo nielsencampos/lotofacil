@@ -487,8 +487,7 @@ models:
                 field: dim_contest_id
       - name: winner_index_nbr
         description: >
-          Position of this entry in the source array; part of the grain
-          since the source posicao field is always 1.
+          Position of this entry in the source array; part of the grain.
         tests:
           - not_null
       - name: dim_location_id
@@ -501,9 +500,5 @@ models:
               arguments:
                 to: ref('dim_location')
                 field: dim_location_id
-      - name: winner_position_nbr
-        description: >
-          Source ranking field for this winner; always 1 in the data seen so
-          far.
       - name: winner_qtty
         description: Number of winning tickets from this municipality.

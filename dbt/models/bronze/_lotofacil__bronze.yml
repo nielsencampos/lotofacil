@@ -165,9 +165,9 @@ models:
           - not_null
       - name: winner_index
         description: >
-          Position of this entry in the source array. Combined with
-          contest_number for uniqueness since the source posicao field is
-          always 1.
+          Position of this entry in the source array. Together with
+          contest_number it makes the row unique (the source posicao field
+          is always 1, so it is dropped).
         tests:
           - not_null
       - name: state
@@ -177,10 +177,6 @@ models:
         description: >
           City of the winning ticket; sometimes blank in the source data
           (source: municipio).
-      - name: winner_position
-        description: >
-          Source ranking field for this winner; always 1 in the data seen so
-          far (source: posicao).
       - name: winner_count
         description: >
           Number of winning tickets from this municipality (source:

@@ -7,10 +7,8 @@
 -- - fact_winning_municipality_id is a deterministic numeric md5 of the grain
 --   (contest + winner_index_nbr); the grain is enforced as UNIQUE. See
 --   dbt/macros/numeric_md5.sql.
--- - winner_index_nbr is the entry's position in the source array;
---   winner_position_nbr stays as a degenerate attribute (it's always 1 in the
---   data seen so far, not worth its own dimension); winner_qtty is a count
---   (_qtty).
+-- - winner_index_nbr is the entry's position in the source array (part of the
+--   grain); winner_qtty is a count (_qtty).
 -- Constraints are left unnamed where they create an index — see the note in
 -- dim_location.sql on why.
 {{ config(
@@ -29,7 +27,6 @@ select
     c.dim_contest_id,
     wm.winner_index as winner_index_nbr,
     l.dim_location_id,
-    wm.winner_position as winner_position_nbr,
     wm.winner_count as winner_qtty
 from {{ ref('winning_municipalities') }} wm
 inner join {{ ref('dim_contest') }} c on c.contest_nbr = wm.contest_number
