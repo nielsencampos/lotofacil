@@ -42,10 +42,6 @@ models:
         description: >
           City/state where the draw took place (source:
           nomeMunicipioUFSorteio).
-      - name: heart_team_name
-        description: >
-          Timemania-style "heart team" name; unused by Lotofacil and always
-          blank (source: nomeTimeCoracaoMesSorte).
       - name: previous_contest_number
         description: >
           Contest number immediately before this one (source:
@@ -58,25 +54,10 @@ models:
         description: >
           Contest number immediately after this one (source:
           numeroConcursoProximo).
-      - name: game_number
-        description: >
-          Caixa's internal game code; 8 identifies Lotofacil (source:
-          numeroJogo).
       - name: remarks
         description: >
           Free-text remarks about the contest, usually blank (source:
           observacao).
-      - name: game_type
-        description: >
-          Game name as returned by the API, always "LOTOFACIL" (source:
-          tipoJogo).
-      - name: publication_type
-        description: >
-          Caixa's internal publication-type code (source: tipoPublicacao).
-      - name: is_last_contest
-        description: >
-          Whether this was the most recent contest at the time it was
-          fetched (source: ultimoConcurso).
       - name: collected_amount
         description: >
           Total amount collected from ticket sales for this contest, in BRL
@@ -184,9 +165,9 @@ models:
           - not_null
       - name: winner_index
         description: >
-          Position of this entry in the source array. Combined with
-          contest_number for uniqueness since the source posicao field is
-          always 1.
+          Position of this entry in the source array. Together with
+          contest_number it makes the row unique (the source posicao field
+          is always 1, so it is dropped).
         tests:
           - not_null
       - name: state
@@ -196,10 +177,6 @@ models:
         description: >
           City of the winning ticket; sometimes blank in the source data
           (source: municipio).
-      - name: winner_position
-        description: >
-          Source ranking field for this winner; always 1 in the data seen so
-          far (source: posicao).
       - name: winner_count
         description: >
           Number of winning tickets from this municipality (source:

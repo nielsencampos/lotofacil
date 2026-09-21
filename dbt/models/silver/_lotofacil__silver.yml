@@ -1,0 +1,504 @@
+version: 2
+
+# Column naming (thesaurus): _id surrogate/dimension key, _nbr number, _nm
+# name, _cd code, _dt date, _flg boolean flag, _desc description, _amt decimal
+# amount, _qtty integer quantity.
+
+models:
+  # --- Dimensions ---------------------------------------------------------
+  - name: dim_contest
+    description: >
+      One row per contest — descriptive attributes only. Primary key:
+      dim_contest_id (equals contest_nbr for now); contest_nbr stays as the
+      unique natural key. Foreign keys: dim_location_id to dim_location, and
+      draw_dim_date_id / next_draw_dim_date_id to dim_date (two roles of the
+      same date dimension). Constraints are enforced in PostgreSQL via a
+      post-hook.
+    columns:
+      - name: dim_contest_id
+        description: Contest dimension identifier (equals contest_nbr). Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: contest_nbr
+        description: Lotofacil contest number (unique natural key).
+        tests:
+          - unique
+          - not_null
+      - name: dim_location_id
+        description: >
+          Where the draw took place (venue, city and state, replacing
+          bronze's draw_location + draw_city_state). Foreign key to
+          dim_location.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_location')
+                field: dim_location_id
+      - name: draw_dim_date_id
+        description: Day this contest was drawn. Foreign key to dim_date.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: dim_date_id
+      - name: next_draw_dim_date_id
+        description: >
+          Day of the next scheduled contest. Foreign key to dim_date.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_date')
+                field: dim_date_id
+      - name: is_accumulated_flg
+        description: Whether the main prize tier (15 hits) rolled over with no winner.
+        tests:
+          - not_null
+      - name: show_city_detail_flg
+        description: Whether the API exposes a per-city winner breakdown for this contest.
+      - name: independence_day_flg
+        description: >
+          Whether this was a Lotofacil da Independencia draw. True when the
+          API marks it (special_contest_indicator = 2, only 9 of the 14
+          draws) or, from 2013 on, when it is a September contest whose
+          special accumulated amount is 0 (all 14 draws; the API misses
+          2013-2016 and 2019). See dim_contest.sql.
+        tests:
+          - not_null
+      - name: remarks_desc
+        description: >
+          Free-text remarks about the contest, normalized to
+          upper/trim/unaccent; usually blank.
+      - name: previous_contest_nbr
+        description: Contest number immediately before this one.
+      - name: final_contest_nbr
+        description: >
+          Last contest number in the current progressive "0-5" accumulation
+          cycle (bronze final_contest_number_0_5).
+      - name: next_contest_nbr
+        description: Contest number immediately after this one.
+
+  - name: dim_ball
+    description: >
+      One row per ball number (1-25). Primary key: dim_ball_id (equals
+      ball_nbr); ball_nbr stays as the unique natural key. Enforced in
+      PostgreSQL via a post-hook.
+    columns:
+      - name: dim_ball_id
+        description: Ball dimension identifier (equals ball_nbr). Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: ball_nbr
+        description: Number printed on the ball, 1-25 (unique natural key).
+        tests:
+          - unique
+          - not_null
+      - name: ball_nm
+        description: Portuguese name of the ball, e.g. "Bola Um".
+        tests:
+          - not_null
+
+  - name: dim_draw_position
+    description: >
+      One row per draw position (1-15). Primary key: dim_draw_position_id
+      (equals draw_position_nbr); draw_position_nbr stays as the unique
+      natural key. Enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: dim_draw_position_id
+        description: >
+          Draw position dimension identifier (equals draw_position_nbr).
+          Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: draw_position_nbr
+        description: Position in the draw order, 1-15 (unique natural key).
+        tests:
+          - unique
+          - not_null
+      - name: draw_position_nm
+        description: Portuguese name of the position, e.g. "Primeira Bola".
+        tests:
+          - not_null
+
+  - name: dim_prize_tier
+    description: >
+      One row per prize tier (5 total). Primary key: dim_prize_tier_id
+      (equals prize_tier_nbr); prize_tier_nbr stays as the unique natural
+      key. Enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: dim_prize_tier_id
+        description: >
+          Prize tier dimension identifier (equals prize_tier_nbr). Primary
+          key.
+        tests:
+          - unique
+          - not_null
+      - name: prize_tier_nbr
+        description: >
+          Prize tier rank, 1 (15 hits) through 5 (11 hits) (unique natural
+          key).
+        tests:
+          - unique
+          - not_null
+      - name: prize_tier_desc
+        description: Human-readable description of the tier, e.g. "15 acertos".
+        tests:
+          - not_null
+
+  - name: dim_location
+    description: >
+      One row per distinct (location, city, state) seen among winning
+      tickets (bronze.winning_municipalities) or draws (bronze.draws) — a
+      single shared geography dimension for both. Winning tickets have no
+      venue, so their location_nm is "---NAO SE APLICA---". Values are
+      normalized (upper/trim/unaccent, see dbt/macros/normalize_texts.sql).
+      Not a complete list of all Brazilian cities. Primary key:
+      dim_location_id, a deterministic numeric md5 of the natural key (see
+      dbt/macros/numeric_md5.sql); the natural key is enforced as unique.
+      Enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [location_nm, city_nm, state_cd]
+    columns:
+      - name: dim_location_id
+        description: >
+          Location dimension identifier: deterministic numeric md5 of
+          (location_nm, city_nm, state_cd), see dbt/macros/numeric_md5.sql.
+          Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: location_nm
+        description: >
+          Venue where the draw took place. Normalized to upper/trim/unaccent,
+          with known typos and word-order variants mapped to a canonical name
+          (see the alias map in normalize_location_nm,
+          dbt/macros/normalize_texts.sql). "---NAO INFORMADO---" when the draw's
+          venue is blank in the source, and "---NAO SE APLICA---" for winning
+          tickets, which have no venue. Only the 7 values below are expected.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - '---NAO INFORMADO---'
+                  - '---NAO SE APLICA---'
+                  - AUDITORIO
+                  - CAMINHAO DA SORTE
+                  - ESPACO DA SORTE
+                  - ESPACO LOTERIAS CAIXA
+                  - ESTUDIO DE TV
+      - name: city_nm
+        description: >
+          City name, normalized to upper/trim/unaccent. Blank in the source
+          data is filled in as "---NAO INFORMADO---".
+        tests:
+          - not_null
+      - name: state_cd
+        description: >
+          Brazilian state (UF), normalized to upper/trim. Online/app ticket
+          sales are canonicalized to "XX", and the truncated codes "C"/"G"
+          are fixed to "CE"/"GO" (see dbt/macros/normalize_texts.sql).
+        tests:
+          - not_null
+
+  - name: dim_date
+    description: >
+      One row per calendar day, from the first contest's date up to the
+      latest next_draw_date (the next scheduled draw).
+      Other tables carry dim_date_id instead of a raw date. Names are
+      Portuguese, upper case and unaccented; weeks are ISO weeks (Monday
+      first). No holidays. Primary key: dim_date_id (the smart key
+      yyyymmdd); date_dt stays as the unique natural key. Enforced in
+      PostgreSQL via a post-hook.
+    columns:
+      - name: dim_date_id
+        description: Date dimension identifier, the number yyyymmdd (e.g. 20260921). Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: date_dt
+        description: The calendar date (unique natural key).
+        tests:
+          - unique
+          - not_null
+      - name: date_desc
+        description: Date as DD/MM/YYYY.
+      - name: date_long_desc
+        description: Long date, e.g. "SEGUNDA-FEIRA, 21 DE SETEMBRO DE 2026".
+      - name: year_nbr
+        description: Calendar year.
+        tests:
+          - not_null
+      - name: leap_year_flg
+        description: Whether the year is a leap year.
+      - name: semester_nbr
+        description: Semester of the year, 1-2.
+        tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2]
+      - name: semester_nm
+        description: Semester name, e.g. "1O SEMESTRE".
+      - name: year_semester_nbr
+        description: Year and semester as a number, e.g. 20262.
+      - name: quarter_nbr
+        description: Quarter of the year (trimestre), 1-4.
+        tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4]
+      - name: quarter_nm
+        description: Quarter name, e.g. "3O TRIMESTRE".
+      - name: year_quarter_nbr
+        description: Year and quarter as a number, e.g. 20263.
+      - name: bimester_nbr
+        description: Bimester of the year (bimestre), 1-6.
+        tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6]
+      - name: bimester_nm
+        description: Bimester name, e.g. "5O BIMESTRE".
+      - name: year_bimester_nbr
+        description: Year and bimester as a number, e.g. 202605.
+      - name: month_nbr
+        description: Month of the year, 1-12.
+        tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      - name: month_nm
+        description: Month name in Portuguese, e.g. "SETEMBRO", "MARCO".
+        tests:
+          - accepted_values:
+              arguments:
+                values: [JANEIRO, FEVEREIRO, MARCO, ABRIL, MAIO, JUNHO, JULHO, AGOSTO, SETEMBRO, OUTUBRO, NOVEMBRO, DEZEMBRO]
+      - name: month_abbr_nm
+        description: Three-letter month abbreviation, e.g. "SET".
+      - name: year_month_nbr
+        description: Year and month as a number, e.g. 202609.
+      - name: year_month_desc
+        description: Year and month as text, e.g. "SET/2026".
+      - name: days_in_month_qtty
+        description: Number of days in the month, 28-31.
+      - name: month_start_dt
+        description: First day of the month.
+      - name: month_end_dt
+        description: Last day of the month.
+      - name: month_start_flg
+        description: Whether this is the first day of the month.
+      - name: month_end_flg
+        description: Whether this is the last day of the month.
+      - name: iso_year_nbr
+        description: >
+          ISO year of the week — differs from year_nbr for a few days around
+          New Year.
+      - name: iso_week_nbr
+        description: ISO week number, 1-53.
+      - name: year_week_nbr
+        description: ISO year and week as a number, e.g. 202639.
+      - name: week_start_dt
+        description: Monday of this date's ISO week.
+      - name: week_end_dt
+        description: Sunday of this date's ISO week.
+      - name: day_nbr
+        description: Day of the month, 1-31.
+      - name: day_of_year_nbr
+        description: Day of the year, 1-366.
+      - name: day_of_week_nbr
+        description: ISO day of the week, 1 (Monday) to 7 (Sunday).
+        tests:
+          - accepted_values:
+              arguments:
+                values: [1, 2, 3, 4, 5, 6, 7]
+      - name: day_of_week_nm
+        description: Day of the week in Portuguese, e.g. "SEGUNDA-FEIRA", "SABADO".
+        tests:
+          - accepted_values:
+              arguments:
+                values: [SEGUNDA-FEIRA, TERCA-FEIRA, QUARTA-FEIRA, QUINTA-FEIRA, SEXTA-FEIRA, SABADO, DOMINGO]
+      - name: day_of_week_abbr_nm
+        description: Three-letter day-of-week abbreviation, e.g. "SEG".
+      - name: weekend_flg
+        description: Whether this is a Saturday or Sunday.
+
+  # --- Facts ----------------------------------------------------------------
+  - name: fact_contest_summary
+    description: >
+      One row per contest — the numeric measures split out of dim_contest.
+      Primary key: fact_contest_summary_id (deterministic numeric md5 of the
+      grain); the grain, dim_contest_id, is unique and a foreign key to
+      dim_contest. Enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: fact_contest_summary_id
+        description: Fact identifier, the numeric md5 of dim_contest_id. Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: dim_contest_id
+        description: Contest dimension key (unique, FK to dim_contest).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: dim_contest_id
+      - name: collected_amt
+        description: Total amount collected from ticket sales for this contest, in BRL.
+      - name: accumulated_amt
+        description: >
+          Amount accumulated for the current progressive "0-5" cycle, in
+          BRL (bronze accumulated_amount_0_5).
+      - name: special_accumulated_amt
+        description: >
+          Amount accumulated for the next special (year-end) contest, in
+          BRL.
+      - name: next_accumulated_amt
+        description: >
+          Amount rolled over into the next contest's main prize, in BRL.
+      - name: next_estimated_prize_amt
+        description: Estimated main prize for the next contest, in BRL.
+      - name: guarantee_fund_balance_amt
+        description: Balance of Caixa's prize guarantee fund, in BRL.
+      - name: total_prize_tier_one_amt
+        description: >
+          Total amount paid out at the top prize tier (15 hits) for this
+          contest, in BRL.
+
+  - name: fact_ball_draws
+    description: >
+      One row per (contest, draw position) — factless fact, no numeric
+      measure. Primary key: fact_ball_draw_id (deterministic numeric md5 of
+      the grain); the grain (dim_contest_id, dim_draw_position_id) is
+      unique. Foreign keys to dim_contest, dim_draw_position, and dim_ball,
+      all enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [dim_contest_id, dim_draw_position_id]
+    columns:
+      - name: fact_ball_draw_id
+        description: >
+          Fact identifier: numeric md5 of (dim_contest_id,
+          dim_draw_position_id) — the ball is not part of it. Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: dim_contest_id
+        description: Contest dimension key (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: dim_contest_id
+      - name: dim_draw_position_id
+        description: >
+          Position in which this ball was drawn, 1-15 (FK to
+          dim_draw_position).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_draw_position')
+                field: dim_draw_position_id
+      - name: dim_ball_id
+        description: Ball drawn, 1-25 (FK to dim_ball).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ball')
+                field: dim_ball_id
+
+  - name: fact_prize_tiers
+    description: >
+      One row per (contest, prize tier). Primary key: fact_prize_tier_id
+      (deterministic numeric md5 of the grain); the grain (dim_contest_id,
+      dim_prize_tier_id) is unique. Foreign keys to dim_contest and
+      dim_prize_tier, both enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [dim_contest_id, dim_prize_tier_id]
+    columns:
+      - name: fact_prize_tier_id
+        description: >
+          Fact identifier: numeric md5 of (dim_contest_id,
+          dim_prize_tier_id). Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: dim_contest_id
+        description: Contest dimension key (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: dim_contest_id
+      - name: dim_prize_tier_id
+        description: Prize tier dimension key, 1 through 5 (FK to dim_prize_tier).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_prize_tier')
+                field: dim_prize_tier_id
+      - name: winner_qtty
+        description: Number of winning tickets at this tier for this contest.
+      - name: prize_amt
+        description: Prize amount per winning ticket at this tier, in BRL.
+
+  - name: fact_winning_municipalities
+    description: >
+      One row per (contest, winning municipality). Primary key:
+      fact_winning_municipality_id (deterministic numeric md5 of the grain);
+      the grain (dim_contest_id, winner_index_nbr) is unique. Foreign keys
+      to dim_contest and dim_location, both enforced in PostgreSQL via a
+      post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns: [dim_contest_id, winner_index_nbr]
+    columns:
+      - name: fact_winning_municipality_id
+        description: >
+          Fact identifier: numeric md5 of (dim_contest_id,
+          winner_index_nbr). Primary key.
+        tests:
+          - unique
+          - not_null
+      - name: dim_contest_id
+        description: Contest dimension key (FK to dim_contest).
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: dim_contest_id
+      - name: winner_index_nbr
+        description: >
+          Position of this entry in the source array; part of the grain.
+        tests:
+          - not_null
+      - name: dim_location_id
+        description: >
+          Where the winning ticket came from (state/city; venue is always
+          "---NAO SE APLICA---"). Foreign key to dim_location.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_location')
+                field: dim_location_id
+      - name: winner_qtty
+        description: Number of winning tickets from this municipality.

@@ -7,6 +7,6 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 
 docker compose up -d --wait db
 
-uv sync --quiet
+uv sync --quiet --inexact
 uv run lotofacil init-db
 uv run lotofacil load

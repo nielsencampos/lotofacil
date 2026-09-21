@@ -3,14 +3,14 @@
 Data pipeline for Lotofacil (a Brazilian lottery) with insights.
 
 It fetches draw results from the public Caixa API, stores the raw responses
-as JSON, loads them into PostgreSQL, and turns them into typed tables with
-dbt.
+as JSON, loads them into PostgreSQL, and models them with dbt: a typed
+`bronze` layer and a `silver` star schema (dimensions and facts).
 
 ## Architecture
 
 ```
-Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze
-   (update.sh)                          (load.sh)
+Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->  silver
+   (update.sh)                          (load.sh)                       (dbt)      (dbt)
 ```
 
 - **Source**: `https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/{contest_number}`
@@ -27,8 +27,9 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze
   typed and renamed to English, but with no business logic, joins, or
   derived columns:
   - `draws`: every scalar attribute of the payload (dates, amounts, flags,
-    etc). Fields that are always null or redundant with `contest_number`
-    are dropped.
+    etc). Fields that carry no information (always null, always the same
+    value, or redundant with `contest_number`) are dropped — the reasons are
+    listed in the header of `dbt/models/bronze/draws.sql`.
   - `ball_draws`, `prize_tiers`, `winning_municipalities`: each unnests one
     of the payload's list/object attributes. `listaDezenas` (redundant with
     `dezenasSorteadasOrdemSorteio`) and the list attributes that are always
@@ -43,11 +44,70 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze
   the `config(post_hook=...)` in each model). Composite keys are verified by
   a small custom generic test (`unique_combination_of_columns`, in
   `dbt/macros/`) since dbt's built-in `unique` test only covers one column.
-  No foreign keys yet — there's nothing downstream of bronze to reference.
+  Bronze has no foreign keys; the silver layer does (below).
   Every table/column has an English description in the dbt yml files, and
   `persist_docs` writes them into PostgreSQL as real `COMMENT ON
   TABLE`/`COMMENT ON COLUMN` (visible via `\d+` in psql). `transient.raw`
   isn't dbt-managed, so its comments are set directly in `sql/schema.sql`.
+
+- **dbt (silver layer)**: a star schema built from bronze, cleaned and
+  renamed with the thesaurus below.
+
+  ```mermaid
+  erDiagram
+      dim_contest }o--|| dim_location : dim_location_id
+      dim_contest }o--|| dim_date : "draw_dim_date_id"
+      dim_contest }o--|| dim_date : "next_draw_dim_date_id"
+      fact_contest_summary ||--|| dim_contest : dim_contest_id
+      fact_ball_draws }o--|| dim_contest : dim_contest_id
+      fact_ball_draws }o--|| dim_draw_position : dim_draw_position_id
+      fact_ball_draws }o--|| dim_ball : dim_ball_id
+      fact_prize_tiers }o--|| dim_contest : dim_contest_id
+      fact_prize_tiers }o--|| dim_prize_tier : dim_prize_tier_id
+      fact_winning_municipalities }o--|| dim_contest : dim_contest_id
+      fact_winning_municipalities }o--|| dim_location : dim_location_id
+  ```
+
+  - **Keys**: every dimension has a `dim_*_id` primary key and every fact a
+    `fact_*_id`; facts reference dimensions only through `dim_*_id` (no raw
+    dates, no repeated names). The natural key of each table stays enforced
+    as `UNIQUE`. Ids are the natural number when there is one
+    (`dim_contest_id` = contest number, `dim_ball_id` = ball number),
+    `yyyymmdd` for `dim_date_id`, and a deterministic numeric md5 of the
+    natural key for `dim_location_id` and the `fact_*_id`s
+    (`dbt/macros/numeric_md5.sql`) — unlike `row_number()` they don't shift
+    between rebuilds, and they stay under 2^53 so JavaScript/Excel/BI tools
+    don't round them. Each `fact_*_id` hashes the grain only (e.g.
+    contest + draw position, not the ball), so a corrected result doesn't
+    change the row's id.
+  - **`dim_location`** is shared by draws (venue + city + state) and winning
+    tickets (city + state only, venue `---NAO SE APLICA---`).
+    **`dim_date`** has one row per calendar day, from the first contest to
+    the latest `next_draw_date`, with year/semester/quarter/bimester/month/ISO
+    week, Portuguese day and month names, and flags; no holidays.
+    `dim_contest` references it twice (`draw_dim_date_id`,
+    `next_draw_dim_date_id`), a role-playing dimension.
+  - **Text normalization** (`dbt/macros/normalize_texts.sql`): upper + trim +
+    unaccent (Postgres `unaccent`, created by an `on-run-start` hook), blanks
+    filled as `---NAO INFORMADO---`, online sales (`--`/`XX`, "canal
+    eletrônico") canonicalized to `XX`, truncated states `C`/`G` fixed to
+    `CE`/`GO`, and known typos/variants of draw venues mapped to 5 canonical
+    venue names (a blank venue is `---NAO INFORMADO---`; winning tickets, which
+    have no venue, get `---NAO SE APLICA---`). An `accepted_values` test on `dim_location.location_nm` fails when
+    a new, unmapped venue shows up, so it gets a conscious decision. The
+    same macros are used by every model that touches these columns —
+    otherwise the joins between them would silently stop matching.
+  - **Thesaurus** (column suffixes): `_id` key, `_nbr` number, `_nm` name,
+    `_cd` code, `_dt` date, `_flg` boolean flag, `_desc` description, `_amt`
+    decimal amount, `_qtty` integer quantity.
+  - **Tags** let you select groups of models regardless of folder: `bronze`,
+    `silver`, `dim`, `fact`, `dictionary` (the seeds), e.g.
+    `dbt run --select tag:dim` or `dbt build --select tag:silver,tag:fact`.
+  - Primary keys, unique keys and foreign keys are all enforced in
+    PostgreSQL by post-hooks. Constraints that create an index are left
+    unnamed on purpose: dbt rebuilds a table next to the old one and the
+    hook runs before the old one is dropped, so an explicitly named index
+    collides (index names are unique per schema).
 
 Fetching and loading are two independent services: `update.sh` only talks to
 the Caixa API and writes to `data/raw/` (no Docker/PostgreSQL needed);
@@ -68,7 +128,7 @@ safe to kill PostgreSQL whenever it's not needed
 data/raw/               Raw JSON files fetched from the API (1.json, 2.json, ...)
 src/lotofacil/          Python package: API client, fetch/load logic, CLI
 sql/schema.sql          transient.raw table DDL
-dbt/                    dbt Core project (bronze models + seeds)
+dbt/                    dbt Core project (bronze + silver models, seeds, macros)
 docker-compose.yml      PostgreSQL service
 update.sh               Fetches new contests into data/raw/ (no Docker needed)
 load.sh                 Loads data/raw/ into PostgreSQL's transient.raw
@@ -144,9 +204,19 @@ uv run lotofacil load                           # (re)load every JSON file in da
 | bronze  | `winning_municipalities`    | one row per contest x winning municipality, typed | `(contest_number, winner_index)` |
 | bronze  | `ball_names` (seed)         | static: one row per ball number (1-25)       | `number`                              |
 | bronze  | `ball_orders` (seed)        | static: one row per draw position (1-15)     | `draw_order`                          |
+| silver  | `dim_contest`               | one row per contest                          | `dim_contest_id` (= contest number)   |
+| silver  | `dim_location`              | one row per (venue, city, state)             | `dim_location_id` (numeric md5)       |
+| silver  | `dim_date`                  | one row per calendar day                     | `dim_date_id` (`yyyymmdd`)            |
+| silver  | `dim_ball`                  | one row per ball number (1-25)               | `dim_ball_id`                         |
+| silver  | `dim_draw_position`         | one row per draw position (1-15)             | `dim_draw_position_id`                |
+| silver  | `dim_prize_tier`            | one row per prize tier (5)                   | `dim_prize_tier_id`                   |
+| silver  | `fact_contest_summary`      | one row per contest (monetary measures)      | `fact_contest_summary_id`             |
+| silver  | `fact_ball_draws`           | one row per contest x draw position          | `fact_ball_draw_id`                   |
+| silver  | `fact_prize_tiers`          | one row per contest x prize tier             | `fact_prize_tier_id`                  |
+| silver  | `fact_winning_municipalities` | one row per contest x winning municipality | `fact_winning_municipality_id`        |
 
-Staging/mart models (typed joins, fact tables, aggregations) don't exist yet
-— they're the natural next step on top of this bronze layer.
+A gold/mart layer (pre-aggregated, BI-ready tables) doesn't exist yet — it's
+the natural next step on top of silver.
 
 ## Notebooks
 
@@ -158,7 +228,17 @@ uv run jupyter lab --notebook-dir=workspace
 ```
 
 `workspace/` is excluded from linting (see below) since notebooks aren't
-held to the same style as the package code.
+held to the same style as the package code. `pandas` and `itables` (paginated,
+searchable tables) are part of the `notebook` group.
+
+Two gotchas when exploring the database from a notebook:
+
+- `psycopg` opens a transaction on the first query, and an open transaction
+  keeps a lock on the tables it read. That blocks `dbt run` (it needs an
+  exclusive lock to swap a table). Use `psycopg.connect(..., autocommit=True)`
+  or call `conn.commit()` after your queries.
+- `load.sh`/`update.sh` sync with `uv sync --inexact`, so they don't remove
+  the `notebook` group; a plain `uv sync` does.
 
 ## Linting
 
