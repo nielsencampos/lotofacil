@@ -6,5 +6,5 @@ set -euo pipefail
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
-uv sync --quiet
+uv sync --quiet --inexact
 uv run lotofacil update --skip-load
