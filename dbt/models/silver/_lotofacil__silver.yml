@@ -137,8 +137,8 @@ models:
           - not_null
       - name: city
         description: >
-          City name, normalized to upper/trim; sometimes blank in the
-          source data.
+          City name, normalized to upper/trim/unaccent. Blank in the source
+          data is filled in as "---NAO INFORMADO---".
         tests:
           - not_null
 
@@ -279,8 +279,9 @@ models:
           - not_null
       - name: city
         description: >
-          City of the winning ticket, normalized to upper/trim (part of FK
-          to dim_municipality).
+          City of the winning ticket, normalized to upper/trim/unaccent
+          (part of FK to dim_municipality). Blank in the source data is
+          filled in as "---NAO INFORMADO---".
         tests:
           - not_null
       - name: winner_position

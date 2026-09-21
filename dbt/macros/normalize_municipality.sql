@@ -12,6 +12,8 @@
     - state='C' (city='Fortaleza', the capital of Ceará) -> truncated 'CE'.
     - state='G' (city='Santa Helena de Goias', a city in Goiás) -> truncated
       'GO'.
+    - A blank city (e.g. some winning tickets have a state but no city on
+      record) is filled in as '---NAO INFORMADO---'.
     Apply to every state/city column that ends up in dim_municipality
     (bronze.winning_municipalities AND the parsed bronze.draws.draw_city_state)
     so they all collapse consistently and the dimension's FKs hold.
@@ -28,5 +30,8 @@
 {% endmacro %}
 
 {% macro normalize_municipality_city(city_col) %}
-    unaccent(upper(trim({{ city_col }})))
+    case
+        when trim({{ city_col }}) = '' then '---NAO INFORMADO---'
+        else unaccent(upper(trim({{ city_col }})))
+    end
 {% endmacro %}
