@@ -11,10 +11,13 @@
       dbt_project.yml) so e.g. "MACEIO" and "MACEIÓ" collapse — a regex would
       need a hand-rolled list of every accented character.
     - A blank location/city is filled in as '---NAO INFORMADO---'
-      (not_informed()).
+      (not_informed()): the value exists but is missing.
+    - Winning tickets have no venue at all — nothing is missing — so their
+      location is '---NAO SE APLICA---' (not_applicable()). That keeps them
+      apart from draws whose venue was blank.
     - Draw venues (draw_location) have typos and word-order variants in the
       source, so normalize_location_nm() maps the known ones to a canonical
-      name (see the alias map inside it). Only 6 values are expected in
+      name (see the alias map inside it). Only 7 values are expected in
       dim_location.location_nm; an accepted_values test on it fails when a
       new, unmapped variant shows up so it gets a conscious decision.
     - (state='--', city='CANAL ELETRONICO') and (state='XX', city='Canal
@@ -29,6 +32,8 @@
 {% macro normalize_text(col) %}unaccent(upper(trim({{ col }}))){% endmacro %}
 
 {% macro not_informed() %}'---NAO INFORMADO---'{% endmacro %}
+
+{% macro not_applicable() %}'---NAO SE APLICA---'{% endmacro %}
 
 {% macro normalize_location_nm(location_col) %}
     {#- keys are already normalized (upper, no accents); values are canonical -#}

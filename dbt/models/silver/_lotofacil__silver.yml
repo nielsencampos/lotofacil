@@ -61,8 +61,11 @@ models:
         description: Whether the API exposes a per-city winner breakdown for this contest.
       - name: independence_day_flg
         description: >
-          Whether this was a Lotofacil da Independencia draw (bronze
-          special_contest_indicator = 2; only happens in September).
+          Whether this was a Lotofacil da Independencia draw. True when the
+          API marks it (special_contest_indicator = 2, only 9 of the 14
+          draws) or, from 2013 on, when it is a September contest whose
+          special accumulated amount is 0 (all 14 draws; the API misses
+          2013-2016 and 2019). See dim_contest.sql.
         tests:
           - not_null
       - name: remarks_desc
@@ -152,7 +155,7 @@ models:
       One row per distinct (location, city, state) seen among winning
       tickets (bronze.winning_municipalities) or draws (bronze.draws) — a
       single shared geography dimension for both. Winning tickets have no
-      venue, so their location_nm is "---NAO INFORMADO---". Values are
+      venue, so their location_nm is "---NAO SE APLICA---". Values are
       normalized (upper/trim/unaccent, see dbt/macros/normalize_texts.sql).
       Not a complete list of all Brazilian cities. Primary key:
       dim_location_id, a deterministic numeric md5 of the natural key (see
@@ -176,15 +179,16 @@ models:
           Venue where the draw took place. Normalized to upper/trim/unaccent,
           with known typos and word-order variants mapped to a canonical name
           (see the alias map in normalize_location_nm,
-          dbt/macros/normalize_texts.sql). "---NAO INFORMADO---" when unknown
-          (always the case for winning tickets). Only the 6 values below are
-          expected.
+          dbt/macros/normalize_texts.sql). "---NAO INFORMADO---" when the draw's
+          venue is blank in the source, and "---NAO SE APLICA---" for winning
+          tickets, which have no venue. Only the 7 values below are expected.
         tests:
           - not_null
           - accepted_values:
               arguments:
                 values:
                   - '---NAO INFORMADO---'
+                  - '---NAO SE APLICA---'
                   - AUDITORIO
                   - CAMINHAO DA SORTE
                   - ESPACO DA SORTE
@@ -490,7 +494,7 @@ models:
       - name: dim_location_id
         description: >
           Where the winning ticket came from (state/city; venue is always
-          "---NAO INFORMADO---"). Foreign key to dim_location.
+          "---NAO SE APLICA---"). Foreign key to dim_location.
         tests:
           - not_null
           - relationships:

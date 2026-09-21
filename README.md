@@ -81,7 +81,7 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     contest + draw position, not the ball), so a corrected result doesn't
     change the row's id.
   - **`dim_location`** is shared by draws (venue + city + state) and winning
-    tickets (city + state only, venue `---NAO INFORMADO---`).
+    tickets (city + state only, venue `---NAO SE APLICA---`).
     **`dim_date`** has one row per calendar day, from the first contest to
     the latest `next_draw_date`, with year/semester/quarter/bimester/month/ISO
     week, Portuguese day and month names, and flags; no holidays.
@@ -91,8 +91,9 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     unaccent (Postgres `unaccent`, created by an `on-run-start` hook), blanks
     filled as `---NAO INFORMADO---`, online sales (`--`/`XX`, "canal
     eletrônico") canonicalized to `XX`, truncated states `C`/`G` fixed to
-    `CE`/`GO`, and known typos/variants of draw venues mapped to 6 canonical
-    names. An `accepted_values` test on `dim_location.location_nm` fails when
+    `CE`/`GO`, and known typos/variants of draw venues mapped to 5 canonical
+    venue names (a blank venue is `---NAO INFORMADO---`; winning tickets, which
+    have no venue, get `---NAO SE APLICA---`). An `accepted_values` test on `dim_location.location_nm` fails when
     a new, unmapped venue shows up, so it gets a conscious decision. The
     same macros are used by every model that touches these columns —
     otherwise the joins between them would silently stop matching.

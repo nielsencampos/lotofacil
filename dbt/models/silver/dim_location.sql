@@ -1,8 +1,10 @@
 -- Silver dimension: one row per distinct (location, city, state) seen either
 -- among winning tickets (bronze.winning_municipalities) or draws
 -- (bronze.draws) — a single shared geography dimension for both.
--- - Winning tickets only know state/city, so their location_nm is
---   '---NAO INFORMADO---'; draws also carry the venue (draw_location).
+-- - Winning tickets only know state/city — a winner has no venue, nothing is
+--   missing — so their location_nm is '---NAO SE APLICA---'. Draws also carry
+--   the venue (draw_location); when it is blank in the source it is
+--   '---NAO INFORMADO---'.
 -- - Everything goes through the normalize_* macros (upper/trim/unaccent,
 --   blanks -> '---NAO INFORMADO---', canal eletronico -> 'XX', "C"/"G" ->
 --   "CE"/"GO"), see dbt/macros/normalize_texts.sql. dim_contest and
@@ -10,7 +12,7 @@
 --   keep matching.
 -- - Draw venues are also mapped to a canonical name (typos and word-order
 --   variants, e.g. "ESPCAO LOTERIAS CAIXA" -> "ESPACO LOTERIAS CAIXA"); only
---   6 location_nm values are expected, enforced by an accepted_values test.
+--   7 location_nm values are expected, enforced by an accepted_values test.
 -- - dim_location_id is a deterministic numeric md5 of the natural key (see
 --   dbt/macros/numeric_md5.sql), so it doesn't shift between rebuilds the way
 --   row_number() would. The natural key stays enforced as UNIQUE.
@@ -27,7 +29,7 @@
 ]) }}
 with from_winners as (
     select
-        {{ not_informed() }} as location_nm,
+        {{ not_applicable() }} as location_nm,
         {{ normalize_city_nm('city') }} as city_nm,
         {{ normalize_state_cd('state', 'city') }} as state_cd
     from {{ ref('winning_municipalities') }}

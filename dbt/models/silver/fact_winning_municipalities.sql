@@ -3,7 +3,7 @@
 -- dim_location_id.
 -- - The dim_location lookup runs the same normalize_* macros dim_location was
 --   built with (winning tickets have no venue, so they match the
---   '---NAO INFORMADO---' location) — otherwise this wouldn't join.
+--   '---NAO SE APLICA---' location) — otherwise this wouldn't join.
 -- - fact_winning_municipality_id is a deterministic numeric md5 of the grain
 --   (contest + winner_index_nbr); the grain is enforced as UNIQUE. See
 --   dbt/macros/numeric_md5.sql.
@@ -34,6 +34,6 @@ select
 from {{ ref('winning_municipalities') }} wm
 inner join {{ ref('dim_contest') }} c on c.contest_nbr = wm.contest_number
 inner join {{ ref('dim_location') }} l
-    on l.location_nm = {{ not_informed() }}
+    on l.location_nm = {{ not_applicable() }}
    and l.city_nm = {{ normalize_city_nm('wm.city') }}
    and l.state_cd = {{ normalize_state_cd('wm.state', 'wm.city') }}

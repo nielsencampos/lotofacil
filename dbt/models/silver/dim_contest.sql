@@ -9,8 +9,14 @@
 --   next_draw_dim_date_id (the next scheduled draw) are two roles of the same
 --   dimension. The next one uses a left join so a missing date could never
 --   make a contest disappear.
--- - independence_day_flg: this was a Lotofacil da Independencia draw
---   (bronze special_contest_indicator = 2; it only shows up in September).
+-- - independence_day_flg: this was a Lotofacil da Independencia draw. The API
+--   marks it (special_contest_indicator = 2) for only 9 of the 14 draws, so
+--   the flag also uses the signature all 14 share: from 2013 on, in
+--   September, the special accumulated amount is 0 (it resets on that draw;
+--   it is 0 on exactly one contest per year, whereas before 2013 it was 0 on
+--   every contest because the column didn't exist yet). The API does not
+--   mark 2013-2016 and 2019. tests/independence_day_at_most_one_per_year.sql
+--   guards the rule against over-flagging.
 -- - Bronze columns that carry no information were dropped in bronze itself
 --   (game type/number, publication type, heart team and is_last_contest have
 --   the same value on every contest).
@@ -37,7 +43,15 @@ select
     dd_next.dim_date_id as next_draw_dim_date_id,
     d.is_accumulated as is_accumulated_flg,
     d.show_city_detail as show_city_detail_flg,
-    coalesce(d.special_contest_indicator = 2, false) as independence_day_flg,
+    coalesce(
+        d.special_contest_indicator = 2
+        or (
+            d.draw_date >= date '2013-01-01'
+            and extract(month from d.draw_date) = 9
+            and d.special_accumulated_amount = 0
+        ),
+        false
+    ) as independence_day_flg,
     {{ normalize_text('d.remarks') }} as remarks_desc,
     d.previous_contest_number as previous_contest_nbr,
     d.final_contest_number_0_5 as final_contest_nbr,
