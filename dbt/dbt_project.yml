@@ -14,7 +14,7 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
-# Required by normalize_municipality_city() (dbt/macros/normalize_municipality.sql)
+# Required by the normalize_*_name() macros (dbt/macros/normalize_texts.sql)
 # to strip accents reliably. Runs before every dbt invocation so `dbt run`
 # is self-sufficient regardless of whether `lotofacil init-db` ran first.
 on-run-start:

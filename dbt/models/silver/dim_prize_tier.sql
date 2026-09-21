@@ -8,9 +8,11 @@
     tags=["dim"],
     post_hook=[
     "alter table {{ this }} drop constraint if exists {{ this.identifier }}_pkey",
-    "alter table {{ this }} add primary key (prize_tier)"
+    "alter table {{ this }} add primary key (dim_prize_tier_id)",
+    "alter table {{ this }} add unique (prize_tier_nbr)"
 ]) }}
 select distinct
-    prize_tier,
-    prize_tier_description
+    prize_tier as dim_prize_tier_id,
+    prize_tier as prize_tier_nbr,
+    prize_tier_description as prize_tier_desc
 from {{ ref('prize_tiers') }}
