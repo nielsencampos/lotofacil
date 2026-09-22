@@ -1,11 +1,21 @@
 # lotofacil
 
+[![CI](https://github.com/nielsencampos/lotofacil/actions/workflows/ci.yml/badge.svg)](https://github.com/nielsencampos/lotofacil/actions/workflows/ci.yml)
+![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)
+![dbt](https://img.shields.io/badge/dbt-1.12+-FF694B.svg?logo=dbt&logoColor=white)
+![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1.svg?logo=postgresql&logoColor=white)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
+![Claude](https://img.shields.io/badge/Claude-claude--code-D97757?logo=anthropic&logoColor=white)
+
 Data pipeline for Lotofacil (a Brazilian lottery) with insights.
 
 It fetches draw results from the public Caixa API, stores the raw responses
 as JSON, loads them into PostgreSQL, and models them with dbt: a typed
 `bronze` layer, a `silver` star schema (dimensions and facts) and a `gold`
-cube with one row per contest. See [ROADMAP.md](ROADMAP.md) for what comes next.
+layer of five tables shaped for a reader (one wide cube per contest, contest
+similarity, ball frequency, ball gap and ball quintets). See
+[ROADMAP.md](ROADMAP.md) for what comes next.
 
 ## Architecture
 
@@ -385,3 +395,17 @@ dependabot update github_actions <owner>/<repo> --local .
 `--local .` points it at the working directory instead of cloning the repo,
 so it reflects uncommitted changes. It prints what PR it *would* open
 without actually opening one.
+
+## Contributing
+
+Issues and pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md)
+for the workflow, [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for expected
+behavior, and [SECURITY.md](SECURITY.md) to report a vulnerability privately.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
+
+---
+
+Built with [Claude Code](https://claude.ai/code) by [Anthropic](https://anthropic.com).
