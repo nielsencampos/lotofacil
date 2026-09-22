@@ -1,9 +1,10 @@
 [project]
 name = "lotofacil"
-version = "0.1.0"
+version = "1.0.0"
 description = "Data pipeline for Lotofacil (a Brazilian lottery) with insights."
 readme = "README.md"
 requires-python = ">=3.12"
+license = "MIT"
 dependencies = [
     "httpx>=0.28.1",
     "psycopg[binary]>=3.3.5",
