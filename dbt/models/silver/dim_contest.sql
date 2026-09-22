@@ -35,6 +35,40 @@
     "alter table {{ this }} add constraint fk_dim_contest_dim_date_draw foreign key (draw_dim_date_id) references {{ ref('dim_date') }} (dim_date_id)",
     "alter table {{ this }} add constraint fk_dim_contest_dim_date_next_draw foreign key (next_draw_dim_date_id) references {{ ref('dim_date') }} (dim_date_id)"
 ]) }}
+with draws as (
+    select
+        contest_number,
+        is_accumulated,
+        show_city_detail,
+        special_contest_indicator,
+        draw_date,
+        next_draw_date,
+        draw_location,
+        draw_city_state,
+        special_accumulated_amount,
+        remarks,
+        previous_contest_number,
+        final_contest_number_0_5,
+        next_contest_number
+    from {{ ref('draws') }}
+),
+
+dim_location as (
+    select
+        dim_location_id,
+        location_nm,
+        city_nm,
+        state_cd
+    from {{ ref('dim_location') }}
+),
+
+dim_date as (
+    select
+        dim_date_id,
+        date_dt
+    from {{ ref('dim_date') }}
+)
+
 select
     d.contest_number as dim_contest_id,
     d.contest_number as contest_nbr,
@@ -56,10 +90,10 @@ select
     d.previous_contest_number as previous_contest_nbr,
     d.final_contest_number_0_5 as final_contest_nbr,
     d.next_contest_number as next_contest_nbr
-from {{ ref('draws') }} d
-inner join {{ ref('dim_location') }} l
+from draws d
+inner join dim_location l
     on l.location_nm = {{ normalize_location_nm('d.draw_location') }}
    and l.city_nm = {{ normalize_city_nm("split_part(d.draw_city_state, ',', 1)") }}
    and l.state_cd = {{ normalize_state_cd("split_part(d.draw_city_state, ',', 2)", "split_part(d.draw_city_state, ',', 1)") }}
-inner join {{ ref('dim_date') }} dd_draw on dd_draw.date_dt = d.draw_date
-left join {{ ref('dim_date') }} dd_next on dd_next.date_dt = d.next_draw_date
+inner join dim_date dd_draw on dd_draw.date_dt = d.draw_date
+left join dim_date dd_next on dd_next.date_dt = d.next_draw_date

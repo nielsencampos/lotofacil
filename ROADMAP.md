@@ -7,8 +7,10 @@ file is for what doesn't yet, and for the open questions we already know about.
 
 `Caixa API -> data/raw -> transient.raw -> bronze -> silver -> gold`, all rebuilt from
 `data/raw/` with `./rebuild.sh`. The modeling is done: a typed bronze layer, a silver
-star schema, and `gold.cube_contest` (one wide row per contest, balls as arrays, winners
-per tier). The next phase is about *using* the data.
+star schema, `gold.cube_contest` (one wide row per contest, balls as arrays, winners
+per tier), `gold.similar_contests` (pairs of contests sharing 13+ of the same 15
+balls) and `gold.ball_frequency` (per ball, how often it came out, as a percentage,
+over several windows). The next phase is about *using* the data.
 
 ## Next: statistics and probability
 
@@ -50,7 +52,8 @@ Ideas for notebooks in `workspace/`, roughly in the order worth doing them.
 
 ## Possible gold models
 
-- Ball frequency and gap per ball, one row per ball.
+- Gap per ball: how many contests since it last came out (`gold.ball_frequency` covers
+  how often, not how long since).
 - A pair matrix (how often two balls came out together).
 - Cube variants: one flag column per ball (25) or one column per draw position (15),
   if arrays turn out to be awkward for the analysis.

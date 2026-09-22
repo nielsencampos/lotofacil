@@ -27,14 +27,112 @@
     "alter table {{ this }} add primary key (contest_nbr)"
 ]) }}
 {%- set tiers = [15, 14, 13, 12, 11] %}
-with balls as (
+with fact_ball_draws as (
+    select
+        dim_contest_id,
+        dim_draw_position_id,
+        dim_ball_id
+    from {{ ref('fact_ball_draws') }}
+),
+
+dim_ball as (
+    select
+        dim_ball_id,
+        ball_nbr
+    from {{ ref('dim_ball') }}
+),
+
+dim_draw_position as (
+    select
+        dim_draw_position_id,
+        draw_position_nbr
+    from {{ ref('dim_draw_position') }}
+),
+
+fact_prize_tiers as (
+    select
+        dim_contest_id,
+        dim_prize_tier_id,
+        winner_qtty,
+        prize_amt
+    from {{ ref('fact_prize_tiers') }}
+),
+
+dim_prize_tier as (
+    select
+        dim_prize_tier_id,
+        prize_tier_nbr
+    from {{ ref('dim_prize_tier') }}
+),
+
+fact_winning_municipalities as (
+    select
+        dim_contest_id,
+        dim_location_id,
+        winner_index_nbr,
+        winner_qtty
+    from {{ ref('fact_winning_municipalities') }}
+),
+
+dim_location as (
+    select
+        dim_location_id,
+        location_nm,
+        city_nm,
+        state_cd
+    from {{ ref('dim_location') }}
+),
+
+dim_contest as (
+    select
+        contest_nbr,
+        dim_contest_id,
+        draw_dim_date_id,
+        next_draw_dim_date_id,
+        dim_location_id,
+        is_accumulated_flg,
+        show_city_detail_flg,
+        independence_day_flg,
+        remarks_desc,
+        previous_contest_nbr,
+        final_contest_nbr,
+        next_contest_nbr
+    from {{ ref('dim_contest') }}
+),
+
+dim_date as (
+    select
+        dim_date_id,
+        date_dt,
+        day_of_week_nm,
+        year_nbr,
+        month_nbr,
+        holiday_flg,
+        holiday_nm
+    from {{ ref('dim_date') }}
+),
+
+fact_contest_summary as (
+    select
+        dim_contest_id,
+        collected_amt,
+        accumulated_amt,
+        special_accumulated_amt,
+        next_accumulated_amt,
+        next_estimated_prize_amt,
+        guarantee_fund_balance_amt,
+        total_prize_tier_one_amt
+    from {{ ref('fact_contest_summary') }}
+),
+
+balls as (
     select
         fbd.dim_contest_id,
         array_agg(db.ball_nbr order by dp.draw_position_nbr) as balls_draw_order,
         array_agg(db.ball_nbr order by db.ball_nbr) as balls_sorted
-    from {{ ref('fact_ball_draws') }} fbd
-    inner join {{ ref('dim_ball') }} db on db.dim_ball_id = fbd.dim_ball_id
-    inner join {{ ref('dim_draw_position') }} dp
+    from fact_ball_draws fbd
+    inner join dim_ball db on db.dim_ball_id = fbd.dim_ball_id
+    inner join dim_draw_position dp
         on dp.dim_draw_position_id = fbd.dim_draw_position_id
     group by fbd.dim_contest_id
 ),
@@ -47,8 +145,8 @@ prize_tiers as (
         sum(fpt.prize_amt) filter (where dpt.prize_tier_nbr = {{ tier }}) as tier_{{ tier }}_prize_amt
         {%- endfor %},
         sum(fpt.winner_qtty) as winner_total_qtty
-    from {{ ref('fact_prize_tiers') }} fpt
-    inner join {{ ref('dim_prize_tier') }} dpt on dpt.dim_prize_tier_id = fpt.dim_prize_tier_id
+    from fact_prize_tiers fpt
+    inner join dim_prize_tier dpt on dpt.dim_prize_tier_id = fpt.dim_prize_tier_id
     group by fpt.dim_contest_id
 ),
 
@@ -64,8 +162,8 @@ municipalities as (
             )
             order by fwm.winner_index_nbr
         ) as tier_15_winning_locations
-    from {{ ref('fact_winning_municipalities') }} fwm
-    inner join {{ ref('dim_location') }} l on l.dim_location_id = fwm.dim_location_id
+    from fact_winning_municipalities fwm
+    inner join dim_location l on l.dim_location_id = fwm.dim_location_id
     group by fwm.dim_contest_id
 )
 
@@ -111,11 +209,11 @@ select
     s.next_estimated_prize_amt,
     s.guarantee_fund_balance_amt,
     s.total_prize_tier_one_amt
-from {{ ref('dim_contest') }} c
-inner join {{ ref('dim_date') }} dd on dd.dim_date_id = c.draw_dim_date_id
-left join {{ ref('dim_date') }} nd on nd.dim_date_id = c.next_draw_dim_date_id
-inner join {{ ref('dim_location') }} l on l.dim_location_id = c.dim_location_id
+from dim_contest c
+inner join dim_date dd on dd.dim_date_id = c.draw_dim_date_id
+left join dim_date nd on nd.dim_date_id = c.next_draw_dim_date_id
+inner join dim_location l on l.dim_location_id = c.dim_location_id
 inner join balls b on b.dim_contest_id = c.dim_contest_id
 inner join prize_tiers pt on pt.dim_contest_id = c.dim_contest_id
 left join municipalities m on m.dim_contest_id = c.dim_contest_id
-inner join {{ ref('fact_contest_summary') }} s on s.dim_contest_id = c.dim_contest_id
+inner join fact_contest_summary s on s.dim_contest_id = c.dim_contest_id

@@ -18,12 +18,35 @@
     "alter table {{ this }} add constraint fk_fact_prize_tiers_dim_contest foreign key (dim_contest_id) references {{ ref('dim_contest') }} (dim_contest_id)",
     "alter table {{ this }} add constraint fk_fact_prize_tiers_dim_prize_tier foreign key (dim_prize_tier_id) references {{ ref('dim_prize_tier') }} (dim_prize_tier_id)"
 ]) }}
+with prize_tiers as (
+    select
+        contest_number,
+        prize_tier_number,
+        winner_count,
+        prize_amount
+    from {{ ref('prize_tiers') }}
+),
+
+dim_contest as (
+    select
+        dim_contest_id,
+        contest_nbr
+    from {{ ref('dim_contest') }}
+),
+
+dim_prize_tier as (
+    select
+        dim_prize_tier_id,
+        prize_tier_nbr
+    from {{ ref('dim_prize_tier') }}
+)
+
 select
     {{ numeric_md5(['c.dim_contest_id', 'dpt.dim_prize_tier_id']) }} as fact_prize_tier_id,
     c.dim_contest_id,
     dpt.dim_prize_tier_id,
     pt.winner_count as winner_qtty,
     pt.prize_amount as prize_amt
-from {{ ref('prize_tiers') }} pt
-inner join {{ ref('dim_contest') }} c on c.contest_nbr = pt.contest_number
-inner join {{ ref('dim_prize_tier') }} dpt on dpt.prize_tier_nbr = pt.prize_tier_number
+from prize_tiers pt
+inner join dim_contest c on c.contest_nbr = pt.contest_number
+inner join dim_prize_tier dpt on dpt.prize_tier_nbr = pt.prize_tier_number

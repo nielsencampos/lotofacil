@@ -85,6 +85,11 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     don't round them. Each `fact_*_id` hashes the grain only (e.g.
     contest + draw position, not the ball), so a corrected result doesn't
     change the row's id.
+  - **Import CTEs**: every model brings each table it reads in through its
+    own leading `with` CTE (named after the source, selecting only the
+    columns used), and joins/aggregates off those CTEs, never off a bare
+    `{{ ref(...) }}` inside a `from`/`join`. Keeps each model self-documenting
+    about exactly which columns it depends on.
   - **`dim_location`** is shared by draws (venue + city + state) and winning
     tickets (city + state only, venue `---NAO SE APLICA---`).
     **`dim_date`** has one row per calendar day, from the first contest to
@@ -105,10 +110,11 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     otherwise the joins between them would silently stop matching.
   - **Thesaurus** (column suffixes): `_id` key, `_nbr` number, `_nm` name,
     `_cd` code, `_dt` date, `_flg` boolean flag, `_desc` description, `_amt`
-    decimal amount, `_qtty` integer quantity.
+    decimal amount, `_qtty` integer quantity, `_pct` percentage (0-100).
   - **Tags** let you select groups of models regardless of folder: `bronze`,
-    `silver`, `gold`, `dim`, `fact`, `cube`, `dictionary` (the seeds), e.g.
-    `dbt run --select tag:dim` or `dbt build --select tag:silver,tag:fact`.
+    `silver`, `gold`, `dim`, `fact`, `cube`, `similarity`, `frequency`,
+    `dictionary` (the seeds), e.g. `dbt run --select tag:dim` or
+    `dbt build --select tag:silver,tag:fact`.
   - Primary keys, unique keys and foreign keys are all enforced in
     PostgreSQL by post-hooks. Constraints that create an index are left
     unnamed on purpose: dbt rebuilds a table next to the old one and the
@@ -116,8 +122,11 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     collides (index names are unique per schema).
 
 - **dbt (gold layer)**: tables built only from silver and shaped for a reader
-  instead of for modeling. Today it is `cube_contest`, one wide row per
-  contest (see the data model below), so it can be queried without joins.
+  instead of for modeling, each independent of the others (see the data model
+  below). `cube_contest` is one wide row per contest, queried without joins;
+  `similar_contests` is a bridge of contest pairs that drew nearly the same
+  15 balls; `ball_frequency` is one row per ball with its share of the balls
+  drawn, as a percentage, over several windows.
 
 Fetching and loading are two independent services: `update.sh` only talks to
 the Caixa API and writes to `data/raw/` (no Docker/PostgreSQL needed);
@@ -234,6 +243,8 @@ silver, with no key of their own beyond the natural one.
 | Layer   | Model                       | Grain                                      | Primary key                          |
 |---------|-----------------------------|---------------------------------------------|---------------------------------------|
 | gold    | `cube_contest`              | one row per contest, everything in one place | `contest_nbr`                         |
+| gold    | `similar_contests`          | one row per pair of contests sharing 13+ balls | `(contest_a_nbr, contest_b_nbr)`   |
+| gold    | `ball_frequency`            | one row per ball (1-25)                      | `ball_nbr`                            |
 
 `cube_contest` carries the draw date and place, the drawn balls as two integer
 arrays (`balls_draw_order` in the order they came out, `balls_sorted` in numeric
@@ -244,6 +255,28 @@ with a 15-hit winner, and tiers 11-14 have no location data), and the money
 measures. Because those municipalities' winners don't always add up to
 `tier_15_winner_qtty` in the source (79 contests differ), both are shown as sent
 rather than reconciled.
+
+`similar_contests` finds contests whose 15 drawn balls nearly or exactly match
+another contest's, `contest_a_nbr` always the earlier one. The cut is 13+
+shared balls, not the lowest prize tier (11): two random contests already
+share ~9 balls by chance, so 11+ is already ~11% of the ~7.2M possible pairs
+(760k of them) and not meaningfully similar, while 13+ is a ~10.7k-row tail
+worth looking at (354 pairs share 14; none share all 15, yet). Draw date,
+venue (`location_nm`/`city_nm`/`state_cd`) and the tier-15 winner info
+(`tier_15_winner_qtty`, `tier_15_winning_municipality_qtty`,
+`tier_15_winning_locations`) are unfolded per contest
+(`contest_a_*`/`contest_b_*`) the same way `cube_contest` unfolds them, so
+the pair reads without a join back to it.
+
+`ball_frequency` has, per ball, its share of the balls drawn (not of the
+contests) over a set of cumulative windows by draw order -- the last 1
+(`last_contest_pct`, necessarily 0 or 100/15 = 6.6667 since one draw picks 15
+of the 25 balls), 2, 3, 5, 10, 15 and 25 contests taken together
+(`last_2_contests_pct` is the last 2 contests as a whole, not the
+second-to-last contest alone; same pattern through `last_25_contests_pct`) --
+plus the last 1/2/3/5/10 calendar years back from the most recent draw
+(`last_1_year_pct` ... `last_10_years_pct`) and the whole history
+(`total_pct`). Each window's 25 percentages always sum to 100.
 
 ## Notebooks
 

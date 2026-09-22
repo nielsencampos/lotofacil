@@ -8,8 +8,15 @@
     "alter table {{ this }} add primary key (dim_ball_id)",
     "alter table {{ this }} add unique (ball_nbr)"
 ]) }}
+with ball_names as (
+    select
+        number,
+        name
+    from {{ ref('ball_names') }}
+)
+
 select
     number as dim_ball_id,
     number as ball_nbr,
     name as ball_nm
-from {{ ref('ball_names') }}
+from ball_names
