@@ -20,12 +20,41 @@
     "alter table {{ this }} add constraint fk_fact_ball_draws_dim_draw_position foreign key (dim_draw_position_id) references {{ ref('dim_draw_position') }} (dim_draw_position_id)",
     "alter table {{ this }} add constraint fk_fact_ball_draws_dim_ball foreign key (dim_ball_id) references {{ ref('dim_ball') }} (dim_ball_id)"
 ]) }}
+with ball_draws as (
+    select
+        contest_number,
+        draw_order,
+        ball_number
+    from {{ ref('ball_draws') }}
+),
+
+dim_contest as (
+    select
+        dim_contest_id,
+        contest_nbr
+    from {{ ref('dim_contest') }}
+),
+
+dim_draw_position as (
+    select
+        dim_draw_position_id,
+        draw_position_nbr
+    from {{ ref('dim_draw_position') }}
+),
+
+dim_ball as (
+    select
+        dim_ball_id,
+        ball_nbr
+    from {{ ref('dim_ball') }}
+)
+
 select
     {{ numeric_md5(['c.dim_contest_id', 'p.dim_draw_position_id']) }} as fact_ball_draw_id,
     c.dim_contest_id,
     p.dim_draw_position_id,
     b.dim_ball_id
-from {{ ref('ball_draws') }} bd
-inner join {{ ref('dim_contest') }} c on c.contest_nbr = bd.contest_number
-inner join {{ ref('dim_draw_position') }} p on p.draw_position_nbr = bd.draw_order
-inner join {{ ref('dim_ball') }} b on b.ball_nbr = bd.ball_number
+from ball_draws bd
+inner join dim_contest c on c.contest_nbr = bd.contest_number
+inner join dim_draw_position p on p.draw_position_nbr = bd.draw_order
+inner join dim_ball b on b.ball_nbr = bd.ball_number

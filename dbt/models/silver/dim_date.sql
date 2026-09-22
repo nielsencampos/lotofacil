@@ -28,11 +28,25 @@
 {%- set month_abbrs = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'] -%}
 {%- set weekday_names = ['SEGUNDA-FEIRA', 'TERCA-FEIRA', 'QUARTA-FEIRA', 'QUINTA-FEIRA', 'SEXTA-FEIRA', 'SABADO', 'DOMINGO'] -%}
 {%- set weekday_abbrs = ['SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SAB', 'DOM'] %}
-with bounds as (
+with draws as (
+    select
+        draw_date,
+        next_draw_date
+    from {{ ref('draws') }}
+),
+
+holidays as (
+    select
+        holiday_date,
+        holiday_name
+    from {{ ref('holidays') }}
+),
+
+bounds as (
     select
         min(draw_date) as start_dt,
         greatest(max(draw_date), max(next_draw_date)) as end_dt
-    from {{ ref('draws') }}
+    from draws
 ),
 
 calendar as (
@@ -113,4 +127,4 @@ select
     (h.holiday_date is not null) as holiday_flg,
     coalesce(h.holiday_name, {{ not_applicable() }}) as holiday_nm
 from enriched
-left join {{ ref('holidays') }} h on h.holiday_date = enriched.date_dt
+left join holidays h on h.holiday_date = enriched.date_dt

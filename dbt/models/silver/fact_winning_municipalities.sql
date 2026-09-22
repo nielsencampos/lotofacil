@@ -22,15 +22,41 @@
     "alter table {{ this }} add constraint fk_fact_winning_municipalities_dim_contest foreign key (dim_contest_id) references {{ ref('dim_contest') }} (dim_contest_id)",
     "alter table {{ this }} add constraint fk_fact_winning_municipalities_dim_location foreign key (dim_location_id) references {{ ref('dim_location') }} (dim_location_id)"
 ]) }}
+with winning_municipalities as (
+    select
+        contest_number,
+        winner_index,
+        city,
+        state,
+        winner_count
+    from {{ ref('winning_municipalities') }}
+),
+
+dim_contest as (
+    select
+        dim_contest_id,
+        contest_nbr
+    from {{ ref('dim_contest') }}
+),
+
+dim_location as (
+    select
+        dim_location_id,
+        location_nm,
+        city_nm,
+        state_cd
+    from {{ ref('dim_location') }}
+)
+
 select
     {{ numeric_md5(['c.dim_contest_id', 'wm.winner_index']) }} as fact_winning_municipality_id,
     c.dim_contest_id,
     wm.winner_index as winner_index_nbr,
     l.dim_location_id,
     wm.winner_count as winner_qtty
-from {{ ref('winning_municipalities') }} wm
-inner join {{ ref('dim_contest') }} c on c.contest_nbr = wm.contest_number
-inner join {{ ref('dim_location') }} l
+from winning_municipalities wm
+inner join dim_contest c on c.contest_nbr = wm.contest_number
+inner join dim_location l
     on l.location_nm = {{ not_applicable() }}
    and l.city_nm = {{ normalize_city_nm('wm.city') }}
    and l.state_cd = {{ normalize_state_cd('wm.state', 'wm.city') }}

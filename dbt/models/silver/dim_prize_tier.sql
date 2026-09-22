@@ -16,8 +16,15 @@
     "alter table {{ this }} add primary key (dim_prize_tier_id)",
     "alter table {{ this }} add unique (prize_tier_nbr)"
 ]) }}
+with prize_tiers as (
+    select
+        prize_tier_number,
+        prize_tier_description
+    from {{ ref('prize_tiers') }}
+)
+
 select distinct
     prize_tier_number as dim_prize_tier_id,
     prize_tier_number as prize_tier_nbr,
     {{ normalize_text('prize_tier_description') }} as prize_tier_desc
-from {{ ref('prize_tiers') }}
+from prize_tiers

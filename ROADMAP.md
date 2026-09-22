@@ -7,8 +7,14 @@ file is for what doesn't yet, and for the open questions we already know about.
 
 `Caixa API -> data/raw -> transient.raw -> bronze -> silver -> gold`, all rebuilt from
 `data/raw/` with `./rebuild.sh`. The modeling is done: a typed bronze layer, a silver
-star schema, and `gold.cube_contest` (one wide row per contest, balls as arrays, winners
-per tier). The next phase is about *using* the data.
+star schema, `gold.cube_contest` (one wide row per contest, balls as arrays, winners
+per tier), `gold.similar_contests` (pairs of contests sharing 13+ of the same 15
+balls), `gold.ball_frequency` (per ball, how often it came out, as a percentage,
+over several windows), `gold.ball_gap` (per ball, contests since it last came
+out, and how that compares with its own history) and `gold.ball_quintets` (every
+possible 5-ball combination, how many contests drew all 5 together -- 5 because
+that is the mathematical floor two draws always share). The next phase is about
+*using* the data.
 
 ## Next: statistics and probability
 
@@ -26,8 +32,8 @@ Ideas for notebooks in `workspace/`, roughly in the order worth doing them.
    and from it the expected value of a bet. It needs no outside data.
 4. **Sales behavior.** How `collected_amt` moves with the accumulated prize, the day of
    the week, holidays and the Independence draws. This is where a real effect exists.
-5. **Gaps.** For each ball, how many contests it has gone without coming out.
-   Descriptive only.
+5. **Gaps.** Already backed by `gold.ball_gap` (current, max and average gap per
+   ball) -- descriptive only, nothing left to compute here.
 
 ### Ground rules
 
@@ -50,8 +56,6 @@ Ideas for notebooks in `workspace/`, roughly in the order worth doing them.
 
 ## Possible gold models
 
-- Ball frequency and gap per ball, one row per ball.
-- A pair matrix (how often two balls came out together).
 - Cube variants: one flag column per ball (25) or one column per draw position (15),
   if arrays turn out to be awkward for the analysis.
 

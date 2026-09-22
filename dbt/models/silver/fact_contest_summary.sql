@@ -17,6 +17,26 @@
     "alter table {{ this }} add unique (dim_contest_id)",
     "alter table {{ this }} add constraint fk_fact_contest_summary_dim_contest foreign key (dim_contest_id) references {{ ref('dim_contest') }} (dim_contest_id)"
 ]) }}
+with draws as (
+    select
+        contest_number,
+        collected_amount,
+        accumulated_amount_0_5,
+        special_accumulated_amount,
+        next_accumulated_amount,
+        next_estimated_prize,
+        guarantee_fund_balance,
+        total_prize_tier_one_amount
+    from {{ ref('draws') }}
+),
+
+dim_contest as (
+    select
+        dim_contest_id,
+        contest_nbr
+    from {{ ref('dim_contest') }}
+)
+
 select
     {{ numeric_md5(['c.dim_contest_id']) }} as fact_contest_summary_id,
     c.dim_contest_id,
@@ -27,5 +47,5 @@ select
     d.next_estimated_prize as next_estimated_prize_amt,
     d.guarantee_fund_balance as guarantee_fund_balance_amt,
     d.total_prize_tier_one_amount as total_prize_tier_one_amt
-from {{ ref('draws') }} d
-inner join {{ ref('dim_contest') }} c on c.contest_nbr = d.contest_number
+from draws d
+inner join dim_contest c on c.contest_nbr = d.contest_number

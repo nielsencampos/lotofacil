@@ -8,8 +8,15 @@
     "alter table {{ this }} add primary key (dim_draw_position_id)",
     "alter table {{ this }} add unique (draw_position_nbr)"
 ]) }}
+with ball_orders as (
+    select
+        draw_order,
+        name
+    from {{ ref('ball_orders') }}
+)
+
 select
     draw_order as dim_draw_position_id,
     draw_order as draw_position_nbr,
     name as draw_position_nm
-from {{ ref('ball_orders') }}
+from ball_orders

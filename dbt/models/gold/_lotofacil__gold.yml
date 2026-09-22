@@ -126,3 +126,298 @@ models:
         description: Balance of the guarantee fund, in BRL.
       - name: total_prize_tier_one_amt
         description: Total prize amount of the top tier, in BRL.
+
+  - name: similar_contests
+    description: >
+      Gold bridge: one row per pair of contests that drew at least 13 of the
+      same 15 balls, contest_a_nbr always the earlier contest. Two random
+      contests already share ~9 balls by chance, so the cut starts at 13, not
+      at the lowest prize tier (11). 15 shared balls means an identical
+      repeat. Built directly from silver, independent of cube_contest.
+      Primary key: (contest_a_nbr, contest_b_nbr), enforced in PostgreSQL via
+      a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - contest_a_nbr
+              - contest_b_nbr
+    columns:
+      - name: contest_a_nbr
+        description: Number of the earlier contest in the pair.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_nbr
+      - name: contest_a_draw_dt
+        description: Day the earlier contest was drawn.
+        tests:
+          - not_null
+      - name: contest_a_location_nm
+        description: Venue where the earlier contest was drawn.
+        tests:
+          - not_null
+      - name: contest_a_city_nm
+        description: City where the earlier contest was drawn.
+        tests:
+          - not_null
+      - name: contest_a_state_cd
+        description: Two-letter state code of the earlier contest's draw city.
+        tests:
+          - not_null
+      - name: contest_a_tier_15_winner_qtty
+        description: Winners with all 15 hits (the top prize) in the earlier contest.
+        tests:
+          - not_null
+      - name: contest_a_tier_15_winning_municipality_qtty
+        description: >
+          Number of entries in the earlier contest's winning municipalities
+          list (0 when the source lists none). Not reconciled with
+          contest_a_tier_15_winner_qtty, same as cube_contest.
+        tests:
+          - not_null
+      - name: contest_a_tier_15_winning_locations
+        description: >
+          JSON array with one object per winning municipality entry of the
+          earlier contest's tier-15 winners, in source order, each with
+          city_nm, state_cd and winner_qtty. Empty array when there are none.
+        tests:
+          - not_null
+      - name: contest_b_nbr
+        description: Number of the later contest in the pair.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_nbr
+      - name: contest_b_draw_dt
+        description: Day the later contest was drawn.
+        tests:
+          - not_null
+      - name: contest_b_location_nm
+        description: Venue where the later contest was drawn.
+        tests:
+          - not_null
+      - name: contest_b_city_nm
+        description: City where the later contest was drawn.
+        tests:
+          - not_null
+      - name: contest_b_state_cd
+        description: Two-letter state code of the later contest's draw city.
+        tests:
+          - not_null
+      - name: contest_b_tier_15_winner_qtty
+        description: Winners with all 15 hits (the top prize) in the later contest.
+        tests:
+          - not_null
+      - name: contest_b_tier_15_winning_municipality_qtty
+        description: >
+          Number of entries in the later contest's winning municipalities
+          list (0 when the source lists none). Not reconciled with
+          contest_b_tier_15_winner_qtty, same as cube_contest.
+        tests:
+          - not_null
+      - name: contest_b_tier_15_winning_locations
+        description: >
+          JSON array with one object per winning municipality entry of the
+          later contest's tier-15 winners, in source order, each with
+          city_nm, state_cd and winner_qtty. Empty array when there are none.
+        tests:
+          - not_null
+      - name: shared_ball_qtty
+        description: How many of the 15 balls the two contests have in common, 13 to 15.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [13, 14, 15]
+      - name: shared_balls
+        description: The ball numbers the two contests have in common, ascending.
+        tests:
+          - not_null
+
+  - name: ball_frequency
+    description: >
+      Gold cube: one row per ball (1-25), its share of the balls drawn (not
+      of the contests -- see below) over a set of windows anchored on the
+      most recent contest (the last 1/2/3/5/10/15/25 contests by draw order,
+      cumulative -- last_2_contests_pct is the last 2 contests taken
+      together, not the second-to-last contest alone -- the last 1/2/3/5/10
+      calendar years, and the whole history). Each window's 25 percentages
+      sum to 100, checked by
+      tests/ball_frequency_pct_columns_sum_to_100.sql. Built directly from
+      silver, independent of the other gold tables. Primary key: ball_nbr,
+      enforced in PostgreSQL via a post-hook.
+    columns:
+      - name: ball_nbr
+        description: Ball number, 1 to 25 (primary key).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ball')
+                field: ball_nbr
+      - name: last_contest_pct
+        description: >
+          Share of the 15 balls drawn in the most recent contest that were
+          this ball: 0 for the 10 balls that didn't come out, 100/15 = 6.6667
+          for the 15 that did.
+        tests:
+          - not_null
+      - name: last_2_contests_pct
+        description: >
+          Share of the balls drawn in the last 2 contests (by draw order,
+          taken together) that were this ball.
+        tests:
+          - not_null
+      - name: last_3_contests_pct
+        description: >
+          Share of the balls drawn in the last 3 contests (by draw order,
+          taken together) that were this ball.
+        tests:
+          - not_null
+      - name: last_5_contests_pct
+        description: Share of the balls drawn in the last 5 contests (by draw order) that were this ball.
+        tests:
+          - not_null
+      - name: last_10_contests_pct
+        description: Share of the balls drawn in the last 10 contests (by draw order) that were this ball.
+        tests:
+          - not_null
+      - name: last_15_contests_pct
+        description: Share of the balls drawn in the last 15 contests (by draw order) that were this ball.
+        tests:
+          - not_null
+      - name: last_25_contests_pct
+        description: Share of the balls drawn in the last 25 contests (by draw order) that were this ball.
+        tests:
+          - not_null
+      - name: last_1_year_pct
+        description: >
+          Share of the balls drawn in the contests from the 1 calendar year
+          up to the most recent draw that were this ball.
+        tests:
+          - not_null
+      - name: last_2_years_pct
+        description: Share of the balls drawn in the last 2 calendar years that were this ball.
+        tests:
+          - not_null
+      - name: last_3_years_pct
+        description: Share of the balls drawn in the last 3 calendar years that were this ball.
+        tests:
+          - not_null
+      - name: last_5_years_pct
+        description: Share of the balls drawn in the last 5 calendar years that were this ball.
+        tests:
+          - not_null
+      - name: last_10_years_pct
+        description: Share of the balls drawn in the last 10 calendar years that were this ball.
+        tests:
+          - not_null
+      - name: total_pct
+        description: Share of every ball ever drawn that was this ball.
+        tests:
+          - not_null
+
+  - name: ball_gap
+    description: >
+      Gold cube: one row per ball (1-25), how many contests since it last
+      came out (current_gap_qtty, 0 if it came out in the most recent
+      contest) alongside its historical max and average gap between
+      consecutive appearances, so a reader can tell whether the current dry
+      spell is unusual. Built directly from silver, independent of the other
+      gold tables. Primary key: ball_nbr, enforced in PostgreSQL via a
+      post-hook.
+    columns:
+      - name: ball_nbr
+        description: Ball number, 1 to 25 (primary key).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ball')
+                field: ball_nbr
+      - name: last_contest_nbr
+        description: Number of the most recent contest this ball came out in.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_nbr
+      - name: last_draw_dt
+        description: Day of last_contest_nbr.
+        tests:
+          - not_null
+      - name: current_gap_qtty
+        description: >
+          Contests since this ball's last appearance, as of the most recent
+          contest: 0 if it came out in the last contest, 1 if its last
+          appearance was the contest before that, and so on.
+        tests:
+          - not_null
+      - name: max_gap_qtty
+        description: >
+          Longest gap this ball has ever had between two consecutive
+          appearances. Can be smaller than current_gap_qtty when the ball is
+          mid-record: it only updates once the open gap closes.
+        tests:
+          - not_null
+      - name: avg_gap_avg
+        description: Average, across every pair of consecutive appearances, of how many contests this ball sat out.
+        tests:
+          - not_null
+
+  - name: ball_quintets
+    description: >
+      Gold cube: one row per possible 5-ball combination (C(25,5) = 53,130),
+      how many contests drew all 5 of them together. 5 is the mathematical
+      floor two 15-of-25 draws always share (15 + 15 - 25), which is why the
+      grain is 5-ball combinations, not pairs. Includes every combination,
+      not just the ones observed -- expected count is ~214 per combination,
+      so a value far from that is the interesting case. Built directly from
+      silver, independent of the other gold tables. Primary key: (ball_1_nbr
+      .. ball_5_nbr), enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - ball_1_nbr
+              - ball_2_nbr
+              - ball_3_nbr
+              - ball_4_nbr
+              - ball_5_nbr
+    columns:
+      - name: ball_1_nbr
+        description: Lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_2_nbr
+        description: Second-lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_3_nbr
+        description: Third-lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_4_nbr
+        description: Second-highest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_5_nbr
+        description: Highest ball number in the combination.
+        tests:
+          - not_null
+      - name: together_qtty
+        description: Number of contests where all 5 of these balls were drawn together.
+        tests:
+          - not_null
+      - name: together_pct
+        description: Share of every contest where all 5 of these balls were drawn together.
+        tests:
+          - not_null
