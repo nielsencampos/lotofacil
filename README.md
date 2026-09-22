@@ -110,10 +110,11 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
     otherwise the joins between them would silently stop matching.
   - **Thesaurus** (column suffixes): `_id` key, `_nbr` number, `_nm` name,
     `_cd` code, `_dt` date, `_flg` boolean flag, `_desc` description, `_amt`
-    decimal amount, `_qtty` integer quantity, `_pct` percentage (0-100).
+    decimal amount, `_qtty` integer quantity, `_pct` percentage (0-100),
+    `_avg` decimal average.
   - **Tags** let you select groups of models regardless of folder: `bronze`,
-    `silver`, `gold`, `dim`, `fact`, `cube`, `similarity`, `frequency`,
-    `dictionary` (the seeds), e.g. `dbt run --select tag:dim` or
+    `silver`, `gold`, `dim`, `fact`, `cube`, `similarity`, `frequency`, `gap`,
+    `quintet`, `dictionary` (the seeds), e.g. `dbt run --select tag:dim` or
     `dbt build --select tag:silver,tag:fact`.
   - Primary keys, unique keys and foreign keys are all enforced in
     PostgreSQL by post-hooks. Constraints that create an index are left
@@ -126,7 +127,10 @@ Caixa API  -->  data/raw/*.json  -->  transient.raw (Postgres)  -->  bronze  -->
   below). `cube_contest` is one wide row per contest, queried without joins;
   `similar_contests` is a bridge of contest pairs that drew nearly the same
   15 balls; `ball_frequency` is one row per ball with its share of the balls
-  drawn, as a percentage, over several windows.
+  drawn, as a percentage, over several windows; `ball_gap` is one row per
+  ball with how many contests since it last came out, and how that compares
+  with its own history; `ball_quintets` is one row per possible 5-ball
+  combination, how many contests drew all 5 together.
 
 Fetching and loading are two independent services: `update.sh` only talks to
 the Caixa API and writes to `data/raw/` (no Docker/PostgreSQL needed);
@@ -245,6 +249,8 @@ silver, with no key of their own beyond the natural one.
 | gold    | `cube_contest`              | one row per contest, everything in one place | `contest_nbr`                         |
 | gold    | `similar_contests`          | one row per pair of contests sharing 13+ balls | `(contest_a_nbr, contest_b_nbr)`   |
 | gold    | `ball_frequency`            | one row per ball (1-25)                      | `ball_nbr`                            |
+| gold    | `ball_gap`                  | one row per ball (1-25)                      | `ball_nbr`                            |
+| gold    | `ball_quintets`              | one row per possible 5-ball combination     | `(ball_1_nbr .. ball_5_nbr)`          |
 
 `cube_contest` carries the draw date and place, the drawn balls as two integer
 arrays (`balls_draw_order` in the order they came out, `balls_sorted` in numeric
@@ -277,6 +283,24 @@ second-to-last contest alone; same pattern through `last_25_contests_pct`) --
 plus the last 1/2/3/5/10 calendar years back from the most recent draw
 (`last_1_year_pct` ... `last_10_years_pct`) and the whole history
 (`total_pct`). Each window's 25 percentages always sum to 100.
+
+`ball_gap` has, per ball, `current_gap_qtty` (contests since its last
+appearance, 0 if it came out in the most recent contest) next to
+`max_gap_qtty` and `avg_gap_avg` (the longest and average gap it has ever had
+between two consecutive appearances), so a reader can tell whether the
+current dry spell is unusual for that ball. `max_gap_qtty`/`avg_gap_avg` only
+count closed gaps, so a ball can be mid-record (`current_gap_qtty` bigger
+than its own `max_gap_qtty`) until that gap closes.
+
+`ball_quintets` has one row per possible 5-ball combination out of the 25
+(C(25,5) = 53,130), with `together_qtty`/`together_pct`: how many contests
+(and what share) drew all 5 of them together. 5, not 2, because two 15-of-25
+draws always share at least 15 + 15 - 25 = 5 balls -- a mathematical floor,
+not a coincidence -- which makes a specific quintet's ~5.65%-per-contest
+chance a more meaningful unit to look at than a pair's ~35% (close to
+uniform across all 300 pairs, mostly noise). Every combination is included,
+even ones that never happened (`together_qtty = 0`), not just the observed
+ones.
 
 ## Notebooks
 

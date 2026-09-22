@@ -322,3 +322,102 @@ models:
         description: Share of every ball ever drawn that was this ball.
         tests:
           - not_null
+
+  - name: ball_gap
+    description: >
+      Gold cube: one row per ball (1-25), how many contests since it last
+      came out (current_gap_qtty, 0 if it came out in the most recent
+      contest) alongside its historical max and average gap between
+      consecutive appearances, so a reader can tell whether the current dry
+      spell is unusual. Built directly from silver, independent of the other
+      gold tables. Primary key: ball_nbr, enforced in PostgreSQL via a
+      post-hook.
+    columns:
+      - name: ball_nbr
+        description: Ball number, 1 to 25 (primary key).
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_ball')
+                field: ball_nbr
+      - name: last_contest_nbr
+        description: Number of the most recent contest this ball came out in.
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_contest')
+                field: contest_nbr
+      - name: last_draw_dt
+        description: Day of last_contest_nbr.
+        tests:
+          - not_null
+      - name: current_gap_qtty
+        description: >
+          Contests since this ball's last appearance, as of the most recent
+          contest: 0 if it came out in the last contest, 1 if its last
+          appearance was the contest before that, and so on.
+        tests:
+          - not_null
+      - name: max_gap_qtty
+        description: >
+          Longest gap this ball has ever had between two consecutive
+          appearances. Can be smaller than current_gap_qtty when the ball is
+          mid-record: it only updates once the open gap closes.
+        tests:
+          - not_null
+      - name: avg_gap_avg
+        description: Average, across every pair of consecutive appearances, of how many contests this ball sat out.
+        tests:
+          - not_null
+
+  - name: ball_quintets
+    description: >
+      Gold cube: one row per possible 5-ball combination (C(25,5) = 53,130),
+      how many contests drew all 5 of them together. 5 is the mathematical
+      floor two 15-of-25 draws always share (15 + 15 - 25), which is why the
+      grain is 5-ball combinations, not pairs. Includes every combination,
+      not just the ones observed -- expected count is ~214 per combination,
+      so a value far from that is the interesting case. Built directly from
+      silver, independent of the other gold tables. Primary key: (ball_1_nbr
+      .. ball_5_nbr), enforced in PostgreSQL via a post-hook.
+    tests:
+      - unique_combination_of_columns:
+          arguments:
+            combination_of_columns:
+              - ball_1_nbr
+              - ball_2_nbr
+              - ball_3_nbr
+              - ball_4_nbr
+              - ball_5_nbr
+    columns:
+      - name: ball_1_nbr
+        description: Lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_2_nbr
+        description: Second-lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_3_nbr
+        description: Third-lowest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_4_nbr
+        description: Second-highest ball number in the combination.
+        tests:
+          - not_null
+      - name: ball_5_nbr
+        description: Highest ball number in the combination.
+        tests:
+          - not_null
+      - name: together_qtty
+        description: Number of contests where all 5 of these balls were drawn together.
+        tests:
+          - not_null
+      - name: together_pct
+        description: Share of every contest where all 5 of these balls were drawn together.
+        tests:
+          - not_null
