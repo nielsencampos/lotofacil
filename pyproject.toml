@@ -30,7 +30,7 @@ dev = [
     "ruff>=0.16.8",
 ]
 notebook = [
-    "jupyterlab>=4.6.3",
+    "jupyterlab>=4.6.4",
     "pandas>=2.2",
     "itables>=2.2",
 ]
