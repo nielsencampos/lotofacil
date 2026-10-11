@@ -10,7 +10,7 @@ dependencies = [
     "psycopg[binary]>=3.3.6",
     "pydantic>=2.13.5",
     "pydantic-settings>=2.15.0",
-    "typer>=0.27.2",
+    "typer>=0.27.3",
     "dbt-core>=1.12.5",
     "dbt-postgres>=1.11.0",
 ]
