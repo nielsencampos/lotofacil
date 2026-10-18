@@ -27,7 +27,7 @@ packages = ["src/lotofacil"]
 
 [dependency-groups]
 dev = [
-    "ruff>=0.16.8",
+    "ruff>=0.17.0",
 ]
 notebook = [
     "jupyterlab>=4.6.4",
